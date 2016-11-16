@@ -17,7 +17,6 @@
 
 #pragma mark - 第三方轮子
 #import <YYKit.h>
-#import <YYM>
 #define MAS_SHORTHAND_GLOBALS
 #import <Masonry.h>
 #import <MJRefresh.h>
@@ -34,7 +33,7 @@
 #import "NSObject+parse.h"
 #import "UIView+HUD.h"
 #import "BaseNetManager.h"
-#import "NetManager.h"
+//#import "NetManager.h"
 
 
 #endif /* PrefixHeader_pch */

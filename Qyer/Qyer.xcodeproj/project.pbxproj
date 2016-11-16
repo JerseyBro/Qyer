@@ -20,7 +20,6 @@
 		F4A513771DDC60C2008AF2A1 /* NSObject+parse.m in Sources */ = {isa = PBXBuildFile; fileRef = F4A513741DDC60C2008AF2A1 /* NSObject+parse.m */; };
 		F4A5137B1DDC63F5008AF2A1 /* MainController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4A5137A1DDC63F5008AF2A1 /* MainController.m */; };
 		F4A5137E1DDC642F008AF2A1 /* BaseNetManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F4A5137D1DDC642F008AF2A1 /* BaseNetManager.m */; };
-		F4A513811DDC6447008AF2A1 /* Test.m in Sources */ = {isa = PBXBuildFile; fileRef = F4A513801DDC6447008AF2A1 /* Test.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,8 +49,6 @@
 		F4A5137A1DDC63F5008AF2A1 /* MainController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainController.m; sourceTree = "<group>"; };
 		F4A5137C1DDC642F008AF2A1 /* BaseNetManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseNetManager.h; sourceTree = "<group>"; };
 		F4A5137D1DDC642F008AF2A1 /* BaseNetManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseNetManager.m; sourceTree = "<group>"; };
-		F4A5137F1DDC6447008AF2A1 /* Test.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Test.h; sourceTree = "<group>"; };
-		F4A513801DDC6447008AF2A1 /* Test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Test.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -181,8 +178,6 @@
 		F4A5136A1DDC60A3008AF2A1 /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
-				F4A5137F1DDC6447008AF2A1 /* Test.h */,
-				F4A513801DDC6447008AF2A1 /* Test.m */,
 			);
 			path = Vendor;
 			sourceTree = "<group>";
@@ -323,7 +318,6 @@
 				F4A513761DDC60C2008AF2A1 /* UIView+HUD.m in Sources */,
 				F4A5136E1DDC60B2008AF2A1 /* QyerModel.m in Sources */,
 				854C209B1DDC5B4B00F5D5F4 /* ViewController.m in Sources */,
-				F4A513811DDC6447008AF2A1 /* Test.m in Sources */,
 				F4A5137B1DDC63F5008AF2A1 /* MainController.m in Sources */,
 				854C20981DDC5B4B00F5D5F4 /* AppDelegate.m in Sources */,
 				854C20951DDC5B4B00F5D5F4 /* main.m in Sources */,
@@ -447,7 +441,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B2B8C73DF8CFEFD16DD67BCE /* Pods-Qyer.debug.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = "$(PRODUCT_NAME)/PrefixHeader.pch";
 				INFOPLIST_FILE = Qyer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = DKD.Qyer;
@@ -459,7 +453,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A04F497D9480ACCC7D65A036 /* Pods-Qyer.release.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = "$(PRODUCT_NAME)/PrefixHeader.pch";
 				INFOPLIST_FILE = Qyer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = DKD.Qyer;

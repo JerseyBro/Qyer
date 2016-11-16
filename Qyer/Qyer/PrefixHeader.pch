@@ -1,0 +1,39 @@
+//
+//  PrefixHeader.pch
+//  Qyer
+//
+//  Created by “Skip、 on 2016/11/16.
+//  Copyright © 2016年 DKD. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+
+#pragma mark - 第三方轮子
+#import <YYKit.h>
+#define MAS_SHORTHAND_GLOBALS
+#import <Masonry.h>
+#import <MJRefresh.h>
+#import <AFNetworking.h>
+#import <MBProgressHUD.h>
+#import <WMPageController.h>
+#import <BlocksKit.h>
+#import <BlocksKit+UIKit.h>
+
+
+
+#pragma mark - 分类、网络请求
+#import "NSString+WX.h"
+#import "NSObject+parse.h"
+#import "UIView+HUD.h"
+#import "BaseNetManager.h"
+#import "NetManager.h"
+
+
+#endif /* PrefixHeader_pch */

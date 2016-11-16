@@ -1,0 +1,494 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2696AB9198967D29662C3CCF /* libPods-Qyer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B9CE096C68FF0D6FCB7D0228 /* libPods-Qyer.a */; };
+		854C20951DDC5B4B00F5D5F4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 854C20941DDC5B4B00F5D5F4 /* main.m */; };
+		854C20981DDC5B4B00F5D5F4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 854C20971DDC5B4B00F5D5F4 /* AppDelegate.m */; };
+		854C209B1DDC5B4B00F5D5F4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 854C209A1DDC5B4B00F5D5F4 /* ViewController.m */; };
+		854C209E1DDC5B4B00F5D5F4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 854C209C1DDC5B4B00F5D5F4 /* Main.storyboard */; };
+		854C20A01DDC5B4B00F5D5F4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 854C209F1DDC5B4B00F5D5F4 /* Assets.xcassets */; };
+		854C20A31DDC5B4B00F5D5F4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 854C20A11DDC5B4B00F5D5F4 /* LaunchScreen.storyboard */; };
+		F4A5136E1DDC60B2008AF2A1 /* QyerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F4A5136D1DDC60B2008AF2A1 /* QyerModel.m */; };
+		F4A513751DDC60C2008AF2A1 /* NSString+WX.m in Sources */ = {isa = PBXBuildFile; fileRef = F4A513701DDC60C2008AF2A1 /* NSString+WX.m */; };
+		F4A513761DDC60C2008AF2A1 /* UIView+HUD.m in Sources */ = {isa = PBXBuildFile; fileRef = F4A513721DDC60C2008AF2A1 /* UIView+HUD.m */; };
+		F4A513771DDC60C2008AF2A1 /* NSObject+parse.m in Sources */ = {isa = PBXBuildFile; fileRef = F4A513741DDC60C2008AF2A1 /* NSObject+parse.m */; };
+		F4A5137B1DDC63F5008AF2A1 /* MainController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4A5137A1DDC63F5008AF2A1 /* MainController.m */; };
+		F4A5137E1DDC642F008AF2A1 /* BaseNetManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F4A5137D1DDC642F008AF2A1 /* BaseNetManager.m */; };
+		F4A513811DDC6447008AF2A1 /* Test.m in Sources */ = {isa = PBXBuildFile; fileRef = F4A513801DDC6447008AF2A1 /* Test.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		854C20901DDC5B4B00F5D5F4 /* Qyer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Qyer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		854C20941DDC5B4B00F5D5F4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		854C20961DDC5B4B00F5D5F4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		854C20971DDC5B4B00F5D5F4 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		854C20991DDC5B4B00F5D5F4 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ViewController.h; path = Qyer/ViewController.h; sourceTree = SOURCE_ROOT; };
+		854C209A1DDC5B4B00F5D5F4 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = ViewController.m; path = Qyer/ViewController.m; sourceTree = SOURCE_ROOT; };
+		854C209D1DDC5B4B00F5D5F4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		854C209F1DDC5B4B00F5D5F4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../Assets.xcassets; sourceTree = "<group>"; };
+		854C20A21DDC5B4B00F5D5F4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		854C20A41DDC5B4B00F5D5F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A04F497D9480ACCC7D65A036 /* Pods-Qyer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Qyer.release.xcconfig"; path = "Pods/Target Support Files/Pods-Qyer/Pods-Qyer.release.xcconfig"; sourceTree = "<group>"; };
+		B2B8C73DF8CFEFD16DD67BCE /* Pods-Qyer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Qyer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Qyer/Pods-Qyer.debug.xcconfig"; sourceTree = "<group>"; };
+		B9CE096C68FF0D6FCB7D0228 /* libPods-Qyer.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Qyer.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F4A5136C1DDC60B2008AF2A1 /* QyerModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QyerModel.h; sourceTree = "<group>"; };
+		F4A5136D1DDC60B2008AF2A1 /* QyerModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QyerModel.m; sourceTree = "<group>"; };
+		F4A5136F1DDC60C2008AF2A1 /* NSString+WX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+WX.h"; sourceTree = "<group>"; };
+		F4A513701DDC60C2008AF2A1 /* NSString+WX.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+WX.m"; sourceTree = "<group>"; };
+		F4A513711DDC60C2008AF2A1 /* UIView+HUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+HUD.h"; sourceTree = "<group>"; };
+		F4A513721DDC60C2008AF2A1 /* UIView+HUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+HUD.m"; sourceTree = "<group>"; };
+		F4A513731DDC60C2008AF2A1 /* NSObject+parse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+parse.h"; sourceTree = "<group>"; };
+		F4A513741DDC60C2008AF2A1 /* NSObject+parse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+parse.m"; sourceTree = "<group>"; };
+		F4A513781DDC610D008AF2A1 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		F4A513791DDC63F5008AF2A1 /* MainController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainController.h; sourceTree = "<group>"; };
+		F4A5137A1DDC63F5008AF2A1 /* MainController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainController.m; sourceTree = "<group>"; };
+		F4A5137C1DDC642F008AF2A1 /* BaseNetManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseNetManager.h; sourceTree = "<group>"; };
+		F4A5137D1DDC642F008AF2A1 /* BaseNetManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseNetManager.m; sourceTree = "<group>"; };
+		F4A5137F1DDC6447008AF2A1 /* Test.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Test.h; sourceTree = "<group>"; };
+		F4A513801DDC6447008AF2A1 /* Test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Test.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		854C208D1DDC5B4B00F5D5F4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2696AB9198967D29662C3CCF /* libPods-Qyer.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0DBDDDD7CC50C707243BBD4C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B2B8C73DF8CFEFD16DD67BCE /* Pods-Qyer.debug.xcconfig */,
+				A04F497D9480ACCC7D65A036 /* Pods-Qyer.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		854C20871DDC5B4B00F5D5F4 = {
+			isa = PBXGroup;
+			children = (
+				854C20921DDC5B4B00F5D5F4 /* Qyer */,
+				854C20911DDC5B4B00F5D5F4 /* Products */,
+				0DBDDDD7CC50C707243BBD4C /* Pods */,
+				9023DBB756C4AEBBE1B4701A /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		854C20911DDC5B4B00F5D5F4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				854C20901DDC5B4B00F5D5F4 /* Qyer.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		854C20921DDC5B4B00F5D5F4 /* Qyer */ = {
+			isa = PBXGroup;
+			children = (
+				F4A513651DDC60A3008AF2A1 /* Category */,
+				F4A513661DDC60A3008AF2A1 /* NetManager */,
+				F4A513671DDC60A3008AF2A1 /* Model */,
+				F4A513681DDC60A3008AF2A1 /* View */,
+				F4A513691DDC60A3008AF2A1 /* Resource */,
+				F4A5136A1DDC60A3008AF2A1 /* Vendor */,
+				F4A5136B1DDC60A3008AF2A1 /* ViewController */,
+				854C20961DDC5B4B00F5D5F4 /* AppDelegate.h */,
+				854C20971DDC5B4B00F5D5F4 /* AppDelegate.m */,
+				854C20931DDC5B4B00F5D5F4 /* Supporting Files */,
+			);
+			path = Qyer;
+			sourceTree = "<group>";
+		};
+		854C20931DDC5B4B00F5D5F4 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				854C20A41DDC5B4B00F5D5F4 /* Info.plist */,
+				854C20941DDC5B4B00F5D5F4 /* main.m */,
+				F4A513781DDC610D008AF2A1 /* PrefixHeader.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9023DBB756C4AEBBE1B4701A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B9CE096C68FF0D6FCB7D0228 /* libPods-Qyer.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F4A513651DDC60A3008AF2A1 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				F4A5136F1DDC60C2008AF2A1 /* NSString+WX.h */,
+				F4A513701DDC60C2008AF2A1 /* NSString+WX.m */,
+				F4A513711DDC60C2008AF2A1 /* UIView+HUD.h */,
+				F4A513721DDC60C2008AF2A1 /* UIView+HUD.m */,
+				F4A513731DDC60C2008AF2A1 /* NSObject+parse.h */,
+				F4A513741DDC60C2008AF2A1 /* NSObject+parse.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		F4A513661DDC60A3008AF2A1 /* NetManager */ = {
+			isa = PBXGroup;
+			children = (
+				F4A5137C1DDC642F008AF2A1 /* BaseNetManager.h */,
+				F4A5137D1DDC642F008AF2A1 /* BaseNetManager.m */,
+			);
+			path = NetManager;
+			sourceTree = "<group>";
+		};
+		F4A513671DDC60A3008AF2A1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F4A5136C1DDC60B2008AF2A1 /* QyerModel.h */,
+				F4A5136D1DDC60B2008AF2A1 /* QyerModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F4A513681DDC60A3008AF2A1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F4A513791DDC63F5008AF2A1 /* MainController.h */,
+				F4A5137A1DDC63F5008AF2A1 /* MainController.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F4A513691DDC60A3008AF2A1 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				854C209C1DDC5B4B00F5D5F4 /* Main.storyboard */,
+				854C209F1DDC5B4B00F5D5F4 /* Assets.xcassets */,
+				854C20A11DDC5B4B00F5D5F4 /* LaunchScreen.storyboard */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		F4A5136A1DDC60A3008AF2A1 /* Vendor */ = {
+			isa = PBXGroup;
+			children = (
+				F4A5137F1DDC6447008AF2A1 /* Test.h */,
+				F4A513801DDC6447008AF2A1 /* Test.m */,
+			);
+			path = Vendor;
+			sourceTree = "<group>";
+		};
+		F4A5136B1DDC60A3008AF2A1 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				854C20991DDC5B4B00F5D5F4 /* ViewController.h */,
+				854C209A1DDC5B4B00F5D5F4 /* ViewController.m */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		854C208F1DDC5B4B00F5D5F4 /* Qyer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 854C20A71DDC5B4B00F5D5F4 /* Build configuration list for PBXNativeTarget "Qyer" */;
+			buildPhases = (
+				B582152370AB50CBDC242DC2 /* [CP] Check Pods Manifest.lock */,
+				854C208C1DDC5B4B00F5D5F4 /* Sources */,
+				854C208D1DDC5B4B00F5D5F4 /* Frameworks */,
+				854C208E1DDC5B4B00F5D5F4 /* Resources */,
+				F8589A9E2C1284B17C7C0ACE /* [CP] Embed Pods Frameworks */,
+				FB77B3278B89CDF9537BA8B8 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Qyer;
+			productName = Qyer;
+			productReference = 854C20901DDC5B4B00F5D5F4 /* Qyer.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		854C20881DDC5B4B00F5D5F4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0810;
+				ORGANIZATIONNAME = DKD;
+				TargetAttributes = {
+					854C208F1DDC5B4B00F5D5F4 = {
+						CreatedOnToolsVersion = 8.1;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 854C208B1DDC5B4B00F5D5F4 /* Build configuration list for PBXProject "Qyer" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 854C20871DDC5B4B00F5D5F4;
+			productRefGroup = 854C20911DDC5B4B00F5D5F4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				854C208F1DDC5B4B00F5D5F4 /* Qyer */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		854C208E1DDC5B4B00F5D5F4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				854C20A31DDC5B4B00F5D5F4 /* LaunchScreen.storyboard in Resources */,
+				854C20A01DDC5B4B00F5D5F4 /* Assets.xcassets in Resources */,
+				854C209E1DDC5B4B00F5D5F4 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		B582152370AB50CBDC242DC2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F8589A9E2C1284B17C7C0ACE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Qyer/Pods-Qyer-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FB77B3278B89CDF9537BA8B8 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Qyer/Pods-Qyer-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		854C208C1DDC5B4B00F5D5F4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F4A513771DDC60C2008AF2A1 /* NSObject+parse.m in Sources */,
+				F4A5137E1DDC642F008AF2A1 /* BaseNetManager.m in Sources */,
+				F4A513761DDC60C2008AF2A1 /* UIView+HUD.m in Sources */,
+				F4A5136E1DDC60B2008AF2A1 /* QyerModel.m in Sources */,
+				854C209B1DDC5B4B00F5D5F4 /* ViewController.m in Sources */,
+				F4A513811DDC6447008AF2A1 /* Test.m in Sources */,
+				F4A5137B1DDC63F5008AF2A1 /* MainController.m in Sources */,
+				854C20981DDC5B4B00F5D5F4 /* AppDelegate.m in Sources */,
+				854C20951DDC5B4B00F5D5F4 /* main.m in Sources */,
+				F4A513751DDC60C2008AF2A1 /* NSString+WX.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		854C209C1DDC5B4B00F5D5F4 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				854C209D1DDC5B4B00F5D5F4 /* Base */,
+			);
+			name = Main.storyboard;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		854C20A11DDC5B4B00F5D5F4 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				854C20A21DDC5B4B00F5D5F4 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			path = ..;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		854C20A51DDC5B4B00F5D5F4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		854C20A61DDC5B4B00F5D5F4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		854C20A81DDC5B4B00F5D5F4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B2B8C73DF8CFEFD16DD67BCE /* Pods-Qyer.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Qyer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = DKD.Qyer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		854C20A91DDC5B4B00F5D5F4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A04F497D9480ACCC7D65A036 /* Pods-Qyer.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Qyer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = DKD.Qyer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		854C208B1DDC5B4B00F5D5F4 /* Build configuration list for PBXProject "Qyer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				854C20A51DDC5B4B00F5D5F4 /* Debug */,
+				854C20A61DDC5B4B00F5D5F4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		854C20A71DDC5B4B00F5D5F4 /* Build configuration list for PBXNativeTarget "Qyer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				854C20A81DDC5B4B00F5D5F4 /* Debug */,
+				854C20A91DDC5B4B00F5D5F4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 854C20881DDC5B4B00F5D5F4 /* Project object */;
+}

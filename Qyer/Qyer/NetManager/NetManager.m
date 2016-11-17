@@ -11,9 +11,9 @@
 @implementation NetManager
 
 
-+(id)getTouWithPage:(NSInteger)page completionHandler:(void (^)(NSArray<QyerModel *> *, NSError *))completionHandler{
++(id)getTouWithPage:(NSInteger)page completionHandler:(void (^)(QyerModel  *, NSError *))completionHandler{
     
-
+    
     return [self GET:ktouPath paramaters:nil completionHandler:^(id responseObj, NSError *error) {
         !completionHandler ?: completionHandler([QyerModel parse:responseObj],error);
     }];

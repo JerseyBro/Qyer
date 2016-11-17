@@ -11,6 +11,6 @@
 
 @interface NetManager : BaseNetManager
 //获取头部滑动页数数据
-+(id)getTouWithPage:(NSInteger)page completionHandler:(void(^)(NSArray<QyerModel *> *pic ,NSError *error))completionHandler;
++(id)getTouWithPage:(NSInteger)page completionHandler:(void(^)(QyerModel  *pic ,NSError *error))completionHandler;
 
 @end

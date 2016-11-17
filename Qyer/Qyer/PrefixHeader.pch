@@ -25,6 +25,7 @@
 #import <WMPageController.h>
 #import <BlocksKit.h>
 #import <BlocksKit+UIKit.h>
+#import <iCarousel.h>
 
 
 
@@ -33,7 +34,9 @@
 #import "NSObject+parse.h"
 #import "UIView+HUD.h"
 #import "BaseNetManager.h"
-//#import "NetManager.h"
+
+#import "NetManager.h"
+#import "Constant.h"
 
 
 #endif /* PrefixHeader_pch */

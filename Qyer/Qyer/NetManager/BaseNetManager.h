@@ -10,4 +10,6 @@
 
 @interface BaseNetManager : NSObject
 
++(id)GET:(NSString *)path paramaters:(NSDictionary *)paramaters completionHandler:(void(^)(id responseObj,NSError *error))completionHandler;
+
 @end

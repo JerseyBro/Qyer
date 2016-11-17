@@ -20,6 +20,7 @@
 		F4A513771DDC60C2008AF2A1 /* NSObject+parse.m in Sources */ = {isa = PBXBuildFile; fileRef = F4A513741DDC60C2008AF2A1 /* NSObject+parse.m */; };
 		F4A5137B1DDC63F5008AF2A1 /* MainController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4A5137A1DDC63F5008AF2A1 /* MainController.m */; };
 		F4A5137E1DDC642F008AF2A1 /* BaseNetManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F4A5137D1DDC642F008AF2A1 /* BaseNetManager.m */; };
+		F4B9E4AF1DDDE3D600254772 /* NetManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F4B9E4AE1DDDE3D600254772 /* NetManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +50,9 @@
 		F4A5137A1DDC63F5008AF2A1 /* MainController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainController.m; sourceTree = "<group>"; };
 		F4A5137C1DDC642F008AF2A1 /* BaseNetManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseNetManager.h; sourceTree = "<group>"; };
 		F4A5137D1DDC642F008AF2A1 /* BaseNetManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseNetManager.m; sourceTree = "<group>"; };
+		F4B9E4AB1DDDE20900254772 /* Constant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Constant.h; path = ../Constant.h; sourceTree = "<group>"; };
+		F4B9E4AD1DDDE3D600254772 /* NetManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetManager.h; sourceTree = "<group>"; };
+		F4B9E4AE1DDDE3D600254772 /* NetManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +97,7 @@
 		854C20921DDC5B4B00F5D5F4 /* Qyer */ = {
 			isa = PBXGroup;
 			children = (
+				F4B9E4AC1DDDE22300254772 /* Define */,
 				F4A513651DDC60A3008AF2A1 /* Category */,
 				F4A513661DDC60A3008AF2A1 /* NetManager */,
 				F4A513671DDC60A3008AF2A1 /* Model */,
@@ -143,6 +148,8 @@
 			children = (
 				F4A5137C1DDC642F008AF2A1 /* BaseNetManager.h */,
 				F4A5137D1DDC642F008AF2A1 /* BaseNetManager.m */,
+				F4B9E4AD1DDDE3D600254772 /* NetManager.h */,
+				F4B9E4AE1DDDE3D600254772 /* NetManager.m */,
 			);
 			path = NetManager;
 			sourceTree = "<group>";
@@ -189,6 +196,14 @@
 				854C209A1DDC5B4B00F5D5F4 /* ViewController.m */,
 			);
 			path = ViewController;
+			sourceTree = "<group>";
+		};
+		F4B9E4AC1DDDE22300254772 /* Define */ = {
+			isa = PBXGroup;
+			children = (
+				F4B9E4AB1DDDE20900254772 /* Constant.h */,
+			);
+			path = Define;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -314,6 +329,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F4A513771DDC60C2008AF2A1 /* NSObject+parse.m in Sources */,
+				F4B9E4AF1DDDE3D600254772 /* NetManager.m in Sources */,
 				F4A5137E1DDC642F008AF2A1 /* BaseNetManager.m in Sources */,
 				F4A513761DDC60C2008AF2A1 /* UIView+HUD.m in Sources */,
 				F4A5136E1DDC60B2008AF2A1 /* QyerModel.m in Sources */,

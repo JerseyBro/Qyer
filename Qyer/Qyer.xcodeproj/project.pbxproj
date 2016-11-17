@@ -8,6 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		2696AB9198967D29662C3CCF /* libPods-Qyer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B9CE096C68FF0D6FCB7D0228 /* libPods-Qyer.a */; };
+		553928571DDE339900D72F47 /* RecommendVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 553928561DDE339900D72F47 /* RecommendVC.m */; };
+		5539285A1DDE341800D72F47 /* DestinationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 553928591DDE341800D72F47 /* DestinationVC.m */; };
+		5539285D1DDE347100D72F47 /* TravelShoppingVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5539285C1DDE347100D72F47 /* TravelShoppingVC.m */; };
+		553928601DDE349500D72F47 /* CommunityVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5539285F1DDE349500D72F47 /* CommunityVC.m */; };
+		553928631DDE34B900D72F47 /* MyHomeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 553928621DDE34B900D72F47 /* MyHomeVC.m */; };
+		553928661DDE34E400D72F47 /* MainTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 553928651DDE34E400D72F47 /* MainTabBar.m */; };
+		553928691DDE350400D72F47 /* AllNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 553928681DDE350400D72F47 /* AllNavigationBar.m */; };
 		854C20951DDC5B4B00F5D5F4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 854C20941DDC5B4B00F5D5F4 /* main.m */; };
 		854C20981DDC5B4B00F5D5F4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 854C20971DDC5B4B00F5D5F4 /* AppDelegate.m */; };
 		854C209B1DDC5B4B00F5D5F4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 854C209A1DDC5B4B00F5D5F4 /* ViewController.m */; };
@@ -24,6 +31,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		553928551DDE339900D72F47 /* RecommendVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecommendVC.h; sourceTree = "<group>"; };
+		553928561DDE339900D72F47 /* RecommendVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecommendVC.m; sourceTree = "<group>"; };
+		553928581DDE341800D72F47 /* DestinationVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DestinationVC.h; sourceTree = "<group>"; };
+		553928591DDE341800D72F47 /* DestinationVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DestinationVC.m; sourceTree = "<group>"; };
+		5539285B1DDE347100D72F47 /* TravelShoppingVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TravelShoppingVC.h; sourceTree = "<group>"; };
+		5539285C1DDE347100D72F47 /* TravelShoppingVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TravelShoppingVC.m; sourceTree = "<group>"; };
+		5539285E1DDE349500D72F47 /* CommunityVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommunityVC.h; sourceTree = "<group>"; };
+		5539285F1DDE349500D72F47 /* CommunityVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommunityVC.m; sourceTree = "<group>"; };
+		553928611DDE34B900D72F47 /* MyHomeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyHomeVC.h; sourceTree = "<group>"; };
+		553928621DDE34B900D72F47 /* MyHomeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyHomeVC.m; sourceTree = "<group>"; };
+		553928641DDE34E400D72F47 /* MainTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTabBar.h; sourceTree = "<group>"; };
+		553928651DDE34E400D72F47 /* MainTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTabBar.m; sourceTree = "<group>"; };
+		553928671DDE350400D72F47 /* AllNavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AllNavigationBar.h; sourceTree = "<group>"; };
+		553928681DDE350400D72F47 /* AllNavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AllNavigationBar.m; sourceTree = "<group>"; };
 		854C20901DDC5B4B00F5D5F4 /* Qyer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Qyer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		854C20941DDC5B4B00F5D5F4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		854C20961DDC5B4B00F5D5F4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -76,6 +97,29 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		553928541DDE333300D72F47 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				854C20991DDC5B4B00F5D5F4 /* ViewController.h */,
+				854C209A1DDC5B4B00F5D5F4 /* ViewController.m */,
+				553928551DDE339900D72F47 /* RecommendVC.h */,
+				553928561DDE339900D72F47 /* RecommendVC.m */,
+				553928581DDE341800D72F47 /* DestinationVC.h */,
+				553928591DDE341800D72F47 /* DestinationVC.m */,
+				5539285B1DDE347100D72F47 /* TravelShoppingVC.h */,
+				5539285C1DDE347100D72F47 /* TravelShoppingVC.m */,
+				5539285E1DDE349500D72F47 /* CommunityVC.h */,
+				5539285F1DDE349500D72F47 /* CommunityVC.m */,
+				553928611DDE34B900D72F47 /* MyHomeVC.h */,
+				553928621DDE34B900D72F47 /* MyHomeVC.m */,
+				553928641DDE34E400D72F47 /* MainTabBar.h */,
+				553928651DDE34E400D72F47 /* MainTabBar.m */,
+				553928671DDE350400D72F47 /* AllNavigationBar.h */,
+				553928681DDE350400D72F47 /* AllNavigationBar.m */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
 		854C20871DDC5B4B00F5D5F4 = {
 			isa = PBXGroup;
 			children = (
@@ -97,6 +141,7 @@
 		854C20921DDC5B4B00F5D5F4 /* Qyer */ = {
 			isa = PBXGroup;
 			children = (
+				553928541DDE333300D72F47 /* ViewController */,
 				F4B9E4AC1DDDE22300254772 /* Define */,
 				F4A513651DDC60A3008AF2A1 /* Category */,
 				F4A513661DDC60A3008AF2A1 /* NetManager */,
@@ -104,7 +149,6 @@
 				F4A513681DDC60A3008AF2A1 /* View */,
 				F4A513691DDC60A3008AF2A1 /* Resource */,
 				F4A5136A1DDC60A3008AF2A1 /* Vendor */,
-				F4A5136B1DDC60A3008AF2A1 /* ViewController */,
 				854C20961DDC5B4B00F5D5F4 /* AppDelegate.h */,
 				854C20971DDC5B4B00F5D5F4 /* AppDelegate.m */,
 				854C20931DDC5B4B00F5D5F4 /* Supporting Files */,
@@ -187,15 +231,6 @@
 			children = (
 			);
 			path = Vendor;
-			sourceTree = "<group>";
-		};
-		F4A5136B1DDC60A3008AF2A1 /* ViewController */ = {
-			isa = PBXGroup;
-			children = (
-				854C20991DDC5B4B00F5D5F4 /* ViewController.h */,
-				854C209A1DDC5B4B00F5D5F4 /* ViewController.m */,
-			);
-			path = ViewController;
 			sourceTree = "<group>";
 		};
 		F4B9E4AC1DDDE22300254772 /* Define */ = {
@@ -329,15 +364,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				F4A513771DDC60C2008AF2A1 /* NSObject+parse.m in Sources */,
+				5539285D1DDE347100D72F47 /* TravelShoppingVC.m in Sources */,
 				F4B9E4AF1DDDE3D600254772 /* NetManager.m in Sources */,
 				F4A5137E1DDC642F008AF2A1 /* BaseNetManager.m in Sources */,
 				F4A513761DDC60C2008AF2A1 /* UIView+HUD.m in Sources */,
 				F4A5136E1DDC60B2008AF2A1 /* QyerModel.m in Sources */,
+				553928601DDE349500D72F47 /* CommunityVC.m in Sources */,
+				5539285A1DDE341800D72F47 /* DestinationVC.m in Sources */,
+				553928661DDE34E400D72F47 /* MainTabBar.m in Sources */,
 				854C209B1DDC5B4B00F5D5F4 /* ViewController.m in Sources */,
 				F4A5137B1DDC63F5008AF2A1 /* MainController.m in Sources */,
 				854C20981DDC5B4B00F5D5F4 /* AppDelegate.m in Sources */,
 				854C20951DDC5B4B00F5D5F4 /* main.m in Sources */,
 				F4A513751DDC60C2008AF2A1 /* NSString+WX.m in Sources */,
+				553928691DDE350400D72F47 /* AllNavigationBar.m in Sources */,
+				553928571DDE339900D72F47 /* RecommendVC.m in Sources */,
+				553928631DDE34B900D72F47 /* MyHomeVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,18 +1,18 @@
 //
-//  MyHomeVC.m
+//  BournViewController.m
 //  Qyer
 //
-//  Created by 😘王艳 on 2016/11/18.
+//  Created by “Skip、 on 2016/11/18.
 //  Copyright © 2016年 DKD. All rights reserved.
 //
 
-#import "MyHomeVC.h"
+#import "BournViewController.h"
 
-@interface MyHomeVC ()
+@interface BournViewController ()
 
 @end
 
-@implementation MyHomeVC
+@implementation BournViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

@@ -1,18 +1,18 @@
 //
-//  CommunityVC.m
+//  MineViewController.m
 //  Qyer
 //
-//  Created by 😘王艳 on 2016/11/18.
+//  Created by “Skip、 on 2016/11/18.
 //  Copyright © 2016年 DKD. All rights reserved.
 //
 
-#import "CommunityVC.h"
+#import "MineViewController.h"
 
-@interface CommunityVC ()
+@interface MineViewController ()
 
 @end
 
-@implementation CommunityVC
+@implementation MineViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

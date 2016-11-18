@@ -1,18 +1,18 @@
 //
-//  DestinationVC.m
+//  ShoppingViewController.m
 //  Qyer
 //
-//  Created by 😘王艳 on 2016/11/18.
+//  Created by “Skip、 on 2016/11/18.
 //  Copyright © 2016年 DKD. All rights reserved.
 //
 
-#import "DestinationVC.h"
+#import "ShoppingViewController.h"
 
-@interface DestinationVC ()
+@interface ShoppingViewController ()
 
 @end
 
-@implementation DestinationVC
+@implementation ShoppingViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

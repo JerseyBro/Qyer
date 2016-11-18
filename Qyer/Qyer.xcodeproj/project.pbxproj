@@ -8,13 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		2696AB9198967D29662C3CCF /* libPods-Qyer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B9CE096C68FF0D6FCB7D0228 /* libPods-Qyer.a */; };
-		553928571DDE339900D72F47 /* RecommendVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 553928561DDE339900D72F47 /* RecommendVC.m */; };
-		5539285A1DDE341800D72F47 /* DestinationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 553928591DDE341800D72F47 /* DestinationVC.m */; };
-		5539285D1DDE347100D72F47 /* TravelShoppingVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5539285C1DDE347100D72F47 /* TravelShoppingVC.m */; };
-		553928601DDE349500D72F47 /* CommunityVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5539285F1DDE349500D72F47 /* CommunityVC.m */; };
-		553928631DDE34B900D72F47 /* MyHomeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 553928621DDE34B900D72F47 /* MyHomeVC.m */; };
-		553928661DDE34E400D72F47 /* MainTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 553928651DDE34E400D72F47 /* MainTabBar.m */; };
-		553928691DDE350400D72F47 /* AllNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 553928681DDE350400D72F47 /* AllNavigationBar.m */; };
 		854C20951DDC5B4B00F5D5F4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 854C20941DDC5B4B00F5D5F4 /* main.m */; };
 		854C20981DDC5B4B00F5D5F4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 854C20971DDC5B4B00F5D5F4 /* AppDelegate.m */; };
 		854C209B1DDC5B4B00F5D5F4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 854C209A1DDC5B4B00F5D5F4 /* ViewController.m */; };
@@ -27,24 +20,16 @@
 		F4A513771DDC60C2008AF2A1 /* NSObject+parse.m in Sources */ = {isa = PBXBuildFile; fileRef = F4A513741DDC60C2008AF2A1 /* NSObject+parse.m */; };
 		F4A5137B1DDC63F5008AF2A1 /* MainController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4A5137A1DDC63F5008AF2A1 /* MainController.m */; };
 		F4A5137E1DDC642F008AF2A1 /* BaseNetManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F4A5137D1DDC642F008AF2A1 /* BaseNetManager.m */; };
+		F4ADDC831DDEFE4400C13254 /* MineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4ADDC821DDEFE4400C13254 /* MineViewController.m */; };
+		F4ADDC891DDF000D00C13254 /* CommunityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4ADDC881DDF000D00C13254 /* CommunityViewController.m */; };
+		F4ADDC8F1DDF007000C13254 /* ShoppingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4ADDC8E1DDF007000C13254 /* ShoppingViewController.m */; };
+		F4ADDC921DDF00C000C13254 /* BournViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4ADDC911DDF00C000C13254 /* BournViewController.m */; };
+		F4ADDC951DDF013600C13254 /* AllViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4ADDC941DDF013600C13254 /* AllViewController.m */; };
+		F4ADDC981DDF01BF00C13254 /* RecommendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4ADDC971DDF01BF00C13254 /* RecommendViewController.m */; };
 		F4B9E4AF1DDDE3D600254772 /* NetManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F4B9E4AE1DDDE3D600254772 /* NetManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		553928551DDE339900D72F47 /* RecommendVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecommendVC.h; sourceTree = "<group>"; };
-		553928561DDE339900D72F47 /* RecommendVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecommendVC.m; sourceTree = "<group>"; };
-		553928581DDE341800D72F47 /* DestinationVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DestinationVC.h; sourceTree = "<group>"; };
-		553928591DDE341800D72F47 /* DestinationVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DestinationVC.m; sourceTree = "<group>"; };
-		5539285B1DDE347100D72F47 /* TravelShoppingVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TravelShoppingVC.h; sourceTree = "<group>"; };
-		5539285C1DDE347100D72F47 /* TravelShoppingVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TravelShoppingVC.m; sourceTree = "<group>"; };
-		5539285E1DDE349500D72F47 /* CommunityVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommunityVC.h; sourceTree = "<group>"; };
-		5539285F1DDE349500D72F47 /* CommunityVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommunityVC.m; sourceTree = "<group>"; };
-		553928611DDE34B900D72F47 /* MyHomeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyHomeVC.h; sourceTree = "<group>"; };
-		553928621DDE34B900D72F47 /* MyHomeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyHomeVC.m; sourceTree = "<group>"; };
-		553928641DDE34E400D72F47 /* MainTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTabBar.h; sourceTree = "<group>"; };
-		553928651DDE34E400D72F47 /* MainTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTabBar.m; sourceTree = "<group>"; };
-		553928671DDE350400D72F47 /* AllNavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AllNavigationBar.h; sourceTree = "<group>"; };
-		553928681DDE350400D72F47 /* AllNavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AllNavigationBar.m; sourceTree = "<group>"; };
 		854C20901DDC5B4B00F5D5F4 /* Qyer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Qyer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		854C20941DDC5B4B00F5D5F4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		854C20961DDC5B4B00F5D5F4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -71,6 +56,18 @@
 		F4A5137A1DDC63F5008AF2A1 /* MainController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainController.m; sourceTree = "<group>"; };
 		F4A5137C1DDC642F008AF2A1 /* BaseNetManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseNetManager.h; sourceTree = "<group>"; };
 		F4A5137D1DDC642F008AF2A1 /* BaseNetManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseNetManager.m; sourceTree = "<group>"; };
+		F4ADDC811DDEFE4400C13254 /* MineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineViewController.h; sourceTree = "<group>"; };
+		F4ADDC821DDEFE4400C13254 /* MineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineViewController.m; sourceTree = "<group>"; };
+		F4ADDC871DDF000D00C13254 /* CommunityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommunityViewController.h; sourceTree = "<group>"; };
+		F4ADDC881DDF000D00C13254 /* CommunityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommunityViewController.m; sourceTree = "<group>"; };
+		F4ADDC8D1DDF007000C13254 /* ShoppingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShoppingViewController.h; sourceTree = "<group>"; };
+		F4ADDC8E1DDF007000C13254 /* ShoppingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShoppingViewController.m; sourceTree = "<group>"; };
+		F4ADDC901DDF00C000C13254 /* BournViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BournViewController.h; sourceTree = "<group>"; };
+		F4ADDC911DDF00C000C13254 /* BournViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BournViewController.m; sourceTree = "<group>"; };
+		F4ADDC931DDF013600C13254 /* AllViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AllViewController.h; sourceTree = "<group>"; };
+		F4ADDC941DDF013600C13254 /* AllViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AllViewController.m; sourceTree = "<group>"; };
+		F4ADDC961DDF01BF00C13254 /* RecommendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecommendViewController.h; sourceTree = "<group>"; };
+		F4ADDC971DDF01BF00C13254 /* RecommendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecommendViewController.m; sourceTree = "<group>"; };
 		F4B9E4AB1DDDE20900254772 /* Constant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Constant.h; path = ../Constant.h; sourceTree = "<group>"; };
 		F4B9E4AD1DDDE3D600254772 /* NetManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetManager.h; sourceTree = "<group>"; };
 		F4B9E4AE1DDDE3D600254772 /* NetManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetManager.m; sourceTree = "<group>"; };
@@ -100,22 +97,13 @@
 		553928541DDE333300D72F47 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				854C20991DDC5B4B00F5D5F4 /* ViewController.h */,
-				854C209A1DDC5B4B00F5D5F4 /* ViewController.m */,
-				553928551DDE339900D72F47 /* RecommendVC.h */,
-				553928561DDE339900D72F47 /* RecommendVC.m */,
-				553928581DDE341800D72F47 /* DestinationVC.h */,
-				553928591DDE341800D72F47 /* DestinationVC.m */,
-				5539285B1DDE347100D72F47 /* TravelShoppingVC.h */,
-				5539285C1DDE347100D72F47 /* TravelShoppingVC.m */,
-				5539285E1DDE349500D72F47 /* CommunityVC.h */,
-				5539285F1DDE349500D72F47 /* CommunityVC.m */,
-				553928611DDE34B900D72F47 /* MyHomeVC.h */,
-				553928621DDE34B900D72F47 /* MyHomeVC.m */,
-				553928641DDE34E400D72F47 /* MainTabBar.h */,
-				553928651DDE34E400D72F47 /* MainTabBar.m */,
-				553928671DDE350400D72F47 /* AllNavigationBar.h */,
-				553928681DDE350400D72F47 /* AllNavigationBar.m */,
+				F4ADDC7C1DDEFDEF00C13254 /* 旅行商城 */,
+				F4ADDC7D1DDEFDEF00C13254 /* 目的地 */,
+				F4ADDC7E1DDEFDEF00C13254 /* 社区 */,
+				F4ADDC7F1DDEFDEF00C13254 /* 推荐 */,
+				F4ADDC801DDEFDEF00C13254 /* 我的 */,
+				F4ADDC931DDF013600C13254 /* AllViewController.h */,
+				F4ADDC941DDF013600C13254 /* AllViewController.m */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -151,6 +139,8 @@
 				F4A5136A1DDC60A3008AF2A1 /* Vendor */,
 				854C20961DDC5B4B00F5D5F4 /* AppDelegate.h */,
 				854C20971DDC5B4B00F5D5F4 /* AppDelegate.m */,
+				854C20991DDC5B4B00F5D5F4 /* ViewController.h */,
+				854C209A1DDC5B4B00F5D5F4 /* ViewController.m */,
 				854C20931DDC5B4B00F5D5F4 /* Supporting Files */,
 			);
 			path = Qyer;
@@ -231,6 +221,51 @@
 			children = (
 			);
 			path = Vendor;
+			sourceTree = "<group>";
+		};
+		F4ADDC7C1DDEFDEF00C13254 /* 旅行商城 */ = {
+			isa = PBXGroup;
+			children = (
+				F4ADDC8D1DDF007000C13254 /* ShoppingViewController.h */,
+				F4ADDC8E1DDF007000C13254 /* ShoppingViewController.m */,
+			);
+			path = "旅行商城";
+			sourceTree = "<group>";
+		};
+		F4ADDC7D1DDEFDEF00C13254 /* 目的地 */ = {
+			isa = PBXGroup;
+			children = (
+				F4ADDC901DDF00C000C13254 /* BournViewController.h */,
+				F4ADDC911DDF00C000C13254 /* BournViewController.m */,
+			);
+			path = "目的地";
+			sourceTree = "<group>";
+		};
+		F4ADDC7E1DDEFDEF00C13254 /* 社区 */ = {
+			isa = PBXGroup;
+			children = (
+				F4ADDC871DDF000D00C13254 /* CommunityViewController.h */,
+				F4ADDC881DDF000D00C13254 /* CommunityViewController.m */,
+			);
+			path = "社区";
+			sourceTree = "<group>";
+		};
+		F4ADDC7F1DDEFDEF00C13254 /* 推荐 */ = {
+			isa = PBXGroup;
+			children = (
+				F4ADDC961DDF01BF00C13254 /* RecommendViewController.h */,
+				F4ADDC971DDF01BF00C13254 /* RecommendViewController.m */,
+			);
+			path = "推荐";
+			sourceTree = "<group>";
+		};
+		F4ADDC801DDEFDEF00C13254 /* 我的 */ = {
+			isa = PBXGroup;
+			children = (
+				F4ADDC811DDEFE4400C13254 /* MineViewController.h */,
+				F4ADDC821DDEFE4400C13254 /* MineViewController.m */,
+			);
+			path = "我的";
 			sourceTree = "<group>";
 		};
 		F4B9E4AC1DDDE22300254772 /* Define */ = {
@@ -363,23 +398,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F4ADDC891DDF000D00C13254 /* CommunityViewController.m in Sources */,
+				F4ADDC921DDF00C000C13254 /* BournViewController.m in Sources */,
 				F4A513771DDC60C2008AF2A1 /* NSObject+parse.m in Sources */,
-				5539285D1DDE347100D72F47 /* TravelShoppingVC.m in Sources */,
 				F4B9E4AF1DDDE3D600254772 /* NetManager.m in Sources */,
 				F4A5137E1DDC642F008AF2A1 /* BaseNetManager.m in Sources */,
 				F4A513761DDC60C2008AF2A1 /* UIView+HUD.m in Sources */,
+				F4ADDC951DDF013600C13254 /* AllViewController.m in Sources */,
+				F4ADDC8F1DDF007000C13254 /* ShoppingViewController.m in Sources */,
 				F4A5136E1DDC60B2008AF2A1 /* QyerModel.m in Sources */,
-				553928601DDE349500D72F47 /* CommunityVC.m in Sources */,
-				5539285A1DDE341800D72F47 /* DestinationVC.m in Sources */,
-				553928661DDE34E400D72F47 /* MainTabBar.m in Sources */,
+				F4ADDC831DDEFE4400C13254 /* MineViewController.m in Sources */,
 				854C209B1DDC5B4B00F5D5F4 /* ViewController.m in Sources */,
 				F4A5137B1DDC63F5008AF2A1 /* MainController.m in Sources */,
 				854C20981DDC5B4B00F5D5F4 /* AppDelegate.m in Sources */,
+				F4ADDC981DDF01BF00C13254 /* RecommendViewController.m in Sources */,
 				854C20951DDC5B4B00F5D5F4 /* main.m in Sources */,
 				F4A513751DDC60C2008AF2A1 /* NSString+WX.m in Sources */,
-				553928691DDE350400D72F47 /* AllNavigationBar.m in Sources */,
-				553928571DDE339900D72F47 /* RecommendVC.m in Sources */,
-				553928631DDE34B900D72F47 /* MyHomeVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

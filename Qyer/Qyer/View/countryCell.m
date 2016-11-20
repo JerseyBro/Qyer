@@ -17,8 +17,8 @@
         _photo.layer.cornerRadius = 2;
         _photo.clipsToBounds = YES;
         [_photo mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.left.top.equalTo(0);
-            make.width.height.equalTo(90);
+            make.left.top.bottom.equalTo(0);
+            make.width.equalTo(_photo.mas_height);
             
         }];
     }
@@ -29,9 +29,12 @@
     if (!_cnname) {
         _cnname = [UILabel new];
         [self.contentView addSubview:_cnname];
+        _cnname.font = [UIFont systemFontOfSize:13];
+        _cnname.numberOfLines = 0;
         [_cnname mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.left.equalTo(self.photo.mas_right).offset(12);
-            make.top.equalTo(17);
+            make.left.equalTo(self.photo.mas_right).offset(10);
+            make.top.equalTo(6);
+            make.right.equalTo(-1);
         }];
     }
     return _cnname;
@@ -41,11 +44,14 @@
     if (!_enname) {
         _enname = [UILabel new];
         [self.contentView addSubview:_enname];
-        _enname.font = [UIFont systemFontOfSize:12];
+        _enname.font = [UIFont systemFontOfSize:11];
         _enname.textColor = [UIColor grayColor];
+        _enname.numberOfLines = 0;
         [_enname mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.equalTo(self.cnname);
-            make.top.equalTo(self.cnname.mas_bottom).offset(10);
+            make.top.equalTo(self.cnname.mas_bottom).offset(4);
+            make.right.equalTo(-1);
+            make.bottom.equalTo(0);
         }];
     }
     return _enname;

@@ -16,6 +16,7 @@
         _tagname.textAlignment = NSTextAlignmentCenter;
         _tagname.highlightedTextColor = [UIColor colorWithRed:35 / 255.0 green:189 / 255.0 blue:123 / 255.0 alpha:1.0];
         _tagname.textColor = [UIColor colorWithRed:89 / 255.0 green:89 / 255.0 blue:89 / 255.0 alpha:1.0];
+
         [self.contentView addSubview:_tagname];
         [_tagname mas_makeConstraints:^(MASConstraintMaker *make) {
             make.center.equalTo(0);

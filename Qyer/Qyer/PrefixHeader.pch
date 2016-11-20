@@ -29,6 +29,10 @@
 
 
 
+#pragma mark - 各个页面数据Medel
+//目的地 数据
+#import "bournModel.h"
+
 #pragma mark - 分类、网络请求
 #import "NSString+WX.h"
 #import "NSObject+parse.h"

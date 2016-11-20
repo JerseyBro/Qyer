@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface BournViewController : UITableViewController
+@interface BournViewController : UIViewController
+//灰色
+-(UIColor*)GetGrayColor;
 
 @end

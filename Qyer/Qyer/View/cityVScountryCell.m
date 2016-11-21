@@ -14,14 +14,28 @@
     if (!_photo) {
         _photo = [UIImageView new];
         [self.contentView addSubview:_photo];
+        //打开用户交互
+         _photo.userInteractionEnabled = YES;
+          //切割圆形
+        _photo.layer.cornerRadius = 2;
+        _photo.layer.masksToBounds = YES;
         [_photo mas_makeConstraints:^(MASConstraintMaker *make) {
             make.edges.equalTo(0);
         }];
         //填充样式
-//        _photo.contentMode = UIViewContentModeScaleAspectFill;
-        //切割圆形
-        _photo.layer.cornerRadius = 2;
-        _photo.layer.masksToBounds = YES;
+       _photo.contentMode = UIViewContentModeScaleAspectFill;
+       // 设置毛玻璃
+        UIBlurEffect *effect = [UIBlurEffect effectWithStyle:UIBlurEffectStyleDark];
+        UIVisualEffectView *effectView = [[UIVisualEffectView alloc] initWithEffect:effect];
+        effectView.alpha = .5;
+        
+        [_photo addSubview:effectView];
+        [effectView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.edges.equalTo(0);
+        }];
+        
+      
+     
     }
     return _photo;
 }
@@ -31,6 +45,7 @@
         _cnname = [UILabel new];
         [self.contentView addSubview:_cnname];
         _cnname.textColor = [UIColor whiteColor];
+         _cnname.font = [UIFont fontWithName:@"Helvetica-Bold" size:18];
         [_cnname mas_makeConstraints:^(MASConstraintMaker *make) {
             make.centerX.equalTo(0);
           
@@ -45,7 +60,9 @@
         _enname = [UILabel new];
         [self.contentView addSubview:_enname];
         _enname.textColor = [UIColor whiteColor];
-        _enname.font = [UIFont systemFontOfSize:13];
+       
+        _enname.font = [UIFont systemFontOfSize:15];
+    
         [_enname mas_makeConstraints:^(MASConstraintMaker *make) {
             make.centerX.equalTo(0);
             

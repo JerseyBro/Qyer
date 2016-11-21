@@ -232,23 +232,20 @@
 -(NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
 {
     if (self.cityVScountry.countrycount) {
-        NSLog(@"二个分区");
         return 2;
     }
-    NSLog(@"一个分区");
     return  1;
 }
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
     if (section == 1)
     {
-        NSLog(@"分区二有%ldge",self.cityVScountry.countrycount);
+
         return self.cityVScountry.countrycount;
         
     }
     else{
-        NSLog(@"无");
-        NSLog(@"分区一有%ld个",self.cityVScountry.citycount);
+
         return  self.cityVScountry.citycount;
     }
     
@@ -263,9 +260,8 @@
         [cell.photo setImageURL:citydata.photo.wx_URL];
         cell.cnname.text = citydata.cnname;
         cell.enname.text = citydata.enname;
-        NSLog(@"haha----");
-         NSLog(@"无");
-        NSLog(@"%@",cell);
+        //  重口味样式毛玻璃 。使用时 如果父视图用了 自动布局  则子视图必须也要使用 否则无法显示出来
+       
         return cell;
 
     }else
@@ -278,7 +274,6 @@
             [cell.photo setImageURL:citydata.photo.wx_URL];
             cell.cnname.text = citydata.cnname;
             cell.enname.text = citydata.enname;
-            NSLog(@"haha");
             return cell;
         }
        else
@@ -289,7 +284,7 @@
             [cell.photo setImageURL:countrydata.photo.wx_URL];
             cell.cnname.text = countrydata.cnname;
             cell.enname.text = countrydata.enname;
-            NSLog(@"嘿嘿");
+
            return cell;
         }
     }

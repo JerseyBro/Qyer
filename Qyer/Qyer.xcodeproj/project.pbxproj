@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		2696AB9198967D29662C3CCF /* libPods-Qyer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B9CE096C68FF0D6FCB7D0228 /* libPods-Qyer.a */; };
+		550463C91DE4A848000AA3F7 /* CityVSCountryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 550463C81DE4A848000AA3F7 /* CityVSCountryModel.m */; };
+		550463CE1DE4AA04000AA3F7 /* BournCityVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 550463CD1DE4AA04000AA3F7 /* BournCityVC.m */; };
+		550463D31DE4AE63000AA3F7 /* CityheadCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 550463D21DE4AE63000AA3F7 /* CityheadCell.m */; };
+		550463D61DE4AE94000AA3F7 /* HeaddownCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 550463D51DE4AE94000AA3F7 /* HeaddownCell.m */; };
 		5508C8B01DE144A700594AB5 /* bournModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5508C8AF1DE144A700594AB5 /* bournModel.m */; };
 		5508C8B41DE14A8F00594AB5 /* bournzonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5508C8B31DE14A8F00594AB5 /* bournzonCell.m */; };
 		5508C8B71DE14AB500594AB5 /* cityVScountryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5508C8B61DE14AB500594AB5 /* cityVScountryCell.m */; };
@@ -36,6 +40,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		550463C71DE4A848000AA3F7 /* CityVSCountryModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CityVSCountryModel.h; sourceTree = "<group>"; };
+		550463C81DE4A848000AA3F7 /* CityVSCountryModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CityVSCountryModel.m; sourceTree = "<group>"; };
+		550463CC1DE4AA04000AA3F7 /* BournCityVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BournCityVC.h; sourceTree = "<group>"; };
+		550463CD1DE4AA04000AA3F7 /* BournCityVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BournCityVC.m; sourceTree = "<group>"; };
+		550463D11DE4AE63000AA3F7 /* CityheadCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CityheadCell.h; sourceTree = "<group>"; };
+		550463D21DE4AE63000AA3F7 /* CityheadCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CityheadCell.m; sourceTree = "<group>"; };
+		550463D41DE4AE94000AA3F7 /* HeaddownCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeaddownCell.h; sourceTree = "<group>"; };
+		550463D51DE4AE94000AA3F7 /* HeaddownCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeaddownCell.m; sourceTree = "<group>"; };
 		5508C8AE1DE144A700594AB5 /* bournModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bournModel.h; sourceTree = "<group>"; };
 		5508C8AF1DE144A700594AB5 /* bournModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = bournModel.m; sourceTree = "<group>"; };
 		5508C8B21DE14A8F00594AB5 /* bournzonCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bournzonCell.h; sourceTree = "<group>"; };
@@ -112,16 +124,54 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		5508C8AD1DE1448500594AB5 /* 目的地Model */ = {
+		550463C51DE4A7E3000AA3F7 /* 目的城市VS国家Model */ = {
+			isa = PBXGroup;
+			children = (
+				550463C71DE4A848000AA3F7 /* CityVSCountryModel.h */,
+				550463C81DE4A848000AA3F7 /* CityVSCountryModel.m */,
+			);
+			name = "目的城市VS国家Model";
+			sourceTree = "<group>";
+		};
+		550463C61DE4A7E5000AA3F7 /* 目的分区与城市Model */ = {
 			isa = PBXGroup;
 			children = (
 				5508C8AE1DE144A700594AB5 /* bournModel.h */,
 				5508C8AF1DE144A700594AB5 /* bournModel.m */,
 			);
-			name = "目的地Model";
+			name = "目的分区与城市Model";
 			sourceTree = "<group>";
 		};
-		5508C8B81DE14ABA00594AB5 /* 目的地Cell */ = {
+		550463CA1DE4A9C3000AA3F7 /* 目的地国家与城市 */ = {
+			isa = PBXGroup;
+			children = (
+				550463CC1DE4AA04000AA3F7 /* BournCityVC.h */,
+				550463CD1DE4AA04000AA3F7 /* BournCityVC.m */,
+			);
+			name = "目的地国家与城市";
+			sourceTree = "<group>";
+		};
+		550463CB1DE4A9C6000AA3F7 /* 目的地列表 */ = {
+			isa = PBXGroup;
+			children = (
+				F4ADDC901DDF00C000C13254 /* BournViewController.h */,
+				F4ADDC911DDF00C000C13254 /* BournViewController.m */,
+			);
+			name = "目的地列表";
+			sourceTree = "<group>";
+		};
+		550463CF1DE4AD9C000AA3F7 /* 城市与国家详情列表Cell */ = {
+			isa = PBXGroup;
+			children = (
+				550463D11DE4AE63000AA3F7 /* CityheadCell.h */,
+				550463D21DE4AE63000AA3F7 /* CityheadCell.m */,
+				550463D41DE4AE94000AA3F7 /* HeaddownCell.h */,
+				550463D51DE4AE94000AA3F7 /* HeaddownCell.m */,
+			);
+			name = "城市与国家详情列表Cell";
+			sourceTree = "<group>";
+		};
+		550463D01DE4AD9F000AA3F7 /* 目的地分区与城市国家列表Cell */ = {
 			isa = PBXGroup;
 			children = (
 				5508C8B21DE14A8F00594AB5 /* bournzonCell.h */,
@@ -130,6 +180,24 @@
 				5508C8B61DE14AB500594AB5 /* cityVScountryCell.m */,
 				5508C8B91DE14E6800594AB5 /* countryCell.h */,
 				5508C8BA1DE14E6800594AB5 /* countryCell.m */,
+			);
+			name = "目的地分区与城市国家列表Cell";
+			sourceTree = "<group>";
+		};
+		5508C8AD1DE1448500594AB5 /* 目的地Model */ = {
+			isa = PBXGroup;
+			children = (
+				550463C61DE4A7E5000AA3F7 /* 目的分区与城市Model */,
+				550463C51DE4A7E3000AA3F7 /* 目的城市VS国家Model */,
+			);
+			name = "目的地Model";
+			sourceTree = "<group>";
+		};
+		5508C8B81DE14ABA00594AB5 /* 目的地Cell */ = {
+			isa = PBXGroup;
+			children = (
+				550463D01DE4AD9F000AA3F7 /* 目的地分区与城市国家列表Cell */,
+				550463CF1DE4AD9C000AA3F7 /* 城市与国家详情列表Cell */,
 			);
 			name = "目的地Cell";
 			sourceTree = "<group>";
@@ -311,8 +379,8 @@
 		F4ADDC7D1DDEFDEF00C13254 /* 目的地 */ = {
 			isa = PBXGroup;
 			children = (
-				F4ADDC901DDF00C000C13254 /* BournViewController.h */,
-				F4ADDC911DDF00C000C13254 /* BournViewController.m */,
+				550463CB1DE4A9C6000AA3F7 /* 目的地列表 */,
+				550463CA1DE4A9C3000AA3F7 /* 目的地国家与城市 */,
 			);
 			path = "目的地";
 			sourceTree = "<group>";
@@ -484,8 +552,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				550463CE1DE4AA04000AA3F7 /* BournCityVC.m in Sources */,
 				F4ADDC891DDF000D00C13254 /* CommunityViewController.m in Sources */,
 				F4ADDC921DDF00C000C13254 /* BournViewController.m in Sources */,
+				550463D61DE4AE94000AA3F7 /* HeaddownCell.m in Sources */,
 				F405057D1DE43275005FCD15 /* RecommendModel.m in Sources */,
 				F4A513771DDC60C2008AF2A1 /* NSObject+parse.m in Sources */,
 				F4B9E4AF1DDDE3D600254772 /* NetManager.m in Sources */,
@@ -498,7 +568,9 @@
 				F4A5136E1DDC60B2008AF2A1 /* QyerModel.m in Sources */,
 				5508C8B01DE144A700594AB5 /* bournModel.m in Sources */,
 				5508C8B71DE14AB500594AB5 /* cityVScountryCell.m in Sources */,
+				550463C91DE4A848000AA3F7 /* CityVSCountryModel.m in Sources */,
 				5508C8B41DE14A8F00594AB5 /* bournzonCell.m in Sources */,
+				550463D31DE4AE63000AA3F7 /* CityheadCell.m in Sources */,
 				F4ADDC831DDEFE4400C13254 /* MineViewController.m in Sources */,
 				854C209B1DDC5B4B00F5D5F4 /* ViewController.m in Sources */,
 				854C20981DDC5B4B00F5D5F4 /* AppDelegate.m in Sources */,

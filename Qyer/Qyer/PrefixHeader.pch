@@ -15,6 +15,10 @@
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
 
+
+#define WIDTH  [UIScreen mainScreen].bounds.size.width
+#define HEIGHT [UIScreen mainScreen].bounds.size.height
+
 #pragma mark - 第三方轮子
 #import <YYKit.h>
 #define MAS_SHORTHAND_GLOBALS
@@ -32,7 +36,11 @@
 #pragma mark - 各个页面数据Medel
 //目的地 数据
 #import "bournModel.h"
+#import "CityVSCountryModel.h"
 
+//目的地 界面
+#import "BournCityVC.h"
+#import "BournViewController.h"
 #pragma mark - 分类、网络请求
 #import "NSString+WX.h"
 #import "NSObject+parse.h"

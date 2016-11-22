@@ -63,7 +63,7 @@
         //布局 设置居中 底距离底部距离为 6；
         [self.pageC mas_makeConstraints:^(MASConstraintMaker *make) {
             make.centerX.equalTo(0);
-            make.bottom.equalTo(self.ic).offset(-3);
+            make.bottom.equalTo(-49);
         }];
         NSLog(@"--%@---",self.pageC);
         //添加搜索栏，并设置
@@ -154,6 +154,11 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+
+
+
+
 
 
 

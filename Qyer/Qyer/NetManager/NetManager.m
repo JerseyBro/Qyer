@@ -17,6 +17,11 @@
 #define kVisit @"http://open.qyer.com/qyer/home/home_city_info?city_ids=一定要酷%2C9819&client_id=qyer_ios&client_secret=cd254439208ab658ddf9&count=10&lat=22.64517627972826&lng=114.1987525574829&page=1&track_app_channel=App%2520Store&track_app_version=7.0.5&track_device_info=iPhone%25205s&track_deviceid=FDBE0B0B-FBBE-B527-56A9-00E955C14A7C&track_os=ios%252010.1.1&v=1"
 //  推荐内容数据宏
 #define kContent @"http://open.qyer.com/qyer/home/home_feed?client_id=qyer_ios&client_secret=cd254439208ab658ddf9&count=10&lat=22.6451641991634&lon=114.1987457779863&oauth_token=8e9d40965a20539beb6d8171e0ff9aeb&page=一定要帅&track_app_channel=App%2520Store&track_app_version=7.0.5&track_device_info=iPhone%25205s&track_deviceid=FDBE0B0B-FBBE-B527-56A9-00E955C14A7C&track_os=ios%252010.1.1&track_user_id=8556847&v=1"
+
+// 旅行商城页面的网络地址宏定义.
+#define kShoppingPath @"http://open.qyer.com/qyer/discount/zk/discount_index?client_id=qyer_ios&client_secret=cd254439208ab658ddf9&count=20&lat=22.64518681964929&lon=114.1987129509261&page=1&track_app_channel=App%2520Store&track_app_version=7.0.5&track_device_info=iPhone%25205&track_deviceid=30554DAE-A825-442E-95BE-82E8AEC35AD6&track_os=ios%25209.1&v=1"
+
+
 //  头部滑动
 +(id)getTouWithPage:(NSInteger)page completionHandler:(void (^)(QyerModel  *, NSError *))completionHandler{
     
@@ -57,6 +62,14 @@
         !completionHandler ?: completionHandler ([CityVSCountryModel parse:responseObj],error);
     }];
     
+}
+
+// 获取旅行商城的数据
++(id)getShoppingCompletionHandler:(void (^)(ShoppingModel *, NSError *))completionHandler
+{
+    return [self GET:kShoppingPath paramaters:nil completionHandler:^(id responseObj, NSError *error) {
+        !completionHandler ?: completionHandler([ShoppingModel parse:responseObj],error);
+    }];
 }
 
 @end

@@ -397,8 +397,7 @@
 		F4ADDC7F1DDEFDEF00C13254 /* 推荐 */ = {
 			isa = PBXGroup;
 			children = (
-				F4ADDC961DDF01BF00C13254 /* RecommendViewController.h */,
-				F4ADDC971DDF01BF00C13254 /* RecommendViewController.m */,
+				F4B221A51DE549C5005AEC81 /* 推荐滚动视图 */,
 			);
 			path = "推荐";
 			sourceTree = "<group>";
@@ -410,6 +409,15 @@
 				F4ADDC821DDEFE4400C13254 /* MineViewController.m */,
 			);
 			path = "我的";
+			sourceTree = "<group>";
+		};
+		F4B221A51DE549C5005AEC81 /* 推荐滚动视图 */ = {
+			isa = PBXGroup;
+			children = (
+				F4ADDC961DDF01BF00C13254 /* RecommendViewController.h */,
+				F4ADDC971DDF01BF00C13254 /* RecommendViewController.m */,
+			);
+			name = "推荐滚动视图";
 			sourceTree = "<group>";
 		};
 		F4B9E4AC1DDDE22300254772 /* Define */ = {

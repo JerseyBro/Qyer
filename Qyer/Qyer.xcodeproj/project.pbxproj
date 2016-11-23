@@ -46,6 +46,7 @@
 		9386D58F1DE581B000A6ADF8 /* AdvertisementView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9386D5891DE581B000A6ADF8 /* AdvertisementView.m */; };
 		9386D5901DE581B000A6ADF8 /* HongKongJapanView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9386D58B1DE581B000A6ADF8 /* HongKongJapanView.m */; };
 		9386D5911DE581B000A6ADF8 /* ShoppingHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9386D58D1DE581B000A6ADF8 /* ShoppingHeaderView.m */; };
+		9386D5971DE5A0D500A6ADF8 /* WorldCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9386D5961DE5A0D500A6ADF8 /* WorldCell.m */; };
 		F405057D1DE43275005FCD15 /* RecommendModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F405057C1DE43275005FCD15 /* RecommendModel.m */; };
 		F40505811DE45BA8005FCD15 /* RecommendViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F40505801DE45BA8005FCD15 /* RecommendViewModel.m */; };
 		F40505851DE48765005FCD15 /* RecommendCityCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F40505841DE48765005FCD15 /* RecommendCityCell.m */; };
@@ -140,6 +141,8 @@
 		9386D58B1DE581B000A6ADF8 /* HongKongJapanView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HongKongJapanView.m; sourceTree = "<group>"; };
 		9386D58C1DE581B000A6ADF8 /* ShoppingHeaderVIew.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShoppingHeaderVIew.h; sourceTree = "<group>"; };
 		9386D58D1DE581B000A6ADF8 /* ShoppingHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShoppingHeaderView.m; sourceTree = "<group>"; };
+		9386D5951DE5A0D500A6ADF8 /* WorldCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WorldCell.h; sourceTree = "<group>"; };
+		9386D5961DE5A0D500A6ADF8 /* WorldCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WorldCell.m; sourceTree = "<group>"; };
 		A04F497D9480ACCC7D65A036 /* Pods-Qyer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Qyer.release.xcconfig"; path = "Pods/Target Support Files/Pods-Qyer/Pods-Qyer.release.xcconfig"; sourceTree = "<group>"; };
 		B2B8C73DF8CFEFD16DD67BCE /* Pods-Qyer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Qyer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Qyer/Pods-Qyer.debug.xcconfig"; sourceTree = "<group>"; };
 		B9CE096C68FF0D6FCB7D0228 /* libPods-Qyer.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Qyer.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -437,6 +440,8 @@
 				9386D58B1DE581B000A6ADF8 /* HongKongJapanView.m */,
 				9386D58C1DE581B000A6ADF8 /* ShoppingHeaderVIew.h */,
 				9386D58D1DE581B000A6ADF8 /* ShoppingHeaderView.m */,
+				9386D5951DE5A0D500A6ADF8 /* WorldCell.h */,
+				9386D5961DE5A0D500A6ADF8 /* WorldCell.m */,
 			);
 			path = "旅行商城cell";
 			sourceTree = "<group>";
@@ -698,6 +703,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9386D5971DE5A0D500A6ADF8 /* WorldCell.m in Sources */,
 				550463CE1DE4AA04000AA3F7 /* BournCityVC.m in Sources */,
 				F4ADDC891DDF000D00C13254 /* CommunityViewController.m in Sources */,
 				9333271D1DE579AC00D65904 /* SDWebImageManager.m in Sources */,

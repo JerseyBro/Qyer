@@ -12,5 +12,4 @@
 
 -(NSURL *)wx_URL;
 
-
 @end

@@ -14,5 +14,4 @@
     return [NSURL URLWithString:self];
 }
 
-
 @end

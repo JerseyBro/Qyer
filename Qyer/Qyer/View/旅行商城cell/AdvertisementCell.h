@@ -10,6 +10,7 @@
 
 @interface AdvertisementCell : UITableViewCell
 // 声明广告View中用到的所有控件,为其属性.
+@property(nonatomic)  UIView   *view;
 @property(nonatomic)  UIButton *leftBtn;
 @property(nonatomic)  UIButton *rightUpBtn;
 @property(nonatomic)  UIButton *rightDownBtn;

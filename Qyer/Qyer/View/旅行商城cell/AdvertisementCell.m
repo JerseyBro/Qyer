@@ -9,24 +9,35 @@
 #import "AdvertisementCell.h"
 
 @implementation AdvertisementCell
+-(UIView *)view
+{
+    if (!_view)
+    {
+        _view = [UIView new];
+        [self.contentView addSubview:_view];
+        [_view mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.left.right.top.bottom.equalTo(0);
+            make.width.equalTo([UIScreen mainScreen].bounds.size.width);
+        }];
+        _view.backgroundColor = [UIColor whiteColor];
+    }
+    return _view;
+}
 
 -(UIButton *)leftBtn
 {
     if (!_leftBtn)
     {
         _leftBtn = [UIButton new];
-        [self.contentView addSubview:_leftBtn];
+        [self.view addSubview:_leftBtn];
         [_leftBtn mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.equalTo(0);
             make.top.equalTo(0);
             make.bottom.equalTo(0);
-            CGFloat width = [UIScreen mainScreen].bounds.size.width / 2;
-            //            make.width.equalTo(width);
-            //            make.height.equalTo(110);
+            CGFloat width = [UIScreen mainScreen].bounds.size.width / 2.0;
             make.width.equalTo(width);
-            //            make.edges.equalTo(0);
         }];
-        _leftBtn.imageView.contentMode = UIViewContentModeScaleToFill;
+        //_leftBtn.imageView.contentMode = UIViewContentModeScaleToFill;
     }
     return _leftBtn;
 }
@@ -36,41 +47,29 @@
     if (!_rightUpBtn)
     {
         _rightUpBtn = [UIButton new];
-        [self.contentView addSubview:_rightUpBtn];
+        [self.view addSubview:_rightUpBtn];
         [_rightUpBtn mas_makeConstraints:^(MASConstraintMaker *make) {
-            //            make.left.equalTo(self.rightDownBtn);
             make.left.equalTo(self.leftBtn.mas_right).offset(2.5);
             make.top.equalTo(0);
             make.right.equalTo(0);
-            //            make.bottom.equalTo(self)
-            //            make.top.equalTo(self.rightDownBtn.mas_bottom).offset(5);
-            //            make.right.bottom.equalTo(0);
         }];
     }
     
     return _rightUpBtn;
 }
-//
+
 -(UIButton *)rightDownBtn
 {
     if (!_rightDownBtn)
     {
         _rightDownBtn = [UIButton new];
-        [self.contentView addSubview:_rightDownBtn];
+        [self.view addSubview:_rightDownBtn];
         [_rightDownBtn mas_makeConstraints:^(MASConstraintMaker *make) {
-            //            make.left.equalTo(self.leftBtn.mas_right).offset(5);
-            //            make.top.equalTo(0);
-            //            make.right.equalTo(0);
             make.bottom.equalTo(0);
             make.right.equalTo(0);
             
             make.left.equalTo(self.rightUpBtn);
             make.top.equalTo(self.rightUpBtn.mas_bottom).offset(2.5);
-            
-            //            CGFloat width = self.leftBtn.width / 2;
-            //make.width.equalTo(self.leftBtn.mas_width);
-            //CGFloat hight = self.leftBtn.height / 2;
-            //make.height.equalTo(hight);
             make.size.equalTo(self.rightUpBtn);
             
         }];

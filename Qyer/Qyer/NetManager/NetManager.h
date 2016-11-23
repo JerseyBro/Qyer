@@ -25,4 +25,7 @@
 +(id) getBournModelCompletionHandeler:(void(^)(bournModel* model,NSError* error))completionHandeler;
 //获取点击进去后的城市数据信息
 +getBournCityVSCountryModelWithidField:(NSInteger)idField completionHandler:(void(^)(CityVSCountryModel  *pic ,NSError *error))completionHandler;
+// 获取旅行商城的所有数据.
++(id)getShoppingCompletionHandler:(void(^)(ShoppingModel *model,NSError *error))completionHandler;
+
 @end

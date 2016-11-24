@@ -570,36 +570,7 @@
 			path = "我的";
 			sourceTree = "<group>";
 		};
-<<<<<<< HEAD
-		F4B221A51DE549C5005AEC81 /* 推荐滚动视图 */ = {
-			isa = PBXGroup;
-			children = (
-				F4ADDC961DDF01BF00C13254 /* RecommendViewController.h */,
-				F4ADDC971DDF01BF00C13254 /* RecommendViewController.m */,
-			);
-			name = "推荐滚动视图";
-			sourceTree = "<group>";
-		};
-		F4B9E4AC1DDDE22300254772 /* Define */ = {
-			isa = PBXGroup;
-			children = (
-				F4B9E4AB1DDDE20900254772 /* Constant.h */,
-			);
-			path = Define;
-			sourceTree = "<group>";
-		};
-=======
->>>>>>> f399fb92b12b64b8addb17d14e113521f6bada4d
-		F4C5DF6D1DE3F48C0069B18C /* 推荐Model */ = {
-			isa = PBXGroup;
-			children = (
-				F405057E1DE454F0005FCD15 /* 推荐城市Model */,
-				F405057A1DE43234005FCD15 /* 推荐内容Model */,
-				F40505791DE431F5005FCD15 /* 推荐表头视图Model */,
-			);
-			name = "推荐Model";
-			sourceTree = "<group>";
-		};
+
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */

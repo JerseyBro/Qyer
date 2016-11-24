@@ -20,6 +20,9 @@
 		854C20981DDC5B4B00F5D5F4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 854C20971DDC5B4B00F5D5F4 /* AppDelegate.m */; };
 		854C209B1DDC5B4B00F5D5F4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 854C209A1DDC5B4B00F5D5F4 /* ViewController.m */; };
 		868502971DE76EBC00EEA569 /* RecommendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 868502961DE76EBC00EEA569 /* RecommendViewController.m */; };
+		8685029B1DE7707D00EEA569 /* RecommendModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8685029A1DE7707D00EEA569 /* RecommendModel.m */; };
+		8685029E1DE7711100EEA569 /* QyerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8685029D1DE7711100EEA569 /* QyerModel.m */; };
+		868502A11DE771B600EEA569 /* RecommendViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 868502A01DE771B600EEA569 /* RecommendViewModel.m */; };
 		933326E21DE5791500D65904 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 933326E11DE5791500D65904 /* LaunchScreen.storyboard */; };
 		933326E41DE5792600D65904 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 933326E31DE5792600D65904 /* Main.storyboard */; };
 		933326E61DE5793800D65904 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 933326E51DE5793800D65904 /* Assets.xcassets */; };
@@ -48,10 +51,7 @@
 		9386D5901DE581B000A6ADF8 /* HongKongJapanView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9386D58B1DE581B000A6ADF8 /* HongKongJapanView.m */; };
 		9386D5911DE581B000A6ADF8 /* ShoppingHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9386D58D1DE581B000A6ADF8 /* ShoppingHeaderView.m */; };
 		9386D5971DE5A0D500A6ADF8 /* WorldCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9386D5961DE5A0D500A6ADF8 /* WorldCell.m */; };
-		F405057D1DE43275005FCD15 /* RecommendModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F405057C1DE43275005FCD15 /* RecommendModel.m */; };
-		F40505811DE45BA8005FCD15 /* RecommendViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F40505801DE45BA8005FCD15 /* RecommendViewModel.m */; };
 		F40505851DE48765005FCD15 /* RecommendCityCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F40505841DE48765005FCD15 /* RecommendCityCell.m */; };
-		F4A5136E1DDC60B2008AF2A1 /* QyerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F4A5136D1DDC60B2008AF2A1 /* QyerModel.m */; };
 		F4A513751DDC60C2008AF2A1 /* NSString+WX.m in Sources */ = {isa = PBXBuildFile; fileRef = F4A513701DDC60C2008AF2A1 /* NSString+WX.m */; };
 		F4A513761DDC60C2008AF2A1 /* UIView+HUD.m in Sources */ = {isa = PBXBuildFile; fileRef = F4A513721DDC60C2008AF2A1 /* UIView+HUD.m */; };
 		F4A513771DDC60C2008AF2A1 /* NSObject+parse.m in Sources */ = {isa = PBXBuildFile; fileRef = F4A513741DDC60C2008AF2A1 /* NSObject+parse.m */; };
@@ -61,7 +61,6 @@
 		F4ADDC8F1DDF007000C13254 /* ShoppingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4ADDC8E1DDF007000C13254 /* ShoppingViewController.m */; };
 		F4ADDC921DDF00C000C13254 /* BournViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4ADDC911DDF00C000C13254 /* BournViewController.m */; };
 		F4ADDC951DDF013600C13254 /* AllViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4ADDC941DDF013600C13254 /* AllViewController.m */; };
-		F4ADDC981DDF01BF00C13254 /* RecommendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4ADDC971DDF01BF00C13254 /* RecommendViewController.m */; };
 		F4B9E4AF1DDDE3D600254772 /* NetManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F4B9E4AE1DDDE3D600254772 /* NetManager.m */; };
 /* End PBXBuildFile section */
 
@@ -91,6 +90,12 @@
 		854C20A41DDC5B4B00F5D5F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		868502951DE76EBC00EEA569 /* RecommendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecommendViewController.h; sourceTree = "<group>"; };
 		868502961DE76EBC00EEA569 /* RecommendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecommendViewController.m; sourceTree = "<group>"; };
+		868502991DE7707D00EEA569 /* RecommendModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecommendModel.h; sourceTree = "<group>"; };
+		8685029A1DE7707D00EEA569 /* RecommendModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecommendModel.m; sourceTree = "<group>"; };
+		8685029C1DE7711100EEA569 /* QyerModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QyerModel.h; sourceTree = "<group>"; };
+		8685029D1DE7711100EEA569 /* QyerModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QyerModel.m; sourceTree = "<group>"; };
+		8685029F1DE771B600EEA569 /* RecommendViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecommendViewModel.h; sourceTree = "<group>"; };
+		868502A01DE771B600EEA569 /* RecommendViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecommendViewModel.m; sourceTree = "<group>"; };
 		933326DF1DE576FD00D65904 /* Constant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constant.h; sourceTree = "<group>"; };
 		933326E11DE5791500D65904 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		933326E31DE5792600D65904 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
@@ -149,11 +154,8 @@
 		A04F497D9480ACCC7D65A036 /* Pods-Qyer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Qyer.release.xcconfig"; path = "Pods/Target Support Files/Pods-Qyer/Pods-Qyer.release.xcconfig"; sourceTree = "<group>"; };
 		B2B8C73DF8CFEFD16DD67BCE /* Pods-Qyer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Qyer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Qyer/Pods-Qyer.debug.xcconfig"; sourceTree = "<group>"; };
 		B9CE096C68FF0D6FCB7D0228 /* libPods-Qyer.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Qyer.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		F405057C1DE43275005FCD15 /* RecommendModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecommendModel.m; sourceTree = "<group>"; };
-		F40505801DE45BA8005FCD15 /* RecommendViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecommendViewModel.m; sourceTree = "<group>"; };
 		F40505831DE48765005FCD15 /* RecommendCityCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecommendCityCell.h; sourceTree = "<group>"; };
 		F40505841DE48765005FCD15 /* RecommendCityCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecommendCityCell.m; sourceTree = "<group>"; };
-		F4A5136D1DDC60B2008AF2A1 /* QyerModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QyerModel.m; sourceTree = "<group>"; };
 		F4A5136F1DDC60C2008AF2A1 /* NSString+WX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+WX.h"; sourceTree = "<group>"; };
 		F4A513701DDC60C2008AF2A1 /* NSString+WX.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+WX.m"; sourceTree = "<group>"; };
 		F4A513711DDC60C2008AF2A1 /* UIView+HUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+HUD.h"; sourceTree = "<group>"; };
@@ -173,7 +175,6 @@
 		F4ADDC911DDF00C000C13254 /* BournViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BournViewController.m; sourceTree = "<group>"; };
 		F4ADDC931DDF013600C13254 /* AllViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AllViewController.h; sourceTree = "<group>"; };
 		F4ADDC941DDF013600C13254 /* AllViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AllViewController.m; sourceTree = "<group>"; };
-		F4ADDC971DDF01BF00C13254 /* RecommendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecommendViewController.m; sourceTree = "<group>"; };
 		F4B9E4AD1DDDE3D600254772 /* NetManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetManager.h; sourceTree = "<group>"; };
 		F4B9E4AE1DDDE3D600254772 /* NetManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -339,6 +340,19 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		868502981DE76FF300EEA569 /* 推荐Model */ = {
+			isa = PBXGroup;
+			children = (
+				868502991DE7707D00EEA569 /* RecommendModel.h */,
+				8685029A1DE7707D00EEA569 /* RecommendModel.m */,
+				8685029C1DE7711100EEA569 /* QyerModel.h */,
+				8685029D1DE7711100EEA569 /* QyerModel.m */,
+				8685029F1DE771B600EEA569 /* RecommendViewModel.h */,
+				868502A01DE771B600EEA569 /* RecommendViewModel.m */,
+			);
+			path = "推荐Model";
+			sourceTree = "<group>";
+		};
 		9023DBB756C4AEBBE1B4701A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -481,6 +495,7 @@
 		F4A513671DDC60A3008AF2A1 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				868502981DE76FF300EEA569 /* 推荐Model */,
 				933327271DE57E0C00D65904 /* 旅行商城Model */,
 				5508C8AD1DE1448500594AB5 /* 目的地Model */,
 			);
@@ -672,7 +687,6 @@
 				868502971DE76EBC00EEA569 /* RecommendViewController.m in Sources */,
 				F4ADDC921DDF00C000C13254 /* BournViewController.m in Sources */,
 				550463D61DE4AE94000AA3F7 /* HeaddownCell.m in Sources */,
-				F405057D1DE43275005FCD15 /* RecommendModel.m in Sources */,
 				F4A513771DDC60C2008AF2A1 /* NSObject+parse.m in Sources */,
 				9333271C1DE579AC00D65904 /* SDWebImageDownloaderOperation.m in Sources */,
 				F4B9E4AF1DDDE3D600254772 /* NetManager.m in Sources */,
@@ -684,15 +698,16 @@
 				F4ADDC8F1DDF007000C13254 /* ShoppingViewController.m in Sources */,
 				9386D58F1DE581B000A6ADF8 /* AdvertisementView.m in Sources */,
 				5508C8BB1DE14E6800594AB5 /* countryCell.m in Sources */,
-				F4A5136E1DDC60B2008AF2A1 /* QyerModel.m in Sources */,
 				9386D5851DE5811900A6ADF8 /* ShoppingModel.m in Sources */,
 				933327201DE579AC00D65904 /* UIImage+GIF.m in Sources */,
 				933327161DE579AC00D65904 /* NSImage+WebCache.m in Sources */,
 				5508C8B01DE144A700594AB5 /* bournModel.m in Sources */,
 				5508C8B71DE14AB500594AB5 /* cityVScountryCell.m in Sources */,
+				8685029B1DE7707D00EEA569 /* RecommendModel.m in Sources */,
 				933327241DE579AC00D65904 /* UIImageView+WebCache.m in Sources */,
 				550463C91DE4A848000AA3F7 /* CityVSCountryModel.m in Sources */,
 				9333271F1DE579AC00D65904 /* UIButton+WebCache.m in Sources */,
+				868502A11DE771B600EEA569 /* RecommendViewModel.m in Sources */,
 				9333271B1DE579AC00D65904 /* SDWebImageDownloader.m in Sources */,
 				933327221DE579AC00D65904 /* UIImage+WebP.m in Sources */,
 				933327211DE579AC00D65904 /* UIImage+MultiFormat.m in Sources */,
@@ -707,14 +722,13 @@
 				9386D5911DE581B000A6ADF8 /* ShoppingHeaderView.m in Sources */,
 				854C209B1DDC5B4B00F5D5F4 /* ViewController.m in Sources */,
 				854C20981DDC5B4B00F5D5F4 /* AppDelegate.m in Sources */,
-				F4ADDC981DDF01BF00C13254 /* RecommendViewController.m in Sources */,
 				854C20951DDC5B4B00F5D5F4 /* main.m in Sources */,
 				9386D58E1DE581B000A6ADF8 /* AdvertisementCell.m in Sources */,
 				933327141DE579AC00D65904 /* MKAnnotationView+WebCache.m in Sources */,
-				F40505811DE45BA8005FCD15 /* RecommendViewModel.m in Sources */,
 				933327251DE579AC00D65904 /* UIView+WebCache.m in Sources */,
 				933327231DE579AC00D65904 /* UIImageView+HighlightedWebCache.m in Sources */,
 				933327151DE579AC00D65904 /* NSData+ImageContentType.m in Sources */,
+				8685029E1DE7711100EEA569 /* QyerModel.m in Sources */,
 				F4A513751DDC60C2008AF2A1 /* NSString+WX.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

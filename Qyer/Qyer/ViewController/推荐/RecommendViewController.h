@@ -2,8 +2,8 @@
 //  RecommendViewController.h
 //  Qyer
 //
-//  Created by “Skip、 on 2016/11/18.
-//  Copyright © 2016年 DKD. All rights reserved.
+//  Created by Yang Xiong on 25/11/2016.
+//  Copyright © 2016 DKD. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

@@ -16,13 +16,23 @@
 +(NSDictionary<NSString *,id> *)modelContainerPropertyGenericClass
 {
     return @{@"icon_list":@"ShoppingIconListModel",
-                    @"market_topic":@"ShoppingMarketTopicModel",
-             @"hot_area":@"ShoppingHotAreaModel"};
+             @"discount_topic":@"ShoppingDiscountTopicModel",
+             @"market_topic":@"ShoppingMarketTopicModel",
+             @"hot_area":@"ShoppingHotAreaModel",
+             @"hot_goods":@"ShoppingHotGoodsModel"};
 }
 @end
 
 @implementation ShoppingDiscountTopicModel
++(NSDictionary<NSString *,id> *)modelContainerPropertyGenericClass
+{
+    return @{@"list":@"ShoppingDisCountTopicListModel"};
+}
 
++(NSDictionary<NSString *,id> *)modelCustomPropertyMapper
+{
+    return @{@"topic0":@"0",@"topic1":@"1"};
+}
 @end
 
 @implementation ShoppingHotAreaModel
@@ -34,7 +44,10 @@
 @end
 
 @implementation ShoppingHotGoodsModel
-
++(NSDictionary<NSString *,id> *)modelCustomPropertyMapper
+{
+    return @{@"ID":@"id"};
+}
 @end
 
 @implementation ShoppingIconListModel
@@ -73,4 +86,31 @@
 {
     return @{@"ID":@"id"};
 }
+@end
+
+
+@implementation ShoppingDisCountTopic0Model
++(NSDictionary<NSString *,id> *)modelContainerPropertyGenericClass
+{
+    return @{@"list":@"ShoppingDisCountTopicListModel"};
+}
+@end
+
+@implementation ShoppingDisCountTopic1Model
++(NSDictionary<NSString *,id> *)modelContainerPropertyGenericClass
+{
+    return @{@"list":@"ShoppingDisCountTopicListModel"};
+}
+@end
+
+@implementation ShoppingDisCountTopicListModel
++(NSDictionary<NSString *,id> *)modelCustomPropertyMapper
+{
+    return @{@"ID":@"id"};
+}
+@end
+
+@implementation ShoppingDisCountTopicTopicModel
+
+
 @end

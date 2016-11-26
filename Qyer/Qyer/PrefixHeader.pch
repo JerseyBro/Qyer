@@ -62,6 +62,8 @@
 #import "AdvertisementCell.h"
 #import "HongKongJapanView.h"
 #import "WorldCell.h"
+#import "DiscountTopicCell.h"
+#import "HotGoodsCell.h"
 
 
 #endif /* PrefixHeader_pch */

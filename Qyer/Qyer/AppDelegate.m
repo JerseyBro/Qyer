@@ -24,7 +24,15 @@
     _window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     [_window makeKeyAndVisible];
     _window.rootViewController = [AllViewController new];
+    
+    [NetManager getShoppingCompletionHandler:^(ShoppingModel *model, NSError *error) {
+        NSLog(@"");
+    }];
+    
     return YES;
+    
+
+    
 }
 
 

@@ -1,14 +1,14 @@
 //
-//  WorldCell.m
+//  DiscountTopicCell.m
 //  Qyer
 //
-//  Created by tarena15 on 2016/11/23.
-//  Copyright © 2016年 DKD. All rights reserved.
+//  Created by Yang Xiong on 25/11/2016.
+//  Copyright © 2016 DKD. All rights reserved.
 //
 
-#import "WorldCell.h"
+#import "DiscountTopicCell.h"
 
-@implementation WorldCell
+@implementation DiscountTopicCell
 -(UIColor *)backgroundColor
 {
     return [UIColor colorWithRed:47 / 255.0 green:176 / 255.0 blue:116 / 255.0 alpha:1.0];
@@ -54,95 +54,24 @@
 }
 
 
--(NSArray<UIButton *> *)cityBtn
+-(UIButton *)topIV
 {
-    if (!_cityBtn)
+    if (!_topIV)
     {
-        NSMutableArray *tmpArr = [NSMutableArray new];
-        UIView *lastView = nil;
-        for (NSInteger i = 0; i < 4; i ++)
-        {
-            UIButton *btn = [UIButton new];
-            [self.cityView addSubview:btn];
-            [btn mas_makeConstraints:^(MASConstraintMaker *make) {
-                make.top.equalTo(self.cityTitle.mas_bottom).offset(20);
-                
-                if (i == 0)
-                {
-                    make.left.equalTo(20);
-                }
-                else
-                {
-                    make.left.equalTo(lastView.mas_right).equalTo(10);
-                    make.width.equalTo(lastView);
-                    if (i == 3)
-                    {
-                        make.right.equalTo(-20);
-                    }
-                }
-                
-            }];
-            btn.layer.cornerRadius = 0.5;
-            btn.clipsToBounds = YES;
-            // 设置毛玻璃
-            UIBlurEffect *effect = [UIBlurEffect effectWithStyle:UIBlurEffectStyleDark];
-            UIVisualEffectView *effectView = [[UIVisualEffectView alloc] initWithEffect:effect];
-            effectView.alpha = .3;
-            
-            [btn addSubview:effectView];
-            [effectView mas_makeConstraints:^(MASConstraintMaker *make) {
-                make.edges.equalTo(0);
-            }];
-
-            lastView = btn;
-            [tmpArr addObject:btn];
-        }
-        _cityBtn = tmpArr.copy;
-        
+        _topIV = [UIButton new];
+        [self.contentView addSubview:_topIV];
+        [_topIV mas_makeConstraints:^(MASConstraintMaker *make) {
+            //CGFloat topHeight = self.contentView.size.height * (1 / 4.0);
+            make.left.equalTo(20);
+            make.right.equalTo(-20);
+            make.top.equalTo(self.cityTitle.mas_bottom).offset(20);
+            make.height.equalTo(120);
+        }];
+        _topIV.layer.cornerRadius = 4.0;
+        _topIV.clipsToBounds = YES;
     }
-    return _cityBtn;
+    return _topIV;
 }
-
-
--(NSArray<UILabel *> *)cityName
-{
-    if (!_cityName)
-    {
-        NSMutableArray *tmpArr = [NSMutableArray new];
-        UIView *lastView = nil;
-        for (NSInteger i = 0; i < 4; i ++)
-        {
-            UILabel *name = [UILabel new];
-            [self.cityView addSubview:name];
-            [name mas_makeConstraints:^(MASConstraintMaker *make) {
-                make.top.equalTo(self.cityTitle.mas_bottom).offset(45);
-                
-                if (i == 0)
-                {
-                    make.left.equalTo(20);
-                }
-                else
-                {
-                    make.left.equalTo(lastView.mas_right).equalTo(30);
-                    make.width.equalTo(lastView);
-                    if (i == 3)
-                    {
-                        make.right.equalTo(-20);
-                    }
-                }
-                
-            }];
-            name.textColor = [UIColor whiteColor];
-            name.textAlignment = NSTextAlignmentCenter;
-            lastView = name;
-            [tmpArr addObject:name];
-        }
-        _cityName = tmpArr.copy;
-        
-    }
-    return _cityName;
-}
-
 
 -(UIButton *)cityDetail01Btn
 {
@@ -152,7 +81,7 @@
         [self.cityView addSubview:_cityDetail01Btn];
         [_cityDetail01Btn mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.equalTo(20);
-            make.top.equalTo(self.cityBtn.lastObject.mas_bottom).offset(20);
+            make.top.equalTo(self.topIV.mas_bottom).offset(20);
             make.right.equalTo(-20);
             make.width.equalTo(300);
             //make.height.lessThanOrEqualTo(self.cityBtn.lastObject.mas_height).offset(10);
@@ -188,6 +117,26 @@
     return _cityDetail02Btn;
 }
 
+-(UIButton *)cityDetail03Btn
+{
+    if (!_cityDetail03Btn)
+    {
+        _cityDetail03Btn = [UIButton new];
+        [self.cityView addSubview:_cityDetail03Btn];
+        [_cityDetail03Btn mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.left.right.equalTo(self.cityDetail01Btn);
+            make.top.equalTo(self.cityDetail02Btn.mas_bottom).offset(20);
+            make.width.height.equalTo(self.cityDetail01Btn);
+        }];
+        _cityDetail03Btn.layer.borderWidth = 1;
+        _cityDetail03Btn.layer.borderColor = self.buttonBorderColor.CGColor;
+        _cityDetail03Btn.layer.cornerRadius = 3.0;
+        _cityDetail03Btn.clipsToBounds = YES;
+    }
+    
+    return _cityDetail03Btn;
+}
+
 -(UIImageView *)cityPic1
 {
     if (!_cityPic1)
@@ -196,8 +145,8 @@
         [self.cityDetail01Btn addSubview:_cityPic1];
         [_cityPic1 mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.top.bottom.equalTo(0);
-            make.width.equalTo(self.cityBtn.lastObject);
-            make.height.lessThanOrEqualTo(self.cityBtn.lastObject.mas_height).offset(10);
+            make.width.equalTo(80);
+            make.height.equalTo(self.cityDetail01Btn);
         }];
     }
     
@@ -212,12 +161,28 @@
         [self.cityDetail02Btn addSubview:_cityPic2];
         [_cityPic2 mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.top.bottom.equalTo(0);
-            make.width.equalTo(self.cityBtn.lastObject);
+            make.width.equalTo(self.cityPic1);
             make.height.equalTo(self.cityPic1);
         }];
     }
     
     return _cityPic2;
+}
+
+-(UIImageView *)cityPic3
+{
+    if (!_cityPic3)
+    {
+        _cityPic3 = [UIImageView new];
+        [self.cityDetail03Btn addSubview:_cityPic3];
+        [_cityPic3 mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.left.top.bottom.equalTo(0);
+            make.width.equalTo(self.cityPic1);
+            make.height.equalTo(self.cityPic1);
+        }];
+    }
+    
+    return _cityPic3;
 }
 
 -(UILabel *)title1LB
@@ -256,6 +221,24 @@
     return _title2LB;
 }
 
+-(UILabel *)title3LB
+{
+    if (!_title3LB)
+    {
+        _title3LB = [UILabel new];
+        [self.cityDetail03Btn addSubview:_title3LB];
+        [_title3LB mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.left.equalTo(self.cityPic3.mas_right).offset(10);
+            make.top.equalTo(3);
+            make.right.equalTo(-10);
+        }];
+        _title3LB.numberOfLines = 2;
+        _title3LB.font = [UIFont systemFontOfSize:15.0];
+    }
+    
+    return _title3LB;
+}
+
 -(UILabel *)sold1LB
 {
     if (!_sold1LB)
@@ -290,6 +273,23 @@
     return _sold2LB;
 }
 
+-(UILabel *)sold3LB
+{
+    if (!_sold3LB)
+    {
+        _sold3LB = [UILabel new];
+        [self.cityDetail03Btn addSubview:_sold3LB];
+        [_sold3LB mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.left.equalTo(self.title3LB);
+            make.bottom.equalTo(-3);
+        }];
+        _sold3LB.font = [UIFont systemFontOfSize:13.0];
+        _sold3LB.textColor = [UIColor lightGrayColor];
+    }
+    
+    return _sold3LB;
+}
+
 -(UILabel *)price1LB
 {
     if (!_price1LB)
@@ -322,6 +322,23 @@
     }
     
     return _price2LB;
+}
+
+-(UILabel *)price3LB
+{
+    if (!_price3LB)
+    {
+        _price3LB = [UILabel new];
+        [self.cityDetail03Btn addSubview:_price3LB];
+        [_price3LB mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.right.equalTo(-10);
+            make.bottom.equalTo(-3);
+        }];
+        _price3LB.font = [UIFont systemFontOfSize:16.0];
+        _price3LB.textColor = [UIColor redColor];
+    }
+    
+    return _price3LB;
 }
 
 -(UIButton *)moreContentBtn

@@ -19,6 +19,8 @@
 		854C20951DDC5B4B00F5D5F4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 854C20941DDC5B4B00F5D5F4 /* main.m */; };
 		854C20981DDC5B4B00F5D5F4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 854C20971DDC5B4B00F5D5F4 /* AppDelegate.m */; };
 		854C209B1DDC5B4B00F5D5F4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 854C209A1DDC5B4B00F5D5F4 /* ViewController.m */; };
+		86344B5E1DE87EED00C1842B /* DiscountTopicCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 86344B5D1DE87EED00C1842B /* DiscountTopicCell.m */; };
+		86344B611DE87F0200C1842B /* HotGoodsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 86344B601DE87F0200C1842B /* HotGoodsCell.m */; };
 		868502971DE76EBC00EEA569 /* RecommendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 868502961DE76EBC00EEA569 /* RecommendViewController.m */; };
 		8685029B1DE7707D00EEA569 /* RecommendModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8685029A1DE7707D00EEA569 /* RecommendModel.m */; };
 		8685029E1DE7711100EEA569 /* QyerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8685029D1DE7711100EEA569 /* QyerModel.m */; };
@@ -88,6 +90,10 @@
 		854C20991DDC5B4B00F5D5F4 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ViewController.h; path = Qyer/ViewController.h; sourceTree = SOURCE_ROOT; };
 		854C209A1DDC5B4B00F5D5F4 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = ViewController.m; path = Qyer/ViewController.m; sourceTree = SOURCE_ROOT; };
 		854C20A41DDC5B4B00F5D5F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		86344B5C1DE87EED00C1842B /* DiscountTopicCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiscountTopicCell.h; sourceTree = "<group>"; };
+		86344B5D1DE87EED00C1842B /* DiscountTopicCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiscountTopicCell.m; sourceTree = "<group>"; };
+		86344B5F1DE87F0200C1842B /* HotGoodsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HotGoodsCell.h; sourceTree = "<group>"; };
+		86344B601DE87F0200C1842B /* HotGoodsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HotGoodsCell.m; sourceTree = "<group>"; };
 		868502951DE76EBC00EEA569 /* RecommendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecommendViewController.h; sourceTree = "<group>"; };
 		868502961DE76EBC00EEA569 /* RecommendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecommendViewController.m; sourceTree = "<group>"; };
 		868502991DE7707D00EEA569 /* RecommendModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecommendModel.h; sourceTree = "<group>"; };
@@ -455,6 +461,10 @@
 				9386D58D1DE581B000A6ADF8 /* ShoppingHeaderView.m */,
 				9386D5951DE5A0D500A6ADF8 /* WorldCell.h */,
 				9386D5961DE5A0D500A6ADF8 /* WorldCell.m */,
+				86344B5C1DE87EED00C1842B /* DiscountTopicCell.h */,
+				86344B5D1DE87EED00C1842B /* DiscountTopicCell.m */,
+				86344B5F1DE87F0200C1842B /* HotGoodsCell.h */,
+				86344B601DE87F0200C1842B /* HotGoodsCell.m */,
 			);
 			path = "旅行商城cell";
 			sourceTree = "<group>";
@@ -709,6 +719,7 @@
 				9333271F1DE579AC00D65904 /* UIButton+WebCache.m in Sources */,
 				868502A11DE771B600EEA569 /* RecommendViewModel.m in Sources */,
 				9333271B1DE579AC00D65904 /* SDWebImageDownloader.m in Sources */,
+				86344B5E1DE87EED00C1842B /* DiscountTopicCell.m in Sources */,
 				933327221DE579AC00D65904 /* UIImage+WebP.m in Sources */,
 				933327211DE579AC00D65904 /* UIImage+MultiFormat.m in Sources */,
 				933327181DE579AC00D65904 /* SDImageCacheConfig.m in Sources */,
@@ -722,6 +733,7 @@
 				9386D5911DE581B000A6ADF8 /* ShoppingHeaderView.m in Sources */,
 				854C209B1DDC5B4B00F5D5F4 /* ViewController.m in Sources */,
 				854C20981DDC5B4B00F5D5F4 /* AppDelegate.m in Sources */,
+				86344B611DE87F0200C1842B /* HotGoodsCell.m in Sources */,
 				854C20951DDC5B4B00F5D5F4 /* main.m in Sources */,
 				9386D58E1DE581B000A6ADF8 /* AdvertisementCell.m in Sources */,
 				933327141DE579AC00D65904 /* MKAnnotationView+WebCache.m in Sources */,

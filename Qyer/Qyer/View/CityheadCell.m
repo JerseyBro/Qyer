@@ -10,42 +10,61 @@
 
 @implementation CityheadCell
 
--(iCarousel *)icvc
+-(UIImageView *)image
 {
-    if (!_icvc) {
-        _icvc = [iCarousel new];
-        [self.contentView addSubview:_icvc];
-        [_icvc mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.edges.equalTo(UIEdgeInsetsMake(0, 0, 50, 0));
+    if (!_image) {
+        _image = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"CC_Guide_10x24_"]];
+//        [_image2 setImageURL:@"http://pic.qyer.com/public/mobileapp/startbanner/2016/04/12/14604562592918".wx_URL];
+        [self.contentView addSubview:_image];
+        [_image mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.centerY.equalTo(0);
+            make.left.equalTo(20);
         }];
-//        _icvc.delegate = self;
-//        _icvc.dataSource = self;
-        _icvc.scrollSpeed = 0;
-        
     }
-    return _icvc;
+    return _image;
 }
-#pragma mark ----- icvc  数据源  代理
-//设置分区
--(NSInteger)numberOfItemsInCarousel:(iCarousel *)carousel
+
+-(UILabel *)cityName
 {
-    return self.picture.count;
-}
-//  每个 carousel 显示什么
--(UIView*)carousel:(iCarousel *)carousel viewForItemAtIndex:(NSInteger)index reusingView:(UIView *)view
-{
-    if (!view) {
-     view = [UIImageView new];
+    if (!_cityName) {
+        _cityName = [UILabel new];
+        [self.contentView addSubview:_cityName];
+        _cityName.textAlignment = NSTextAlignmentLeft;
+        _cityName.font = [UIFont systemFontOfSize:15];
+        [_cityName mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.left.equalTo(self.image.mas_right).offset(15);
+            make.centerY.equalTo(0);
+        }];
     }
-    [((UIImageView*)view) setImageURL:self.picture[index].wx_URL];
-    return view;
+    return _cityName;
 }
-//     设置允许循环滚动
--(CGFloat)carousel:(iCarousel *)carousel valueForOption:(iCarouselOption)option withDefault:(CGFloat)value
+
+-(UILabel *)bookNum
 {
-    if (option == iCarouselOptionWrap) {
-        value = YES;
+    if (!_bookNum) {
+        _bookNum = [UILabel new];
+        _bookNum.font = [UIFont systemFontOfSize:12];
+        _bookNum.textColor = [UIColor grayColor];
+        [self.contentView addSubview:_bookNum];
+        [_bookNum mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.right.equalTo(-40);
+            make.centerY.equalTo(0);
+        }];
     }
-    return value;
+    return _bookNum;
 }
+
+-(UIImageView *)image2
+{
+    if (!_image2) {
+        _image2 = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"arrow_gray"]];
+        [self.contentView addSubview:_image2];
+        [_image2 mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.centerY.equalTo(0);
+            make.right.equalTo(-25);
+        }];
+    }
+    return _image2;
+}
+
 @end

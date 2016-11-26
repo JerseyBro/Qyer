@@ -8,6 +8,16 @@
 
 #import <UIKit/UIKit.h>
 
-@interface HeaddownCell : UICollectionViewCell
+@interface HeaddownCell : UICollectionReusableView
+//@property(nonatomic ) iCarousel* icvc;
 
+@property(nonatomic ) UIButton*  goback;
+
+@property(nonatomic ) UILabel* cnname;
+
+@property(nonatomic ) UILabel* enname;
+
+@property(nonatomic ) UILabel* info;
+
+@property(nonatomic ) UIButton* tour;
 @end

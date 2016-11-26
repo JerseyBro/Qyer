@@ -103,6 +103,8 @@
             [self.cityVC reloadData];
         }
     }];
+    
+    self.view.backgroundColor = [UIColor whiteColor];
   
 }
 

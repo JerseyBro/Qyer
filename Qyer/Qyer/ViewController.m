@@ -8,7 +8,7 @@
 
 #import "ViewController.h"
 
-@interface ViewController ()<iCarouselDelegate,iCarouselDataSource>
+@interface ViewController ()
 
 @end
 

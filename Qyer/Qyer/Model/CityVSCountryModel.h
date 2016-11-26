@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@class CiCodataModel,CiCoextraModel,CiCocityPicModel,CiCoRecommendTag,CiCoweatherModel,CiConotMissModel,CiCorecommendDiscountModel,CiCoiconListModel,CiCotravelNecessaryModel,CiComguideListsdataModel,CiCoweatherModel;
+@class CiCodataModel,CiCoextraModel,CiCocityPicModel,CiCoRecommendTag,CiCoweatherModel,CiConot_missModel,CiCoeventsModel,CiCopoisModel,CiCorecommendDiscountModel,CiCoiconListModel,CiCotravelNecessaryModel,CiComguideListsdataModel,CiCoweatherModel;
 @interface CityVSCountryModel : NSObject
 
 @property (nonatomic, strong) CiCodataModel * data;
@@ -25,7 +25,7 @@
 //city_id         城市 id
 @property (nonatomic, assign) NSInteger city_id;
 //city_map       地图图片连接
-@property (nonatomic, strong) NSString * cityMap;
+@property (nonatomic, strong) NSString * city_map;
 // //  表头照片数组
 // cityPic - > city_Pic
 /***
@@ -52,7 +52,7 @@
 //mguide_lists       指南书把但是还不知道是哪里的数据
 @property (nonatomic, strong) NSArray<CiComguideListsdataModel*> * mguideLists;
 //not_miss    TOP必去 里面 有 两个数组 第一个数组装的是 Top10 两个 .  下面一个数组装的是 6个景点的数据.   暂时不
-@property (nonatomic, strong) CiConotMissModel * notMiss;
+@property (nonatomic, strong) CiConot_missModel * not_miss;
 @property (nonatomic, assign) NSInteger planto;
 //recommend_discount
 // 推荐玩法 数组里有字典   是一个类对象. 还的继续取 有6个对象
@@ -96,11 +96,53 @@
 @property (nonatomic, assign) NSInteger raSwitch;
 
 @end
-
+/***
+ **
+ **     天气信息
+ **
+ ***/
 @interface CiCoweatherModel : NSObject
 
 @property (nonatomic, strong) NSString * high_temp;
 @property (nonatomic, strong) NSString * info;
 @property (nonatomic, strong) NSString * low_temp;
+
+@end
+/***
+ **
+ **     Top必去
+ **
+ ***/
+@interface CiConot_missModel : NSObject
+
+@property (nonatomic, strong) NSArray<CiCoeventsModel*> * events;
+
+@property (nonatomic, strong) NSArray<CiCopoisModel*> * pois;
+@end
+
+@interface CiCoeventsModel : NSObject
+
+@property (nonatomic, strong) NSString * icon;
+@property (nonatomic, assign) NSInteger idField;
+@property (nonatomic, strong) NSString * name;
+@property (nonatomic, strong) NSString * photo;
+@property (nonatomic, strong) NSString * url;
+
+
+@end
+
+@interface CiCopoisModel : NSObject
+
+
+
+@property (nonatomic, strong) NSString * grade;
+// id - > idField
+@property (nonatomic, assign) NSInteger idField;
+@property (nonatomic, strong) NSString * name;
+@property (nonatomic, strong) NSString * photo;
+@property (nonatomic, strong) NSString * price;
+@property (nonatomic, strong) NSString * productType;
+@property (nonatomic, strong) NSString * url;
+
 
 @end

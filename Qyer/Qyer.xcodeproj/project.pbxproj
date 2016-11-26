@@ -16,11 +16,15 @@
 		5508C8B41DE14A8F00594AB5 /* bournzonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5508C8B31DE14A8F00594AB5 /* bournzonCell.m */; };
 		5508C8B71DE14AB500594AB5 /* cityVScountryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5508C8B61DE14AB500594AB5 /* cityVScountryCell.m */; };
 		5508C8BB1DE14E6800594AB5 /* countryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5508C8BA1DE14E6800594AB5 /* countryCell.m */; };
+		55FC55B91DE842B9005B66FF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55FC55B81DE842B9005B66FF /* Images.xcassets */; };
+		55FC55BC1DE8634E005B66FF /* TwoHeaddownCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 55FC55BB1DE8634E005B66FF /* TwoHeaddownCell.m */; };
+		55FC55BF1DE89AD5005B66FF /* ThreeHeaddownCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 55FC55BE1DE89AD5005B66FF /* ThreeHeaddownCell.m */; };
+		55FC55C21DE8BD7C005B66FF /* ThreeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 55FC55C11DE8BD7C005B66FF /* ThreeCell.m */; };
+		55FC55C51DE8D729005B66FF /* HeadCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 55FC55C41DE8D729005B66FF /* HeadCell.m */; };
 		854C20951DDC5B4B00F5D5F4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 854C20941DDC5B4B00F5D5F4 /* main.m */; };
 		854C20981DDC5B4B00F5D5F4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 854C20971DDC5B4B00F5D5F4 /* AppDelegate.m */; };
 		854C209B1DDC5B4B00F5D5F4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 854C209A1DDC5B4B00F5D5F4 /* ViewController.m */; };
 		854C209E1DDC5B4B00F5D5F4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 854C209C1DDC5B4B00F5D5F4 /* Main.storyboard */; };
-		854C20A01DDC5B4B00F5D5F4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 854C209F1DDC5B4B00F5D5F4 /* Assets.xcassets */; };
 		854C20A31DDC5B4B00F5D5F4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 854C20A11DDC5B4B00F5D5F4 /* LaunchScreen.storyboard */; };
 		F405057D1DE43275005FCD15 /* RecommendModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F405057C1DE43275005FCD15 /* RecommendModel.m */; };
 		F40505811DE45BA8005FCD15 /* RecommendViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F40505801DE45BA8005FCD15 /* RecommendViewModel.m */; };
@@ -56,6 +60,15 @@
 		5508C8B61DE14AB500594AB5 /* cityVScountryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = cityVScountryCell.m; sourceTree = "<group>"; };
 		5508C8B91DE14E6800594AB5 /* countryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = countryCell.h; sourceTree = "<group>"; };
 		5508C8BA1DE14E6800594AB5 /* countryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = countryCell.m; sourceTree = "<group>"; };
+		55FC55B81DE842B9005B66FF /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = ../Images.xcassets; sourceTree = "<group>"; };
+		55FC55BA1DE8634E005B66FF /* TwoHeaddownCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwoHeaddownCell.h; sourceTree = "<group>"; };
+		55FC55BB1DE8634E005B66FF /* TwoHeaddownCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwoHeaddownCell.m; sourceTree = "<group>"; };
+		55FC55BD1DE89AD5005B66FF /* ThreeHeaddownCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThreeHeaddownCell.h; sourceTree = "<group>"; };
+		55FC55BE1DE89AD5005B66FF /* ThreeHeaddownCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThreeHeaddownCell.m; sourceTree = "<group>"; };
+		55FC55C01DE8BD7C005B66FF /* ThreeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThreeCell.h; sourceTree = "<group>"; };
+		55FC55C11DE8BD7C005B66FF /* ThreeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThreeCell.m; sourceTree = "<group>"; };
+		55FC55C31DE8D729005B66FF /* HeadCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeadCell.h; sourceTree = "<group>"; };
+		55FC55C41DE8D729005B66FF /* HeadCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeadCell.m; sourceTree = "<group>"; };
 		854C20901DDC5B4B00F5D5F4 /* Qyer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Qyer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		854C20941DDC5B4B00F5D5F4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		854C20961DDC5B4B00F5D5F4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -63,7 +76,6 @@
 		854C20991DDC5B4B00F5D5F4 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ViewController.h; path = Qyer/ViewController.h; sourceTree = SOURCE_ROOT; };
 		854C209A1DDC5B4B00F5D5F4 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = ViewController.m; path = Qyer/ViewController.m; sourceTree = SOURCE_ROOT; };
 		854C209D1DDC5B4B00F5D5F4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		854C209F1DDC5B4B00F5D5F4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../Assets.xcassets; sourceTree = "<group>"; };
 		854C20A21DDC5B4B00F5D5F4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		854C20A41DDC5B4B00F5D5F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A04F497D9480ACCC7D65A036 /* Pods-Qyer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Qyer.release.xcconfig"; path = "Pods/Target Support Files/Pods-Qyer/Pods-Qyer.release.xcconfig"; sourceTree = "<group>"; };
@@ -167,6 +179,15 @@
 				550463D21DE4AE63000AA3F7 /* CityheadCell.m */,
 				550463D41DE4AE94000AA3F7 /* HeaddownCell.h */,
 				550463D51DE4AE94000AA3F7 /* HeaddownCell.m */,
+				55FC55C31DE8D729005B66FF /* HeadCell.h */,
+				55FC55C41DE8D729005B66FF /* HeadCell.m */,
+				55FC55BA1DE8634E005B66FF /* TwoHeaddownCell.h */,
+				55FC55BB1DE8634E005B66FF /* TwoHeaddownCell.m */,
+				55FC55BD1DE89AD5005B66FF /* ThreeHeaddownCell.h */,
+				55FC55BE1DE89AD5005B66FF /* ThreeHeaddownCell.m */,
+				55FC55C01DE8BD7C005B66FF /* ThreeCell.h */,
+				55FC55C11DE8BD7C005B66FF /* ThreeCell.m */,
+				55FC55B81DE842B9005B66FF /* Images.xcassets */,
 			);
 			name = "城市与国家详情列表Cell";
 			sourceTree = "<group>";
@@ -237,11 +258,11 @@
 		854C20921DDC5B4B00F5D5F4 /* Qyer */ = {
 			isa = PBXGroup;
 			children = (
-				553928541DDE333300D72F47 /* ViewController */,
 				F4B9E4AC1DDDE22300254772 /* Define */,
 				F4A513651DDC60A3008AF2A1 /* Category */,
 				F4A513661DDC60A3008AF2A1 /* NetManager */,
 				F4A513671DDC60A3008AF2A1 /* Model */,
+				553928541DDE333300D72F47 /* ViewController */,
 				F4A513681DDC60A3008AF2A1 /* View */,
 				F4A513691DDC60A3008AF2A1 /* Resource */,
 				F4A5136A1DDC60A3008AF2A1 /* Vendor */,
@@ -354,7 +375,6 @@
 			isa = PBXGroup;
 			children = (
 				854C209C1DDC5B4B00F5D5F4 /* Main.storyboard */,
-				854C209F1DDC5B4B00F5D5F4 /* Assets.xcassets */,
 				854C20A11DDC5B4B00F5D5F4 /* LaunchScreen.storyboard */,
 			);
 			path = Resource;
@@ -492,7 +512,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				854C20A31DDC5B4B00F5D5F4 /* LaunchScreen.storyboard in Resources */,
-				854C20A01DDC5B4B00F5D5F4 /* Assets.xcassets in Resources */,
+				55FC55B91DE842B9005B66FF /* Images.xcassets in Resources */,
 				854C209E1DDC5B4B00F5D5F4 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -552,6 +572,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				55FC55BF1DE89AD5005B66FF /* ThreeHeaddownCell.m in Sources */,
 				550463CE1DE4AA04000AA3F7 /* BournCityVC.m in Sources */,
 				F4ADDC891DDF000D00C13254 /* CommunityViewController.m in Sources */,
 				F4ADDC921DDF00C000C13254 /* BournViewController.m in Sources */,
@@ -561,6 +582,8 @@
 				F4B9E4AF1DDDE3D600254772 /* NetManager.m in Sources */,
 				F4A5137E1DDC642F008AF2A1 /* BaseNetManager.m in Sources */,
 				F4A513761DDC60C2008AF2A1 /* UIView+HUD.m in Sources */,
+				55FC55BC1DE8634E005B66FF /* TwoHeaddownCell.m in Sources */,
+				55FC55C51DE8D729005B66FF /* HeadCell.m in Sources */,
 				F40505851DE48765005FCD15 /* RecommendCityCell.m in Sources */,
 				F4ADDC951DDF013600C13254 /* AllViewController.m in Sources */,
 				F4ADDC8F1DDF007000C13254 /* ShoppingViewController.m in Sources */,
@@ -569,6 +592,7 @@
 				5508C8B01DE144A700594AB5 /* bournModel.m in Sources */,
 				5508C8B71DE14AB500594AB5 /* cityVScountryCell.m in Sources */,
 				550463C91DE4A848000AA3F7 /* CityVSCountryModel.m in Sources */,
+				55FC55C21DE8BD7C005B66FF /* ThreeCell.m in Sources */,
 				5508C8B41DE14A8F00594AB5 /* bournzonCell.m in Sources */,
 				550463D31DE4AE63000AA3F7 /* CityheadCell.m in Sources */,
 				F4ADDC831DDEFE4400C13254 /* MineViewController.m in Sources */,
@@ -697,11 +721,13 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B2B8C73DF8CFEFD16DD67BCE /* Pods-Qyer.debug.xcconfig */;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				GCC_PREFIX_HEADER = "$(PRODUCT_NAME)/PrefixHeader.pch";
 				INFOPLIST_FILE = Qyer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = DKD.Qyer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -709,11 +735,13 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A04F497D9480ACCC7D65A036 /* Pods-Qyer.release.xcconfig */;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				GCC_PREFIX_HEADER = "$(PRODUCT_NAME)/PrefixHeader.pch";
 				INFOPLIST_FILE = Qyer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = DKD.Qyer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

@@ -8,21 +8,17 @@
 
 #import <UIKit/UIKit.h>
 //#import <iCarousel.h>
-@interface CityheadCell : UICollectionViewCell <iCarouselDelegate,iCarouselDataSource>
+@interface CityheadCell : UICollectionViewCell
 
-@property(nonatomic ) NSArray<NSString*>* picture;
+@property(nonatomic ) UIImageView* image;
 
-@property(nonatomic ) iCarousel* icvc;
+@property(nonatomic ) UILabel*  cityName;
 
-@property(nonatomic ) UIButton*  goback;
+@property(nonatomic ) UILabel*  bookNum;
 
-@property(nonatomic ) UILabel* cnname;
+@property(nonatomic)   UIImageView* image2;
 
-@property(nonatomic ) UILabel* enname;
+//-(UIImageView *)image;
+//-(UIImageView *)image2;
 
-@property(nonatomic ) UILabel* info;
-
-@property(nonatomic ) UIButton* tour;
-
-@property(nonatomic ) UIView*  topView;
 @end

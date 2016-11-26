@@ -2,8 +2,8 @@
 //  RecommendViewController.m
 //  Qyer
 //
-//  Created by “Skip、 on 2016/11/18.
-//  Copyright © 2016年 DKD. All rights reserved.
+//  Created by Yang Xiong on 25/11/2016.
+//  Copyright © 2016 DKD. All rights reserved.
 //
 
 #import "RecommendViewController.h"
@@ -63,7 +63,7 @@
         //布局 设置居中 底距离底部距离为 6；
         [self.pageC mas_makeConstraints:^(MASConstraintMaker *make) {
             make.centerX.equalTo(0);
-            make.bottom.equalTo(-49);
+            make.bottom.equalTo(self.ic).offset(-3);
         }];
         NSLog(@"--%@---",self.pageC);
         //添加搜索栏，并设置
@@ -140,25 +140,20 @@
             [self.ic reloadData];
             //根据iC里面的图片个数设置页面控制器个数
             self.pageC.numberOfPages = self.ic.numberOfItems;
-              NSLog(@"%@",self.pageC);
+            NSLog(@"%@",self.pageC);
             //启动控制器
             self.timer = [NSTimer bk_scheduledTimerWithTimeInterval:3 block:^(NSTimer *timer) {
                 [self.ic setCurrentItemIndex:self.ic.currentItemIndex + 1];
             } repeats:YES];
         }
     }];
- 
+    
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-
-
-
-
 
 
 

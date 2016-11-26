@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface RecommendCityCell : UICollectionViewCell
-
+@interface RecommendCityCell : UITableViewCell
+//  推荐城市View
+@property (nonatomic) UIView *recommendCityView;
 //  表头按钮
 @property (nonatomic) UIButton *iconBtn;
 //  景点玩乐
@@ -20,12 +21,13 @@
 @property (nonatomic) UIButton *packBtn;
 //  收藏目的地
 @property (nonatomic) UIButton *bournBtn;
-//  更多城市View
-@property (nonatomic) UIView *cityView;
+//  更多城市Label
+@property (nonatomic) UILabel *cityLb;
 //  底下景点1按钮
 @property (nonatomic) UIButton *scenicBtn1;
 //  底下景点2按钮
 @property (nonatomic) UIButton *scenicBtn2;
 //  底下景点3按钮
 @property (nonatomic) UIButton *scenicBtn3;
+
 @end

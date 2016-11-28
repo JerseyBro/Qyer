@@ -21,6 +21,7 @@
 		854C209B1DDC5B4B00F5D5F4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 854C209A1DDC5B4B00F5D5F4 /* ViewController.m */; };
 		86344B5E1DE87EED00C1842B /* DiscountTopicCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 86344B5D1DE87EED00C1842B /* DiscountTopicCell.m */; };
 		86344B611DE87F0200C1842B /* HotGoodsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 86344B601DE87F0200C1842B /* HotGoodsCell.m */; };
+		863984FD1DEB3F0A00A0E247 /* shoppingWebPageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 863984FC1DEB3F0A00A0E247 /* shoppingWebPageController.m */; };
 		868502971DE76EBC00EEA569 /* RecommendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 868502961DE76EBC00EEA569 /* RecommendViewController.m */; };
 		8685029B1DE7707D00EEA569 /* RecommendModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8685029A1DE7707D00EEA569 /* RecommendModel.m */; };
 		8685029E1DE7711100EEA569 /* QyerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8685029D1DE7711100EEA569 /* QyerModel.m */; };
@@ -94,6 +95,8 @@
 		86344B5D1DE87EED00C1842B /* DiscountTopicCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiscountTopicCell.m; sourceTree = "<group>"; };
 		86344B5F1DE87F0200C1842B /* HotGoodsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HotGoodsCell.h; sourceTree = "<group>"; };
 		86344B601DE87F0200C1842B /* HotGoodsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HotGoodsCell.m; sourceTree = "<group>"; };
+		863984FB1DEB3F0A00A0E247 /* shoppingWebPageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = shoppingWebPageController.h; sourceTree = "<group>"; };
+		863984FC1DEB3F0A00A0E247 /* shoppingWebPageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = shoppingWebPageController.m; sourceTree = "<group>"; };
 		868502951DE76EBC00EEA569 /* RecommendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecommendViewController.h; sourceTree = "<group>"; };
 		868502961DE76EBC00EEA569 /* RecommendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecommendViewController.m; sourceTree = "<group>"; };
 		868502991DE7707D00EEA569 /* RecommendModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecommendModel.h; sourceTree = "<group>"; };
@@ -527,6 +530,8 @@
 			children = (
 				F4ADDC8D1DDF007000C13254 /* ShoppingViewController.h */,
 				F4ADDC8E1DDF007000C13254 /* ShoppingViewController.m */,
+				863984FB1DEB3F0A00A0E247 /* shoppingWebPageController.h */,
+				863984FC1DEB3F0A00A0E247 /* shoppingWebPageController.m */,
 			);
 			path = "旅行商城";
 			sourceTree = "<group>";
@@ -712,6 +717,7 @@
 				933327201DE579AC00D65904 /* UIImage+GIF.m in Sources */,
 				933327161DE579AC00D65904 /* NSImage+WebCache.m in Sources */,
 				5508C8B01DE144A700594AB5 /* bournModel.m in Sources */,
+				863984FD1DEB3F0A00A0E247 /* shoppingWebPageController.m in Sources */,
 				5508C8B71DE14AB500594AB5 /* cityVScountryCell.m in Sources */,
 				8685029B1DE7707D00EEA569 /* RecommendModel.m in Sources */,
 				933327241DE579AC00D65904 /* UIImageView+WebCache.m in Sources */,

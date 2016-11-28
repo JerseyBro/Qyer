@@ -64,6 +64,7 @@
 #import "WorldCell.h"
 #import "DiscountTopicCell.h"
 #import "HotGoodsCell.h"
+#import "shoppingWebPageController.h"
 
 
 #endif /* PrefixHeader_pch */

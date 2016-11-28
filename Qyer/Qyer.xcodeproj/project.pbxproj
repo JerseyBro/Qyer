@@ -31,6 +31,8 @@
 		5508C8B41DE14A8F00594AB5 /* bournzonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5508C8B31DE14A8F00594AB5 /* bournzonCell.m */; };
 		5508C8B71DE14AB500594AB5 /* cityVScountryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5508C8B61DE14AB500594AB5 /* cityVScountryCell.m */; };
 		5508C8BB1DE14E6800594AB5 /* countryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5508C8BA1DE14E6800594AB5 /* countryCell.m */; };
+		554C20E11DEA9D3700A8271E /* Headerview.xib in Resources */ = {isa = PBXBuildFile; fileRef = 554C20E01DEA9D3700A8271E /* Headerview.xib */; };
+		554C20E41DEA9E9500A8271E /* HeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 554C20E31DEA9E9500A8271E /* HeaderView.m */; };
 		55FC55BC1DE8634E005B66FF /* TwoHeaddownCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 55FC55BB1DE8634E005B66FF /* TwoHeaddownCell.m */; };
 		55FC55BF1DE89AD5005B66FF /* ThreeHeaddownCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 55FC55BE1DE89AD5005B66FF /* ThreeHeaddownCell.m */; };
 		55FC55C21DE8BD7C005B66FF /* ThreeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 55FC55C11DE8BD7C005B66FF /* ThreeCell.m */; };
@@ -74,6 +76,9 @@
 		5508C8B61DE14AB500594AB5 /* cityVScountryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = cityVScountryCell.m; sourceTree = "<group>"; };
 		5508C8B91DE14E6800594AB5 /* countryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = countryCell.h; sourceTree = "<group>"; };
 		5508C8BA1DE14E6800594AB5 /* countryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = countryCell.m; sourceTree = "<group>"; };
+		554C20E01DEA9D3700A8271E /* Headerview.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Headerview.xib; sourceTree = "<group>"; };
+		554C20E21DEA9E9500A8271E /* HeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeaderView.h; sourceTree = "<group>"; };
+		554C20E31DEA9E9500A8271E /* HeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeaderView.m; sourceTree = "<group>"; };
 		55FC55BA1DE8634E005B66FF /* TwoHeaddownCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwoHeaddownCell.h; sourceTree = "<group>"; };
 		55FC55BB1DE8634E005B66FF /* TwoHeaddownCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwoHeaddownCell.m; sourceTree = "<group>"; };
 		55FC55BD1DE89AD5005B66FF /* ThreeHeaddownCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThreeHeaddownCell.h; sourceTree = "<group>"; };
@@ -232,7 +237,7 @@
 				55FC55C01DE8BD7C005B66FF /* ThreeCell.h */,
 				55FC55C11DE8BD7C005B66FF /* ThreeCell.m */,
 			);
-			name = "城市与国家详情列表Cell";
+			path = "城市与国家详情列表Cell";
 			sourceTree = "<group>";
 		};
 		550463D01DE4AD9F000AA3F7 /* 目的地分区与城市国家列表Cell */ = {
@@ -245,7 +250,7 @@
 				5508C8B91DE14E6800594AB5 /* countryCell.h */,
 				5508C8BA1DE14E6800594AB5 /* countryCell.m */,
 			);
-			name = "目的地分区与城市国家列表Cell";
+			path = "目的地分区与城市国家列表Cell";
 			sourceTree = "<group>";
 		};
 		5508C8AD1DE1448500594AB5 /* 目的地Model */ = {
@@ -264,6 +269,7 @@
 				550463CF1DE4AD9C000AA3F7 /* 城市与国家详情列表Cell */,
 			);
 			name = "目的地Cell";
+			path = "目的地View";
 			sourceTree = "<group>";
 		};
 		553928541DDE333300D72F47 /* ViewController */ = {
@@ -278,6 +284,17 @@
 				F4ADDC941DDF013600C13254 /* AllViewController.m */,
 			);
 			path = ViewController;
+			sourceTree = "<group>";
+		};
+		554C20DE1DEA99E500A8271E /* 我的Cell */ = {
+			isa = PBXGroup;
+			children = (
+				554C20E01DEA9D3700A8271E /* Headerview.xib */,
+				554C20E21DEA9E9500A8271E /* HeaderView.h */,
+				554C20E31DEA9E9500A8271E /* HeaderView.m */,
+			);
+			name = "我的Cell";
+			path = "我的View";
 			sourceTree = "<group>";
 		};
 		854C20871DDC5B4B00F5D5F4 = {
@@ -385,6 +402,7 @@
 				F40505841DE48765005FCD15 /* RecommendCityCell.m */,
 			);
 			name = "推荐Cell";
+			path = "推荐View";
 			sourceTree = "<group>";
 		};
 		F4A513651DDC60A3008AF2A1 /* Category */ = {
@@ -424,6 +442,7 @@
 		F4A513681DDC60A3008AF2A1 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				554C20DE1DEA99E500A8271E /* 我的Cell */,
 				9386D57C1DE57F8700A6ADF8 /* 旅行商城cell */,
 				F40505821DE483C0005FCD15 /* 推荐Cell */,
 				5508C8B81DE14ABA00594AB5 /* 目的地Cell */,
@@ -540,6 +559,7 @@
 				854C20A31DDC5B4B00F5D5F4 /* (null) in Resources */,
 				550040301DE967CE00BC3DFF /* Main.storyboard in Resources */,
 				5500402F1DE967CE00BC3DFF /* LaunchScreen.storyboard in Resources */,
+				554C20E11DEA9D3700A8271E /* Headerview.xib in Resources */,
 				5500402E1DE967CE00BC3DFF /* Assets.xcassets in Resources */,
 				854C209E1DDC5B4B00F5D5F4 /* (null) in Resources */,
 			);
@@ -613,6 +633,7 @@
 				5500403D1DE9681F00BC3DFF /* DiscountTopicCell.m in Sources */,
 				5500403E1DE9681F00BC3DFF /* HotGoodsCell.m in Sources */,
 				55FC55BF1DE89AD5005B66FF /* ThreeHeaddownCell.m in Sources */,
+				554C20E41DEA9E9500A8271E /* HeaderView.m in Sources */,
 				550463CE1DE4AA04000AA3F7 /* BournCityVC.m in Sources */,
 				F4ADDC891DDF000D00C13254 /* CommunityViewController.m in Sources */,
 				F4ADDC921DDF00C000C13254 /* BournViewController.m in Sources */,

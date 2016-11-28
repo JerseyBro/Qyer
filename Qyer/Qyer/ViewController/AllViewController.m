@@ -36,6 +36,7 @@
         _recommendVC.tabBarItem.image = [UIImage imageNamed:@"TabBar_Recommend_24x24_"];
         _recommendVC.tabBarItem.selectedImage = [UIImage imageNamed:@"TabBar_Recommend_Highlight_24x24_"];
         //_recommendVC.tabBarItem.selectedImage = [UIImage imageNamed:@"TabBar_Background_Highlight_150x100_"];
+
     }
     return _recommendVC;
 }
@@ -56,6 +57,7 @@
         _shoppingVC.title = @"旅行商城";
         _shoppingVC.tabBarItem.image = [UIImage imageNamed:@"TabBar_Shop_24x24_"];
         _shoppingVC.tabBarItem.selectedImage = [UIImage imageNamed:@"TabBar_Shop_Highlight_24x24_"];
+
 
     }
     return _shoppingVC;

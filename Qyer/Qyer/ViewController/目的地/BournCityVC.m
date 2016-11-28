@@ -110,20 +110,41 @@
     }
     return _cityView;
 }
-
+#pragma mark ----- ViewDidLoad
 - (void)viewDidLoad {
     [super viewDidLoad];
 
     // 添加到父类中.并调用其懒加载
    
     //  获取数据
+
     [NetManager getBournCityVSCountryModelWithidField:self.idField completionHandler:^(CityVSCountryModel *pic, NSError *error) {
+        NSLog(@"里%@",[NSThread currentThread]);
         self.datalist = pic;
         [self.view addSubview:self.cityView];
+        //添加返回按钮
+        [self createWithgoback];
     }];
+
+
     
 }
-
+//  返回按钮
+-(void)createWithgoback
+{
+    UIButton* goback = [UIButton buttonWithType:UIButtonTypeSystem];
+    [goback setImage:[UIImage imageNamed:@"TabBar_Recommend_24x24_"] forState:UIControlStateNormal];
+    [self.view addSubview:goback];
+    [goback mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(15);
+        make.top.equalTo(35);
+    }];
+    [goback bk_addEventHandler:^(id sender) {
+        [self dismissViewControllerAnimated:YES completion:^{
+            
+        }];
+    } forControlEvents:UIControlEventTouchUpInside];
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -260,6 +281,7 @@
                 [headdown title];
         if (missModel.events.count == 2) {
             [headdown.image1 setImageURL:missModel.events[0].photo.wx_URL];
+           
             headdown.content1.text = missModel.events[0].name;
             [headdown.image2 setImageURL:missModel.events[1].photo.wx_URL];
             headdown.content2.text = missModel.events[1].name;

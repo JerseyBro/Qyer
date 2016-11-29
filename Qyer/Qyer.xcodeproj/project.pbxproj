@@ -343,12 +343,9 @@
 		868502981DE76FF300EEA569 /* 推荐Model */ = {
 			isa = PBXGroup;
 			children = (
-				868502991DE7707D00EEA569 /* RecommendModel.h */,
-				8685029A1DE7707D00EEA569 /* RecommendModel.m */,
-				8685029C1DE7711100EEA569 /* QyerModel.h */,
-				8685029D1DE7711100EEA569 /* QyerModel.m */,
-				8685029F1DE771B600EEA569 /* RecommendViewModel.h */,
-				868502A01DE771B600EEA569 /* RecommendViewModel.m */,
+				F402960C1DED5C62008A1855 /* 最近访问Model */,
+				F402960B1DED5C37008A1855 /* 推荐城市Model */,
+				F402960A1DED5C22008A1855 /* 推荐表头Model */,
 			);
 			path = "推荐Model";
 			sourceTree = "<group>";
@@ -457,6 +454,33 @@
 				9386D5961DE5A0D500A6ADF8 /* WorldCell.m */,
 			);
 			path = "旅行商城cell";
+			sourceTree = "<group>";
+		};
+		F402960A1DED5C22008A1855 /* 推荐表头Model */ = {
+			isa = PBXGroup;
+			children = (
+				8685029C1DE7711100EEA569 /* QyerModel.h */,
+				8685029D1DE7711100EEA569 /* QyerModel.m */,
+			);
+			name = "推荐表头Model";
+			sourceTree = "<group>";
+		};
+		F402960B1DED5C37008A1855 /* 推荐城市Model */ = {
+			isa = PBXGroup;
+			children = (
+				8685029F1DE771B600EEA569 /* RecommendViewModel.h */,
+				868502A01DE771B600EEA569 /* RecommendViewModel.m */,
+			);
+			name = "推荐城市Model";
+			sourceTree = "<group>";
+		};
+		F402960C1DED5C62008A1855 /* 最近访问Model */ = {
+			isa = PBXGroup;
+			children = (
+				868502991DE7707D00EEA569 /* RecommendModel.h */,
+				8685029A1DE7707D00EEA569 /* RecommendModel.m */,
+			);
+			name = "最近访问Model";
 			sourceTree = "<group>";
 		};
 		F40505821DE483C0005FCD15 /* 推荐Cell */ = {

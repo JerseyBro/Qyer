@@ -8,9 +8,12 @@
 
 #import "RecommendViewController.h"
 #import <iCarousel.h>
+#import "RecommendCityCell.h"
+
 
 @interface RecommendViewController ()<iCarouselDelegate,iCarouselDataSource>
-//表头 + 搜索栏数据
+
+//表头
 @property (nonatomic) QyerModel * dataList;
 //表头ic
 @property (nonatomic) iCarousel * ic;
@@ -23,10 +26,22 @@
 //表头视图数据
 @property (nonatomic) NSArray <QyerDataSlideModel *> * slideModel;
 //定时器
-@property (nonatomic) NSTimer *timer;
+@property (nonatomic) NSTimer * timer;
+//搜索栏
+@property (nonatomic) UISearchBar * searchBar;
+//最近访问
+@property (nonatomic) RecommendModel * data;
+
 @end
 
 @implementation RecommendViewController
+
+-(void)setTableView:(UITableView *)tableView
+{
+    [super setTableView:tableView];
+}
+
+
 
 #pragma mark - 懒加载
 //获取滚动视图数据
@@ -36,11 +51,12 @@
     }
     return _slideModel;
 }
+
+
 //表头懒加载
 -(UIView *)touView{
     if (!_touView) {
         _touView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, 240)];
-        self.tableView.tableHeaderView = _touView;
         
         //创建iC
         _ic = [iCarousel new];
@@ -60,29 +76,22 @@
         self.pageC.pageIndicatorTintColor = [UIColor colorWithRed:240 / 255.0 green:240 / 255.0 blue:240 / 255.0 alpha:.5];
         
         
-        //布局 设置居中 底距离底部距离为 6；
+        //布局 设置居中 底距离底部距离为 -3；
         [self.pageC mas_makeConstraints:^(MASConstraintMaker *make) {
             make.centerX.equalTo(0);
-            make.bottom.equalTo(self.ic).offset(-3);
+            make.bottom.equalTo(-49);
         }];
-        NSLog(@"--%@---",self.pageC);
-        //添加搜索栏，并设置
-        self.search = [UITextField new];
-        [self.touView addSubview:_search];
-        _search.textAlignment = NSTextAlignmentCenter;
-        NSString *str = @"🔍";
-        _search.placeholder = [str stringByAppendingString:self.dataList.data.keyword];
-        _search.layer.borderWidth = 1;
-        _search.layer.cornerRadius = 3;
-        _search.layer.masksToBounds = YES;
-        _search.font = [UIFont systemFontOfSize:13];
-        _search.layer.borderColor = [UIColor greenColor].CGColor;
-        _search.backgroundColor = [UIColor colorWithRed:244 / 255.0 green:244 / 255.0 blue:244 / 255.0 alpha:.8];
-        [_search mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.left.equalTo(8);
-            make.right.bottom.equalTo(-8);
-            make.height.equalTo(32);
+
+        //创建搜索栏，并设置
+        self.searchBar = [UISearchBar new];
+        [self.touView addSubview:_searchBar];
+        [_searchBar mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.top.equalTo(self.ic.mas_bottom);
+            make.left.equalTo(0);
+            make.right.equalTo(0);
         }];
+        _searchBar.placeholder = [NSString stringWithString:self.dataList.data.keyword];
+        _searchBar.searchBarStyle = UISearchBarStyleMinimal;
     }
     return _touView;
 }
@@ -109,6 +118,8 @@
     return value;
 }
 
+
+
 //当Carousel变化时 自动调用
 -(void)carouselCurrentItemIndexDidChange:(iCarousel *)carousel{
     _pageC.currentPage = carousel.currentItemIndex;
@@ -120,15 +131,49 @@
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 10;
+    return 1;
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    UITableViewCell *cell = [UITableViewCell new];
+
+    RecommendCityCell *cell = [tableView dequeueReusableCellWithIdentifier:@"RecommendCityCell" forIndexPath:indexPath];
+    [cell iconBtnWithCover:self.data.data.cover City:self.data.data.city_name];
+    [cell playBtn];
+    [cell foodBtn];
+    [cell packBtn];
+    [cell bournBtn];
+    [cell cityLb];
+    [cell scenicBtn1];
+    [cell scenicBtn2];
+    [cell scenicBtn3];
+    cell.layer.cornerRadius = 5;
+    cell.layer.borderWidth = 1;
+    cell.clipsToBounds = YES;
+    cell.layer.borderColor = [UIColor grayColor].CGColor;
+    //  点击 cell 不可选
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
     return cell;
 }
+//  设置row高度
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return Height;
+}
+//  推荐城市Cell两边的间隔
+-(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
+    UIView *view = [UIView new];
+    CGFloat width = [UIScreen mainScreen].bounds.size.width - 25;
+    view.size = CGSizeMake(width, 200);
+    return view;
+}
+
+
+
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self setTableView:[UITableView new]];
+    [self.tableView registerClass:[RecommendCityCell class] forCellReuseIdentifier:@"RecommendCityCell"];
     //去掉分割线
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     [NetManager getTouWithPage:0 completionHandler:^(QyerModel *pic, NSError *error) {
@@ -140,11 +185,19 @@
             [self.ic reloadData];
             //根据iC里面的图片个数设置页面控制器个数
             self.pageC.numberOfPages = self.ic.numberOfItems;
-            NSLog(@"%@",self.pageC);
             //启动控制器
             self.timer = [NSTimer bk_scheduledTimerWithTimeInterval:3 block:^(NSTimer *timer) {
                 [self.ic setCurrentItemIndex:self.ic.currentItemIndex + 1];
             } repeats:YES];
+        }
+    }];
+    
+    [NetManager getRecommendCityModel:22 completionHandler:^(RecommendModel *model, NSError *error) {
+        if (!error) {
+            //  获取 model层 数据
+            self.data = model;
+            [self.tableView reloadData];
+          
         }
     }];
     

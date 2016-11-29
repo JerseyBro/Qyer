@@ -30,4 +30,6 @@
 //  底下景点3按钮
 @property (nonatomic) UIButton *scenicBtn3;
 
+-(UIButton *)iconBtnWithCover:(NSString *)cover City:(NSString *)city;
+
 @end

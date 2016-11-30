@@ -13,6 +13,9 @@
 @property(nonatomic) ShoppingModel *shoppingModel;
 @property(nonatomic) NSMutableArray<ShoppingIconListModel *> *iconList;
 @property(nonatomic) NSMutableArray<ShoppingMarketTopicModel *> *marketTopicList;
+@property(nonatomic) NSMutableArray<ShoppingHotGoodsModel *> *hotGoodsList;
+@property(nonatomic) NSMutableArray<ShoppingDisCountTopicListModel *> *topicList;
+@property(nonatomic) NSMutableArray<ShoppingDisCountTopicListModel *> *topicList1;
 @property(nonatomic) NSMutableArray<ShoppingListModel *> *list;
 @property(nonatomic) NSMutableArray<ShoppingPlaceModel *> *place;
 @property(nonatomic) NSMutableArray<ShoppingListModel *> *list1;
@@ -100,12 +103,41 @@
     return _place2;
 }
 
+-(NSMutableArray<ShoppingDisCountTopicListModel *> *)topicList
+{
+    if (!_topicList)
+    {
+        _topicList = [NSMutableArray new];
+    }
+    return _topicList;
+}
+
+-(NSMutableArray<ShoppingDisCountTopicListModel *> *)topicList1
+{
+    if (!_topicList1)
+    {
+        _topicList1 = [NSMutableArray new];
+    }
+    return _topicList1;
+}
+
+-(NSMutableArray<ShoppingHotGoodsModel *> *)hotGoodsList
+{
+    if (!_hotGoodsList)
+    {
+        _hotGoodsList = [NSMutableArray new];
+    }
+    return _hotGoodsList;
+}
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.tableView setBackgroundColor:[UIColor whiteColor]];
     [self.tableView registerClass:[AdvertisementCell class] forCellReuseIdentifier:@"AdvertisementCell"];
     [self.tableView registerClass:[WorldCell class] forCellReuseIdentifier:@"WorldCell"];
+    [self.tableView registerClass:[DiscountTopicCell class] forCellReuseIdentifier:@"DiscountTopicCell"];
+    [self.tableView registerClass:[HotGoodsCell class] forCellReuseIdentifier:@"HotGoodsCell"];
     
     // 调用网络请求的方法，把所有所需的数据解析出来
     self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
@@ -128,13 +160,15 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 4;
+    return 7;
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     NSInteger i = self.shoppingModel.data.market_topic.count;
     NSInteger j = self.shoppingModel.data.hot_area[1].place.count;
+    NSInteger k = self.shoppingModel.data.discount_topic[1].list.count;
+    NSInteger l = self.shoppingModel.data.hot_goods.count;
 
     switch (section)
     {
@@ -178,7 +212,35 @@
                 return 0;
             }
             break;
-            
+        case 4:
+            if (k != 0)
+            {
+                return 1;
+            }
+            else
+            {
+                return 0;
+            }
+            break;
+        case 5:
+            if (k != 0)
+            {
+                return 1;
+            }
+            else
+            {
+                return 0;
+            }
+        case 6:
+            if (l != 0)
+            {
+                return 1;
+            }
+            else
+            {
+                return 0;
+            }
+            break;
         default:
             break;
     }
@@ -279,7 +341,11 @@
         }
         
         
-        cell.cityTitle.text = @"欧洲美国";
+        cell.cityTitle.text = @"港澳台";
+        
+        UIImageView *hkIV = [[UIImageView alloc]initWithFrame:CGRectMake(25, -5, 360, 65)];
+        hkIV.image = [UIImage imageNamed:@"港澳_375x65_"];
+        [cell.cityView addSubview:hkIV];
         
         [cell.cityBtn enumerateObjectsUsingBlock:^(UIButton * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
             [obj setBackgroundImageWithURL:self.place[idx].photo.wx_URL forState:UIControlStateNormal options:NO];
@@ -321,7 +387,10 @@
             }
             
         
-            cell.cityTitle.text = @"港澳台";
+            cell.cityTitle.text = @"东南亚";
+            UIImageView *eastIV = [[UIImageView alloc]initWithFrame:CGRectMake(25, -5, 360, 65)];
+            eastIV.image = [UIImage imageNamed:@"泰国_375x65_"];
+            [cell.cityView addSubview:eastIV];
             
             [cell.cityBtn enumerateObjectsUsingBlock:^(UIButton * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
                 [obj setBackgroundImageWithURL:self.place1[idx].photo.wx_URL forState:UIControlStateNormal options:NO];
@@ -361,7 +430,10 @@
         }
         
         
-        cell.cityTitle.text = @"东南亚";
+        cell.cityTitle.text = @"欧洲美国";
+        UIImageView *usatIV = [[UIImageView alloc]initWithFrame:CGRectMake(30, -5, 360, 65)];
+        usatIV.image = [UIImage imageNamed:@"欧美其他_375x65_"];
+        [cell.cityView addSubview:usatIV];
         
         [cell.cityBtn enumerateObjectsUsingBlock:^(UIButton * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
             [obj setBackgroundImageWithURL:self.place2[idx].photo.wx_URL forState:UIControlStateNormal options:NO];
@@ -389,7 +461,120 @@
         [cell.moreContentBtn setTitle:[NSString stringWithFormat: @"查看东南亚专题 >"] forState:UIControlStateNormal];
         return cell;
     }
+    if (indexPath.section == 4)
+    {
+        [self.topicList addObjectsFromArray:self.shoppingModel.data.discount_topic[0].list];
+        DiscountTopicCell *cell = [tableView dequeueReusableCellWithIdentifier:@"DiscountTopicCell"];
+        if (cell == nil)
+        {
+            cell = [[DiscountTopicCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"DiscountTopicCell"];
+        }
+        
+        
+        cell.cityTitle.text = self.shoppingModel.data.discount_topic[0].topic.title;
+        
+        [cell.topIV setBackgroundImageWithURL:self.shoppingModel.data.discount_topic[0].topic.photo.wx_URL forState:UIControlStateNormal options:NO];
+        
+        
+        [cell.cityPic1 setImageURL:self.topicList[0].photo.wx_URL];
+        cell.title1LB.text = self.topicList[0].title;
+        cell.sold1LB.text = self.topicList[0].sold;
+        cell.price1LB.text = [self.topicList[0].price stringByAppendingString:@" 元起"];
+        
+        
+        [cell.cityPic2 setImageURL:self.topicList[1].photo.wx_URL];
+        cell.title2LB.text = self.topicList[1].title;
+        cell.sold2LB.text = self.topicList[1].sold;
+        cell.price2LB.text = [self.topicList[1].price stringByAppendingString:@" 元起"];
+        
+        [cell.cityPic3 setImageURL:self.topicList[2].photo.wx_URL];
+        cell.title3LB.text = self.topicList[2].title;
+        cell.sold3LB.text = self.topicList[2].sold;
+        cell.price3LB.text = [self.topicList[2].price stringByAppendingString:@" 元起"];
+        
+        //cell.moreContentBtn.titleLabel.text = [NSString stringWithFormat: @"查看港澳台专题 >"];
+        
+        [cell.moreContentBtn setTitle:[NSString stringWithFormat: @"查看完整专题 >"] forState:UIControlStateNormal];
+        return cell;
+    }
+    if (indexPath.section == 5)
+    {
+
+        [self.topicList1 addObjectsFromArray:self.shoppingModel.data.discount_topic[1].list];
+        DiscountTopicCell *cell = [tableView dequeueReusableCellWithIdentifier:@"DiscountTopicCell"];
+        if (cell == nil)
+        {
+            cell = [[DiscountTopicCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"DiscountTopicCell"];
+        }
+        
+        
+        cell.cityTitle.text = self.shoppingModel.data.discount_topic[1].topic.title;
+        
+        [cell.topIV setBackgroundImageWithURL:self.shoppingModel.data.discount_topic[1].topic.photo.wx_URL forState:UIControlStateNormal options:NO];
+        
+        [cell.cityPic1 setImageURL:self.topicList1[0].photo.wx_URL];
+        cell.title1LB.text = self.topicList1[0].title;
+        cell.sold1LB.text = self.topicList1[0].sold;
+        cell.price1LB.text = [self.topicList1[0].price stringByAppendingString:@" 元起"];
+        
+        
+        [cell.cityPic2 setImageURL:self.topicList1[1].photo.wx_URL];
+        cell.title2LB.text = self.topicList1[1].title;
+        cell.sold2LB.text = self.topicList1[1].sold;
+        cell.price2LB.text = [self.topicList1[1].price stringByAppendingString:@" 元起"];
+        
+        [cell.cityPic3 setImageURL:self.topicList1[2].photo.wx_URL];
+        cell.title3LB.text = self.topicList1[2].title;
+        cell.sold3LB.text = self.topicList1[2].sold;
+        cell.price3LB.text = [self.topicList1[2].price stringByAppendingString:@" 元起"];
+       
+        
+        //cell.moreContentBtn.titleLabel.text = [NSString stringWithFormat: @"查看港澳台专题 >"];
+        
+        [cell.moreContentBtn setTitle:[NSString stringWithFormat: @"查看完整专题 >"] forState:UIControlStateNormal];
+        return cell;
+    }
+    if (indexPath.section == 6)
+    {
+        
+//        [self.topicList1 addObjectsFromArray:self.shoppingModel.data.discount_topic[1].list];
+        [self.hotGoodsList addObjectsFromArray:self.shoppingModel.data.hot_goods];
+        HotGoodsCell *cell = [tableView dequeueReusableCellWithIdentifier:@"HotGoodsCell"];
+        if (cell == nil)
+        {
+            cell = [[HotGoodsCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"HotGoodsCell"];
+        }
+        
+        cell.cityTitle.text = @"有好货";
+        NSArray *numberList = @[@"0",@"1",@"2",@"3",@"4",@"5"];
+        
+        [cell.goodsBtn enumerateObjectsUsingBlock:^(UIButton * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+            obj.titleLabel.text = numberList[idx];
+                                   }];
+//        cell.goodsBtn enumerateObjectsUsingBlock:^(UIButton * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+//            obj addTarget:self.hotGoodsList[idx]. action:<#(nonnull SEL)#> forControlEvents:<#(UIControlEvents)#>
+//        }
+        
+        [cell.goodsPic enumerateObjectsUsingBlock:^(UIImageView * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+            [obj setImageURL:self.hotGoodsList[idx].photo.wx_URL];
+        }];
+        
+        [cell.titleLB enumerateObjectsUsingBlock:^(UILabel * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+            obj.text = self.hotGoodsList[idx].title;
+        }];
+        
+        [cell.statusLB enumerateObjectsUsingBlock:^(UILabel * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+            obj.text = self.hotGoodsList[idx].status;
+        }];
+        
+        [cell.priceLB enumerateObjectsUsingBlock:^(UILabel * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+            obj.text = [NSString stringWithFormat:@"%@元起",self.hotGoodsList[idx].price];
+        }];
+
+        return cell;
+    }
     return nil;
+
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
@@ -405,13 +590,22 @@
             return 120;
             break;
         case 1:
-            return 360;
+            return 380;
             break;
         case 2:
-            return 360;
+            return 380;
             break;
         case 3:
-            return 360;
+            return 380;
+            break;
+        case 4:
+            return 520;
+            break;
+        case 5:
+            return 520;
+            break;
+        case 6:
+            return 720;
             break;
             
         default:
@@ -456,6 +650,12 @@
             return 10;
             break;
         case 3:
+            return 10;
+            break;
+        case 4:
+            return 10;
+            break;
+        case 5:
             return 10;
             break;
         default:

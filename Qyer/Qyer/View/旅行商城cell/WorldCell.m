@@ -42,13 +42,13 @@
         [self.cityView addSubview:_cityTitle];
         [_cityTitle mas_makeConstraints:^(MASConstraintMaker *make)
          {
-             make.top.equalTo(10);
+             make.top.equalTo(20);
              make.left.right.equalTo(0);
              make.height.equalTo(20);
              make.width.equalTo([UIScreen mainScreen].bounds.size.width);
          }];
         _cityTitle.textAlignment = NSTextAlignmentCenter;
-        _cityTitle.font = [UIFont systemFontOfSize:18];
+        _cityTitle.font = [UIFont systemFontOfSize:20.0];
     }
     return _cityTitle;
 }
@@ -84,6 +84,16 @@
             }];
             btn.layer.cornerRadius = 0.5;
             btn.clipsToBounds = YES;
+            // 设置毛玻璃
+            UIBlurEffect *effect = [UIBlurEffect effectWithStyle:UIBlurEffectStyleDark];
+            UIVisualEffectView *effectView = [[UIVisualEffectView alloc] initWithEffect:effect];
+            effectView.alpha = .3;
+            
+            [btn addSubview:effectView];
+            [effectView mas_makeConstraints:^(MASConstraintMaker *make) {
+                make.edges.equalTo(0);
+            }];
+
             lastView = btn;
             [tmpArr addObject:btn];
         }
@@ -109,7 +119,7 @@
                 
                 if (i == 0)
                 {
-                    make.left.equalTo(50);
+                    make.left.equalTo(20);
                 }
                 else
                 {
@@ -123,6 +133,7 @@
                 
             }];
             name.textColor = [UIColor whiteColor];
+            name.textAlignment = NSTextAlignmentCenter;
             lastView = name;
             [tmpArr addObject:name];
         }
@@ -221,7 +232,7 @@
             make.right.equalTo(-10);
         }];
         _title1LB.numberOfLines = 2;
-        _title1LB.font = [UIFont systemFontOfSize:14.0];
+        _title1LB.font = [UIFont systemFontOfSize:15.0];
     }
     
     return _title1LB;
@@ -239,7 +250,7 @@
             make.right.equalTo(-10);
         }];
         _title2LB.numberOfLines = 2;
-        _title2LB.font = [UIFont systemFontOfSize:14.0];
+        _title2LB.font = [UIFont systemFontOfSize:15.0];
     }
     
     return _title2LB;
@@ -255,7 +266,7 @@
             make.left.equalTo(self.title1LB);
             make.bottom.equalTo(-3);
         }];
-        _sold1LB.font = [UIFont systemFontOfSize:12.0];
+        _sold1LB.font = [UIFont systemFontOfSize:13.0];
         _sold1LB.textColor = [UIColor lightGrayColor];
     }
     
@@ -272,7 +283,7 @@
             make.left.equalTo(self.title2LB);
             make.bottom.equalTo(-3);
         }];
-        _sold2LB.font = [UIFont systemFontOfSize:12.0];
+        _sold2LB.font = [UIFont systemFontOfSize:13.0];
         _sold2LB.textColor = [UIColor lightGrayColor];
     }
     

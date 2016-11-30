@@ -135,7 +135,7 @@
                 }
             }];
             
-            lb.font = [UIFont systemFontOfSize:12.0];
+            lb.font = [UIFont systemFontOfSize:14.0];
             lb.textAlignment = NSTextAlignmentCenter;
             lastView = lb;
             [tmpArr addObject:lb];

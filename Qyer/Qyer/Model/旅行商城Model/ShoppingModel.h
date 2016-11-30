@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-@class ShoppingDataModel,ShoppingDiscountTopicModel,ShoppingHotAreaModel,ShoppingHotGoodsModel,ShoppingIconListModel,ShoppingMarketTopicModel,Shopping0Model,Shopping1Model,Shopping2Model,ShoppingListModel,ShoppingPlaceModel;
+@class ShoppingDataModel,ShoppingDiscountTopicModel,ShoppingHotAreaModel,ShoppingHotGoodsModel,ShoppingIconListModel,ShoppingMarketTopicModel,Shopping0Model,Shopping1Model,Shopping2Model,ShoppingListModel,ShoppingPlaceModel,ShoppingDisCountTopic0Model,ShoppingDisCountTopic1Model,ShoppingDisCountTopicListModel,ShoppingDisCountTopicTopicModel;
 
 @interface ShoppingModel : NSObject
 @property(nonatomic) ShoppingDataModel *data;
@@ -17,10 +17,36 @@
 @property(nonatomic) NSArray<ShoppingIconListModel *> *icon_list;
 @property(nonatomic) NSArray<ShoppingMarketTopicModel *> *market_topic;
 @property(nonatomic) NSArray<ShoppingHotAreaModel *> *hot_area;
+@property(nonatomic) NSArray<ShoppingDiscountTopicModel *> *discount_topic;
+@property(nonatomic) NSArray<ShoppingHotGoodsModel *> *hot_goods;
 @end
 
 @interface ShoppingDiscountTopicModel : NSObject
+@property(nonatomic) NSArray<ShoppingDisCountTopicListModel *> *list;
+@property(nonatomic) ShoppingDisCountTopicTopicModel *topic;
+@end
 
+@interface ShoppingDisCountTopic0Model : NSObject
+
+@end
+
+@interface ShoppingDisCountTopic1Model : NSObject
+
+@end
+
+@interface ShoppingDisCountTopicListModel : NSObject
+@property(nonatomic) NSString *area;
+@property(nonatomic) NSString *ID;
+@property(nonatomic) NSString *photo;
+@property(nonatomic) NSString *price;
+@property(nonatomic) NSString *sold;
+@property(nonatomic) NSString *title;
+@end
+
+@interface ShoppingDisCountTopicTopicModel : NSObject
+@property(nonatomic) NSString *link_url;
+@property(nonatomic) NSString *photo;
+@property(nonatomic) NSString *title;
 @end
 
 @interface ShoppingHotAreaModel : NSObject
@@ -29,7 +55,12 @@
 @end
 
 @interface ShoppingHotGoodsModel : NSObject
-
+@property(nonatomic) NSString *area;
+@property(nonatomic) NSString *ID;
+@property(nonatomic) NSString *photo;
+@property(nonatomic) NSString *price;
+@property(nonatomic) NSString *status;
+@property(nonatomic) NSString *title;
 @end
 
 @interface ShoppingIconListModel : NSObject
@@ -73,5 +104,3 @@
 @end
 
 
-/*
-  */

@@ -18,13 +18,19 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    [NetManager getBournCityVSCountryModelWithidField:50 completionHandler:^(CityVSCountryModel *pic, NSError *error) {
-        NSLog(@"");
-    }];
+
     _window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     [_window makeKeyAndVisible];
     _window.rootViewController = [AllViewController new];
+    
+    [NetManager getShoppingCompletionHandler:^(ShoppingModel *model, NSError *error) {
+        NSLog(@"");
+    }];
+    
     return YES;
+    
+
+    
 }
 
 

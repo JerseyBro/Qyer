@@ -13,7 +13,7 @@
 #import "RecommendViewController.h"
 #import "MineViewController.h"
 
-@interface AllViewController ()
+@interface AllViewController () <UITabBarControllerDelegate>
 //旅行商城
 @property (nonatomic) ShoppingViewController * shoppingVC;
 //目的地
@@ -24,6 +24,9 @@
 @property (nonatomic) RecommendViewController * recommendVC;
 //我的
 @property (nonatomic) MineViewController *mineVC;
+
+// 装载 tabbar 的背景图片的 UIImageView
+@property (nonatomic) UIImageView *itemSelectedBackground;
 @end
 
 @implementation AllViewController
@@ -97,9 +100,31 @@
     self.viewControllers = @[RecommendNavi, BournNavi, shoppingNavi, CommunityNavi, MineNavi];
 //    //设置了全局的所有tabbarItem的文字样式. 选中时的
 //    [[UITabBarItem appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName: [UIColor whiteColor], NSFontAttributeName:[UIFont systemFontOfSize:35]} forState:UIControlStateSelected];
-
-
     
+    //[self.tabBar setBarTintColor: [UIColor clearColor]];
+    [self.tabBar setTintColor:[UIColor whiteColor]];
+    [self.tabBar setBackgroundColor:[UIColor whiteColor]];
+    //self.tabBarController.tabBar.tintColor = [UIColor whiteColor];
+    //self.tabBarItem.image = [UIImage imageNamed:@""];
+    
+    
+    // 遵守 tabbar 的代理协议
+    self.delegate = self;
+    
+    // 添加选中的背景
+    self.itemSelectedBackground = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"TabBar_Background_Highlight_150x100_"]];
+    
+    self.itemSelectedBackground.frame = CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width / 5, 48);
+    [self.tabBar insertSubview:self.itemSelectedBackground atIndex:0];
+    self.tabBar.opaque = YES;
+    
+}
+
+// 实现 tabbar 的代理方法
+-(void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController
+{
+    NSInteger index = tabBarController.selectedIndex;
+    self.itemSelectedBackground.frame = CGRectMake(index * [UIScreen mainScreen].bounds.size.width / 5, 0, [UIScreen mainScreen].bounds.size.width / 5, 48);
 }
 
 

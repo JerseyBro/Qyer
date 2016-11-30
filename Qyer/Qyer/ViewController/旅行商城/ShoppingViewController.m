@@ -516,7 +516,6 @@
     if (indexPath.section == 6)
     {
         
-//        [self.topicList1 addObjectsFromArray:self.shoppingModel.data.discount_topic[1].list];
         [self.hotGoodsList addObjectsFromArray:self.shoppingModel.data.hot_goods];
         HotGoodsCell *cell = [tableView dequeueReusableCellWithIdentifier:@"HotGoodsCell"];
         if (cell == nil)

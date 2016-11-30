@@ -21,7 +21,9 @@
 
 +(NSDictionary<NSString *,id> *)modelCustomPropertyMapper
 {
-    return @{@"iconList":@"icon_list"};
+    return @{@"iconList":@"icon_list",
+             @"cityPic":@"city_pic",
+             @"guideNum":@"guide_num"};
 }
 
 +(NSDictionary<NSString *,id> *)modelContainerPropertyGenericClass
@@ -39,5 +41,32 @@
 @implementation CiCoweatherModel
 
 
+
+@end
+@implementation CiConot_missModel
+
++(NSDictionary<NSString *,id> *)modelContainerPropertyGenericClass
+{
+    return @{@"events":@"CiCoeventsModel",
+             @"pois":@"CiCopoisModel"};
+}
+
+@end
+
+@implementation CiCoeventsModel
+
++(NSDictionary<NSString *,id> *)modelCustomPropertyMapper
+{
+    return @{@"idField":@"id"};
+}
+
+@end
+
+@implementation CiCopoisModel
+
++(NSDictionary<NSString *,id> *)modelCustomPropertyMapper
+{
+    return @{@"idField":@"id"};
+}
 
 @end

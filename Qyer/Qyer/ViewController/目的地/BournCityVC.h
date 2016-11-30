@@ -10,4 +10,5 @@
 
 @interface BournCityVC : UIViewController
 @property(nonatomic,assign) NSInteger idField;
+
 @end

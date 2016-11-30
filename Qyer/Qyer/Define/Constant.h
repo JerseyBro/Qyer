@@ -8,11 +8,17 @@
 
 
 #ifndef Constant_h
+
 #define Constant_h
-//  推荐城市View高度宏
+//  最近访问View高度宏
 #define Height (long)([UIScreen mainScreen].bounds.size.height * 530 / 1136.0)
-//  推荐城市View宽度宏
+
+//  最近访问View宽度宏
 #define Width (long)([UIScreen mainScreen].bounds.size.width * 590 / 640.0)
+
+//  点评cell高度宏
+#define Height1 (long)([UIScreen mainScreen].bounds.size.height * 90 / 1136.0)
+
 
 // 推荐页面的网络地址宏定义.
 #define ktouPath @"http://open.qyer.com/qyer/home/home_feed?client_id=qyer_ios&client_secret=cd254439208ab658ddf9&count=10&lat=22.64519304434324&lon=114.1987205967858&page=1&track_app_channel=App%2520Store&track_app_version=7.0.5&track_device_info=iPhone%25205s&track_deviceid=FDBE0B0B-FBBE-B527-56A9-00E955C14A7C&track_os=ios%252010.1.1&v=1"

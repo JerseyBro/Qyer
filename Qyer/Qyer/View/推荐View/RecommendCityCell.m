@@ -14,7 +14,8 @@
     CGRect rect = [UIScreen mainScreen].bounds;
     frame.origin.x = 25 / 2.0;
     frame.size.width = rect.size.width - 25;
-    frame.size.height = (long)(rect.size.width * 590 / 640.0);
+//    frame.size.height = (long)(rect.size.width * 590 / 640.0);
+        frame.size.height = Height;
     [super setFrame:frame];
 }
 //  推荐城市View懒加载
@@ -45,9 +46,9 @@
             make.height.equalTo(self.iconBtn.mas_width).multipliedBy(200 / 590.0);
         }];
         // 设置毛玻璃
-        UIBlurEffect *effect = [UIBlurEffect effectWithStyle:UIBlurEffectStyleLight];
+        UIBlurEffect *effect = [UIBlurEffect effectWithStyle:UIBlurEffectStyleDark];
         UIVisualEffectView *effectView = [[UIVisualEffectView alloc] initWithEffect:effect];
-        effectView.alpha = .5;
+        effectView.alpha = .7;
         [self.iconBtn addSubview:effectView];
         [effectView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.edges.equalTo(0);
@@ -212,14 +213,18 @@
     if (!_scenicBtn1) {
         _scenicBtn1 = [UIButton new];
         [self.recommendCityView addSubview:_scenicBtn1];
+        UIImage *image1 = [[UIImage imageNamed:@"Mall_Search_History_10x10_"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
+        [_scenicBtn1 setImage:image1 forState:UIControlStateNormal];
+        _scenicBtn1.tintColor = [UIColor colorWithRed:165 / 255.0 green:226 / 255.0 blue:198 / 255.0 alpha:1];
         [_scenicBtn1 mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.top.equalTo(self.cityLb).offset(45);
+            make.bottom.equalTo(self.cityLb).offset(50);
             make.left.equalTo(Width * 30 / 590);
-            make.size.equalTo(CGSizeMake((Width - 80) / 3, 52));
+            make.size.equalTo(CGSizeMake((Width - 80) / 3, 30));
         }];
-        _scenicBtn1.layer.cornerRadius = 26;
+        _scenicBtn1.layer.cornerRadius = 15;
         _scenicBtn1.clipsToBounds = YES;
-        [_scenicBtn1 setTitle:@"东京" forState:UIControlStateNormal];
+        [_scenicBtn1 setTitle:@" 东京" forState:UIControlStateNormal];
+        _scenicBtn1.font = [UIFont systemFontOfSize:14];
         [_scenicBtn1 setTitleColor:[UIColor colorWithRed:165 / 255.0 green:226 / 255.0 blue:198 / 255.0 alpha:1] forState:UIControlStateNormal];
         _scenicBtn1.layer.borderWidth = 1;
         _scenicBtn1.layer.borderColor = [UIColor colorWithRed:165 / 255.0 green:226 / 255.0 blue:198 / 255.0 alpha:1].CGColor;
@@ -232,14 +237,18 @@
     if (!_scenicBtn2) {
         _scenicBtn2 = [UIButton new];
         [self.recommendCityView addSubview:_scenicBtn2];
+        UIImage *image2 = [[UIImage imageNamed:@"Mall_Search_History_10x10_"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
+        [_scenicBtn2 setImage:image2 forState:UIControlStateNormal];
+       _scenicBtn2.tintColor = [UIColor colorWithRed:165 / 255.0 green:226 / 255.0 blue:198 / 255.0 alpha:1];
         [_scenicBtn2 mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.top.equalTo(self.cityLb).offset(45);
-            make.left.equalTo(Width * 210 / 590);
-            make.size.equalTo(CGSizeMake((Width - 80) / 3, 52));
+            make.bottom.equalTo(self.cityLb).offset(50);
+            make.left.equalTo(Width * 230 / 590);
+            make.size.equalTo(CGSizeMake((Width - 80) / 3, 30));
         }];
-        _scenicBtn2.layer.cornerRadius = 26;
+        _scenicBtn2.layer.cornerRadius = 15;
         _scenicBtn2.clipsToBounds = YES;
-        [_scenicBtn2 setTitle:@"巴黎" forState:UIControlStateNormal];
+        [_scenicBtn2 setTitle:@" 巴黎" forState:UIControlStateNormal];
+        _scenicBtn2.font = [UIFont systemFontOfSize:14];
         [_scenicBtn2 setTitleColor:[UIColor colorWithRed:165 / 255.0 green:226 / 255.0 blue:198 / 255.0 alpha:1] forState:UIControlStateNormal];
         _scenicBtn2.layer.borderWidth = 1;
         _scenicBtn2.layer.borderColor = [UIColor colorWithRed:165 / 255.0 green:226 / 255.0 blue:198 / 255.0 alpha:1].CGColor;
@@ -251,14 +260,18 @@
     if (!_scenicBtn3) {
         _scenicBtn3 = [UIButton new];
         [self.recommendCityView addSubview:_scenicBtn3];
+        UIImage *image3 = [[UIImage imageNamed:@"Mall_Search_History_10x10_"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
+        [_scenicBtn3 setImage:image3 forState:UIControlStateNormal];
+        _scenicBtn3.tintColor = [UIColor colorWithRed:165 / 255.0 green:226 / 255.0 blue:198 / 255.0 alpha:1];
         [_scenicBtn3 mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.top.equalTo(self.cityLb).offset(45);
-            make.left.equalTo(Width * 390 / 590);
-            make.size.equalTo(CGSizeMake((Width - 80) / 3, 52));
+            make.bottom.equalTo(self.cityLb).offset(50);
+            make.left.equalTo(Width * 430 / 590);
+            make.size.equalTo(CGSizeMake((Width - 80) / 3, 30));
         }];
-        _scenicBtn3.layer.cornerRadius = 26;
+        _scenicBtn3.layer.cornerRadius = 15;
         _scenicBtn3.clipsToBounds = YES;
-        [_scenicBtn3 setTitle:@"佛罗伦萨" forState:UIControlStateNormal];
+        [_scenicBtn3 setTitle:@" 高雄市" forState:UIControlStateNormal];
+        _scenicBtn3.font = [UIFont systemFontOfSize:14];
         [_scenicBtn3 setTitleColor:[UIColor colorWithRed:165 / 255.0 green:226 / 255.0 blue:198 / 255.0 alpha:1] forState:UIControlStateNormal];
         _scenicBtn3.layer.borderWidth = 1;
         _scenicBtn3.layer.borderColor = [UIColor colorWithRed:165 / 255.0 green:226 / 255.0 blue:198 / 255.0 alpha:1].CGColor;

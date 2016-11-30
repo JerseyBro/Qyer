@@ -42,6 +42,7 @@
 		854C209B1DDC5B4B00F5D5F4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 854C209A1DDC5B4B00F5D5F4 /* ViewController.m */; };
 		854C209E1DDC5B4B00F5D5F4 /* (null) in Resources */ = {isa = PBXBuildFile; };
 		854C20A31DDC5B4B00F5D5F4 /* (null) in Resources */ = {isa = PBXBuildFile; };
+		F40296761DEECCDD008A1855 /* CommentViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F40296751DEECCDD008A1855 /* CommentViewCell.m */; };
 		F40505851DE48765005FCD15 /* RecommendCityCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F40505841DE48765005FCD15 /* RecommendCityCell.m */; };
 		F4A513751DDC60C2008AF2A1 /* NSString+WX.m in Sources */ = {isa = PBXBuildFile; fileRef = F4A513701DDC60C2008AF2A1 /* NSString+WX.m */; };
 		F4A513761DDC60C2008AF2A1 /* UIView+HUD.m in Sources */ = {isa = PBXBuildFile; fileRef = F4A513721DDC60C2008AF2A1 /* UIView+HUD.m */; };
@@ -121,8 +122,10 @@
 		A04F497D9480ACCC7D65A036 /* Pods-Qyer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Qyer.release.xcconfig"; path = "Pods/Target Support Files/Pods-Qyer/Pods-Qyer.release.xcconfig"; sourceTree = "<group>"; };
 		B2B8C73DF8CFEFD16DD67BCE /* Pods-Qyer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Qyer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Qyer/Pods-Qyer.debug.xcconfig"; sourceTree = "<group>"; };
 		B9CE096C68FF0D6FCB7D0228 /* libPods-Qyer.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Qyer.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		F40505831DE48765005FCD15 /* RecommendCityCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecommendCityCell.h; sourceTree = "<group>"; };
-		F40505841DE48765005FCD15 /* RecommendCityCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecommendCityCell.m; sourceTree = "<group>"; };
+		F40296741DEECCDD008A1855 /* CommentViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommentViewCell.h; sourceTree = "<group>"; };
+		F40296751DEECCDD008A1855 /* CommentViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommentViewCell.m; sourceTree = "<group>"; };
+		F40505831DE48765005FCD15 /* RecommendCityCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RecommendCityCell.h; path = ../RecommendCityCell.h; sourceTree = "<group>"; };
+		F40505841DE48765005FCD15 /* RecommendCityCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RecommendCityCell.m; path = ../RecommendCityCell.m; sourceTree = "<group>"; };
 		F4A5136F1DDC60C2008AF2A1 /* NSString+WX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+WX.h"; sourceTree = "<group>"; };
 		F4A513701DDC60C2008AF2A1 /* NSString+WX.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+WX.m"; sourceTree = "<group>"; };
 		F4A513711DDC60C2008AF2A1 /* UIView+HUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+HUD.h"; sourceTree = "<group>"; };
@@ -419,11 +422,37 @@
 			name = "最近访问Model";
 			sourceTree = "<group>";
 		};
-		F40505821DE483C0005FCD15 /* 推荐Cell */ = {
+		F40296711DEEC2F5008A1855 /* 最近访问城市Cell */ = {
 			isa = PBXGroup;
 			children = (
 				F40505831DE48765005FCD15 /* RecommendCityCell.h */,
 				F40505841DE48765005FCD15 /* RecommendCityCell.m */,
+			);
+			path = "最近访问城市Cell";
+			sourceTree = "<group>";
+		};
+		F40296721DEEC624008A1855 /* 推荐城市Cell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "推荐城市Cell";
+			sourceTree = "<group>";
+		};
+		F40296731DEECC46008A1855 /* 点评Cell */ = {
+			isa = PBXGroup;
+			children = (
+				F40296741DEECCDD008A1855 /* CommentViewCell.h */,
+				F40296751DEECCDD008A1855 /* CommentViewCell.m */,
+			);
+			path = "点评Cell";
+			sourceTree = "<group>";
+		};
+		F40505821DE483C0005FCD15 /* 推荐Cell */ = {
+			isa = PBXGroup;
+			children = (
+				F40296731DEECC46008A1855 /* 点评Cell */,
+				F40296721DEEC624008A1855 /* 推荐城市Cell */,
+				F40296711DEEC2F5008A1855 /* 最近访问城市Cell */,
 			);
 			name = "推荐Cell";
 			path = "推荐View";
@@ -670,6 +699,7 @@
 				55FC55C51DE8D729005B66FF /* HeadCell.m in Sources */,
 				F40505851DE48765005FCD15 /* RecommendCityCell.m in Sources */,
 				F4ADDC951DDF013600C13254 /* AllViewController.m in Sources */,
+				F40296761DEECCDD008A1855 /* CommentViewCell.m in Sources */,
 				F4ADDC8F1DDF007000C13254 /* ShoppingViewController.m in Sources */,
 				5508C8BB1DE14E6800594AB5 /* countryCell.m in Sources */,
 				5508C8B01DE144A700594AB5 /* bournModel.m in Sources */,

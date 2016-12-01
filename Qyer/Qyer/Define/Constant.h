@@ -11,7 +11,7 @@
 
 #define Constant_h
 //  最近访问View高度宏
-#define Height (long)([UIScreen mainScreen].bounds.size.height * 530 / 1136.0)
+#define Height (long)([UIScreen mainScreen].bounds.size.height * 500 / 1136.0)
 
 //  最近访问View宽度宏
 #define Width (long)([UIScreen mainScreen].bounds.size.width * 590 / 640.0)

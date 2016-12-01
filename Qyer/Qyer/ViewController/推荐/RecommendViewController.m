@@ -180,25 +180,33 @@
     }
     
 }
+//  每个分区之间的间隔
 -(CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
 {
-    return 20;
+    return 25;
 }
 //  推荐城市Cell两边的间隔
--(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
     UIView *view = [UIView new];
     CGFloat width = [UIScreen mainScreen].bounds.size.width - 25;
     view.size = CGSizeMake(width, 200);
     return view;
 }
 
-
--(UIStatusBarStyle)preferredStatusBarStyle
-{
+//  点评分区的风格
+- (UIStatusBarStyle)preferredStatusBarStyle{
     return UIStatusBarStyleLightContent;
 }
 
-
+- (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section{
+    UIView *view = [UIView new];
+    if (section == 1) {
+        
+    }
+    
+        
+    return view;
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     //  隐藏导航栏

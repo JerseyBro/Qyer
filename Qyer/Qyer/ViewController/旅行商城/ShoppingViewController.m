@@ -23,6 +23,9 @@
 @property(nonatomic) NSMutableArray<ShoppingListModel *> *list2;
 @property(nonatomic) NSMutableArray<ShoppingPlaceModel *> *place2;
 
+//@property(nonatomic) NSMutableDictionary *idDic;
+@property(nonatomic) NSString *idStr;
+
 @end
 
 @implementation ShoppingViewController
@@ -128,6 +131,15 @@
         _hotGoodsList = [NSMutableArray new];
     }
     return _hotGoodsList;
+}
+
+-(NSString *)idStr
+{
+    if (!_idStr)
+    {
+        _idStr =[NSString new];
+    }
+    return _idStr;
 }
 
 
@@ -247,63 +259,6 @@
     return 0;
 }
 
-
-/*
--(UIView*)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
-
-{
-    [self.marketTopicList  addObjectsFromArray:self.shoppingModel.data.market_topic];
-    if (self.marketTopicList.count > 0) {
-        if (section == 0)
-        {
-            NSArray<NSString *> *marketTopicData = [NSArray new];
-            NSMutableArray *marketTopicTempArr = [NSMutableArray new];
-            for (NSInteger i = 0; i < self.marketTopicList.count; i ++)
-            {
-                NSString *adViewPath = self.marketTopicList[i].pic;
-                [marketTopicTempArr addObject:adViewPath];
-            }
-            marketTopicData = marketTopicTempArr.copy;
-            
-            AdvertisementView *adView = [[AdvertisementView alloc]init];
-            adView.backgroundColor = [UIColor whiteColor];
-            adView.size = CGSizeMake([UIScreen mainScreen].bounds.size.width, 80);
-            
-            [adView.leftBtn setBackgroundImageWithURL:marketTopicData[0].wx_URL forState:UIControlStateNormal options:0];
-            [adView.rightUpBtn setBackgroundImageWithURL:marketTopicData[1].wx_URL forState:UIControlStateNormal options:0];
-            [adView.rightDownBtn setBackgroundImageWithURL:marketTopicData[2].wx_URL forState:UIControlStateNormal options:0];
-            
-            return adView;
-        }
-        
-//        if (section == 1)
-//        {
-//            // 取得所有热门旅游城市的旅游信息
-//            [self.place addObjectsFromArray:self.shoppingModel.data.hot_area[1].place];
-//            NSArray<NSString *> *hotArea = [NSArray new];
-//            NSMutableArray *hotAreaArr = [NSMutableArray new];
-//            for (NSInteger i = 0; i < 4; i ++)
-//            {
-//                NSString *adPhotoPath = self.place[i].photo;
-//                [hotAreaArr addObject:adPhotoPath];
-//            }
-//            hotArea = hotAreaArr.copy;
-//            
-//            HongKongJapanView *hjView = [[HongKongJapanView alloc]init];
-//            hjView.backgroundColor = [UIColor whiteColor];
-//            hjView.size = CGSizeMake([UIScreen mainScreen].bounds.size.width, 80);
-//            
-//            [hjView.cityBtn enumerateObjectsUsingBlock:^(UIButton * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-//                [obj setBackgroundImageWithURL:hotArea[idx].wx_URL forState:UIControlStateNormal options:NO];
-//            }];
-//            
-//            return hjView ;
-//            
-//        }
-    }
-    return nil;
-}
-*/
  
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -321,10 +276,31 @@
                 cell = [[AdvertisementCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"AdvertisementCell"];
             }
             
+            if (cell.leftBtn)
+            {
+                self.idStr = self.marketTopicList[0].url;
+                
+            }
+            else if (cell.rightUpBtn)
+            {
+                self.idStr = self.marketTopicList[1].url;
+                
+            }
+            else if (cell.rightDownBtn)
+            {
+                self.idStr = self.marketTopicList[2].url;
+                [cell.rightDownBtn addTarget:self action:@selector(sendAdverURLandWC:) forControlEvents:UIControlEventTouchUpInside];
+            }
             
             [cell.leftBtn setBackgroundImageWithURL:self.marketTopicList[0].pic.wx_URL forState:UIControlStateNormal options:0];
+            
+            [cell.leftBtn addTarget:self action:@selector(sendAdverURLandWC:) forControlEvents:UIControlEventTouchUpInside];
+
             [cell.rightUpBtn setBackgroundImageWithURL:self.marketTopicList[1].pic.wx_URL forState:UIControlStateNormal options:0];
+            [cell.rightUpBtn addTarget:self action:@selector(sendAdverURLandWC:) forControlEvents:UIControlEventTouchUpInside];
+            
             [cell.rightDownBtn setBackgroundImageWithURL:self.marketTopicList[2].pic.wx_URL forState:UIControlStateNormal options:0];
+            
             
             [cell addSubview:cell.view];
             return cell;
@@ -341,11 +317,11 @@
         }
         
         
-        cell.cityTitle.text = @"港澳台";
+        cell.cityTitle.text = @"东南亚";
         
-        UIImageView *hkIV = [[UIImageView alloc]initWithFrame:CGRectMake(25, -5, 360, 65)];
-        hkIV.image = [UIImage imageNamed:@"港澳_375x65_"];
-        [cell.cityView addSubview:hkIV];
+        UIImageView *eastIV = [[UIImageView alloc]initWithFrame:CGRectMake(25, -5, 360, 65)];
+        eastIV.image = [UIImage imageNamed:@"泰国_375x65_"];
+        [cell.cityView addSubview:eastIV];
         
         [cell.cityBtn enumerateObjectsUsingBlock:^(UIButton * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
             [obj setBackgroundImageWithURL:self.place[idx].photo.wx_URL forState:UIControlStateNormal options:NO];
@@ -387,10 +363,11 @@
             }
             
         
-            cell.cityTitle.text = @"东南亚";
-            UIImageView *eastIV = [[UIImageView alloc]initWithFrame:CGRectMake(25, -5, 360, 65)];
-            eastIV.image = [UIImage imageNamed:@"泰国_375x65_"];
-            [cell.cityView addSubview:eastIV];
+            cell.cityTitle.text = @"港澳台";
+            
+            UIImageView *hkIV = [[UIImageView alloc]initWithFrame:CGRectMake(25, -5, 360, 65)];
+            hkIV.image = [UIImage imageNamed:@"港澳_375x65_"];
+            [cell.cityView addSubview:hkIV];
             
             [cell.cityBtn enumerateObjectsUsingBlock:^(UIButton * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
                 [obj setBackgroundImageWithURL:self.place1[idx].photo.wx_URL forState:UIControlStateNormal options:NO];
@@ -430,9 +407,9 @@
         }
         
         
-        cell.cityTitle.text = @"欧洲美国";
+        cell.cityTitle.text = @"韩日";
         UIImageView *usatIV = [[UIImageView alloc]initWithFrame:CGRectMake(30, -5, 360, 65)];
-        usatIV.image = [UIImage imageNamed:@"欧美其他_375x65_"];
+        usatIV.image = [UIImage imageNamed:@"日本_375x65_"];
         [cell.cityView addSubview:usatIV];
         
         [cell.cityBtn enumerateObjectsUsingBlock:^(UIButton * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
@@ -511,11 +488,13 @@
         cell.cityTitle.text = self.shoppingModel.data.discount_topic[1].topic.title;
         
         [cell.topIV setBackgroundImageWithURL:self.shoppingModel.data.discount_topic[1].topic.photo.wx_URL forState:UIControlStateNormal options:NO];
-        
+
         [cell.cityPic1 setImageURL:self.topicList1[0].photo.wx_URL];
         cell.title1LB.text = self.topicList1[0].title;
         cell.sold1LB.text = self.topicList1[0].sold;
         cell.price1LB.text = [self.topicList1[0].price stringByAppendingString:@" 元起"];
+        self.idStr = self.topicList1[1].ID;
+        [cell.cityDetail02Btn addTarget:self action:@selector(sendURLandWC:) forControlEvents:UIControlEventTouchUpInside];
         
         
         [cell.cityPic2 setImageURL:self.topicList1[1].photo.wx_URL];
@@ -550,11 +529,20 @@
         
         [cell.goodsBtn enumerateObjectsUsingBlock:^(UIButton * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
             obj.titleLabel.text = numberList[idx];
-                                   }];
-//        cell.goodsBtn enumerateObjectsUsingBlock:^(UIButton * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-//            obj addTarget:self.hotGoodsList[idx]. action:<#(nonnull SEL)#> forControlEvents:<#(UIControlEvents)#>
-//        }
+        }];
         
+        [cell.goodsBtn enumerateObjectsUsingBlock:^(UIButton * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+            switch (idx) {
+                case 0:
+                    self.idStr = self.hotGoodsList[0].ID;
+                    [obj addTarget:self action:@selector(sendURLandWC:) forControlEvents:UIControlEventTouchUpInside];
+                    break;
+
+                default:
+                    break;
+            }
+        }];
+
         [cell.goodsPic enumerateObjectsUsingBlock:^(UIImageView * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
             [obj setImageURL:self.hotGoodsList[idx].photo.wx_URL];
         }];
@@ -708,5 +696,23 @@
         return headerView;
     }
     return nil;
+}
+
+// 封装该方法主要作用是用来跳转到下一个界面以及跳转时传递给下个界面的URL
+-(void)sendURLandWC:(NSString *)urlStr
+{
+    NSLog(@"我的传值是 = %@",self.idStr);
+    NSString *path = [NSString stringWithFormat:@"http:/m.qyer.com/z/deal/%@/",self.idStr];
+    shoppingWebPageController *wc = [[shoppingWebPageController alloc]initWithURL:path.wx_URL];
+    
+    [self.navigationController pushViewController:wc animated:YES];
+}
+
+// 封装该方法主要作用是用来跳转广告页面
+-(void)sendAdverURLandWC:(NSString *)urlStr
+{
+    shoppingWebPageController *wc = [[shoppingWebPageController alloc]initWithURL:self.idStr.wx_URL];
+    
+    [self.navigationController pushViewController:wc animated:YES];
 }
 @end

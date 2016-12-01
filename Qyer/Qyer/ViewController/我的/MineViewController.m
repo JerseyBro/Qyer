@@ -82,6 +82,10 @@
         view.backgroundColor = [UIColor yellowColor];
         return view;
     }
+    if (section == 1) {
+        view.backgroundColor = [UIColor greenColor];
+        return view;
+    }
     view.backgroundColor = [UIColor grayColor];
     
     return view;

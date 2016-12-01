@@ -95,9 +95,9 @@
     UINavigationController *RecommendNavi = [[UINavigationController alloc] initWithRootViewController:self.recommendVC];
     UINavigationController *MineNavi = [[UINavigationController alloc] initWithRootViewController:self.mineVC];
     self.viewControllers = @[RecommendNavi, BournNavi, shoppingNavi, CommunityNavi, MineNavi];
-    //设置了全局的所有tabbarItem的文字样式. 选中时的
-    [[UITabBarItem appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName: [UIColor whiteColor], NSFontAttributeName:[UIFont systemFontOfSize:35]} forState:UIControlStateSelected];
-    //[[UITabBar appearance] setsubu:[UIImage imageNamed:@"TabBar_Background_Highlight_150x100_"]];
+//    //设置了全局的所有tabbarItem的文字样式. 选中时的
+//    [[UITabBarItem appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName: [UIColor whiteColor], NSFontAttributeName:[UIFont systemFontOfSize:35]} forState:UIControlStateSelected];
+
 
     
 }

@@ -27,6 +27,10 @@
         NSLog(@"");
     }];
     
+    [NetManager getRecommendContentModel:1 ompletionHandler:^(RecommendViewModel *model, NSError *error) {
+        NSLog(@"");
+    }];
+    
     return YES;
     
 

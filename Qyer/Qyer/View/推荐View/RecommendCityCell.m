@@ -36,8 +36,6 @@
     if (!_iconBtn) {
        _iconBtn = [UIButton buttonWithType:UIButtonTypeSystem];
         [self.recommendCityView addSubview:_iconBtn];
-       
-      
         self.iconBtn.tintColor = [UIColor whiteColor];
         self.iconBtn.font = [UIFont systemFontOfSize:25];
         [_iconBtn mas_makeConstraints:^(MASConstraintMaker *make) {

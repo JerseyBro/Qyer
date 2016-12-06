@@ -14,7 +14,7 @@
     CGRect rect = [UIScreen mainScreen].bounds;
     frame.origin.x = 25 / 2.0;
     frame.size.width = rect.size.width - 25;
-    frame.size.height = (long)(rect.size.width * 590 / 640.0);
+        frame.size.height = Height;
     [super setFrame:frame];
 }
 //  推荐城市View懒加载
@@ -39,15 +39,15 @@
        
       
         self.iconBtn.tintColor = [UIColor whiteColor];
-        self.iconBtn.font = [UIFont systemFontOfSize:35];
+        self.iconBtn.font = [UIFont systemFontOfSize:25];
         [_iconBtn mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.left.right.equalTo(0);
             make.height.equalTo(self.iconBtn.mas_width).multipliedBy(200 / 590.0);
         }];
         // 设置毛玻璃
-        UIBlurEffect *effect = [UIBlurEffect effectWithStyle:UIBlurEffectStyleLight];
+        UIBlurEffect *effect = [UIBlurEffect effectWithStyle:UIBlurEffectStyleDark];
         UIVisualEffectView *effectView = [[UIVisualEffectView alloc] initWithEffect:effect];
-        effectView.alpha = .5;
+        effectView.alpha = .7;
         [self.iconBtn addSubview:effectView];
         [effectView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.edges.equalTo(0);
@@ -61,7 +61,7 @@
         }];
         visitLb.text = @"最近访问";
         //  字体加粗
-        visitLb.font = [UIFont boldSystemFontOfSize:15];
+        visitLb.font = [UIFont boldSystemFontOfSize:10];
         visitLb.textColor = [UIColor lightGrayColor];
     }
         [self.iconBtn setBackgroundImageWithURL:(cover).wx_URL forState:UIControlStateNormal options:0];
@@ -86,7 +86,7 @@
             make.left.equalTo(self.contentView).offset(Width * 60 / 590);
         }];
         playLb.text = @"景点玩乐";
-        playLb.font = [UIFont systemFontOfSize:11];
+        playLb.font = [UIFont systemFontOfSize:10];
         
     }
     return _playBtn;
@@ -109,7 +109,7 @@
             make.left.equalTo(self.contentView).offset(Width * 210 / 590);
         }];
         foodLb.text = @"美食";
-        foodLb.font = [UIFont systemFontOfSize:12];
+        foodLb.font = [UIFont systemFontOfSize:10];
     }
     return _foodBtn;
 }
@@ -131,7 +131,7 @@
             make.left.equalTo(self.contentView).offset(Width * 350 / 590);
         }];
         packLb.text = @"锦囊";
-        packLb.font = [UIFont systemFontOfSize:12];
+        packLb.font = [UIFont systemFontOfSize:10];
         
     }
     return _packBtn;
@@ -154,7 +154,7 @@
             make.left.equalTo(self.contentView).offset(Width * 440 / 590);
         }];
         bournLb.text = @"收藏目的地";
-        bournLb.font = [UIFont systemFontOfSize:12];
+        bournLb.font = [UIFont systemFontOfSize:10];
         
     }
     return _bournBtn;
@@ -167,7 +167,7 @@
         [_cityLb mas_makeConstraints:^(MASConstraintMaker *make) {
             
             make.left.right.equalTo(0);
-            make.top.equalTo(Height * 390 / 530);
+            make.top.equalTo(Height * 370 / 530);
  
             
         }];
@@ -177,20 +177,20 @@
         
         strAtt.image = [UIImage imageNamed:@"actionsheet_line"];
         
-        strAtt.bounds = CGRectMake(0, 5, width, 1);
+        strAtt.bounds = CGRectMake(0, 2, width, 1);
         
         NSTextAttachment *strAtt1 = [NSTextAttachment new];
         
         strAtt1.image = [UIImage imageNamed:@"actionsheet_line"];
         
-        strAtt1.bounds = CGRectMake(0, 5, width, 1);
+        strAtt1.bounds = CGRectMake(0, 2, width, 1);
         
         NSMutableAttributedString *mutStr = [NSMutableAttributedString new];
         
         NSAttributedString *str1 = [NSAttributedString attributedStringWithAttachment:strAtt];
         
         
-        NSAttributedString* str2 = [[NSAttributedString alloc]initWithString:@"  更多城市  " attributes:@{NSForegroundColorAttributeName: [UIColor grayColor],NSFontAttributeName:[UIFont systemFontOfSize:15]}];
+        NSAttributedString* str2 = [[NSAttributedString alloc]initWithString:@"  更多城市  " attributes:@{NSForegroundColorAttributeName: [UIColor grayColor],NSFontAttributeName:[UIFont systemFontOfSize:8]}];
         
         NSAttributedString *str3 = [NSAttributedString attributedStringWithAttachment:strAtt1];
         
@@ -212,14 +212,20 @@
     if (!_scenicBtn1) {
         _scenicBtn1 = [UIButton new];
         [self.recommendCityView addSubview:_scenicBtn1];
+            //  通过tintColor颜色来渲染图片颜色
+        UIImage *image1 = [[UIImage imageNamed:@"Mall_Search_History_10x10_"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
+        [_scenicBtn1 setImage:image1 forState:UIControlStateNormal];
+        _scenicBtn1.tintColor = [UIColor colorWithRed:165 / 255.0 green:226 / 255.0 blue:198 / 255.0 alpha:1];
         [_scenicBtn1 mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.top.equalTo(self.cityLb).offset(45);
+            make.bottom.equalTo(self.cityLb).offset(45);
             make.left.equalTo(Width * 30 / 590);
-            make.size.equalTo(CGSizeMake((Width - 80) / 3, 52));
+            make.size.equalTo(CGSizeMake((Width - 60) / 3, 25));
+            
         }];
-        _scenicBtn1.layer.cornerRadius = 26;
+        _scenicBtn1.layer.cornerRadius = 13;
         _scenicBtn1.clipsToBounds = YES;
-        [_scenicBtn1 setTitle:@"东京" forState:UIControlStateNormal];
+        [_scenicBtn1 setTitle:@" 东京" forState:UIControlStateNormal];
+        _scenicBtn1.font = [UIFont systemFontOfSize:10];
         [_scenicBtn1 setTitleColor:[UIColor colorWithRed:165 / 255.0 green:226 / 255.0 blue:198 / 255.0 alpha:1] forState:UIControlStateNormal];
         _scenicBtn1.layer.borderWidth = 1;
         _scenicBtn1.layer.borderColor = [UIColor colorWithRed:165 / 255.0 green:226 / 255.0 blue:198 / 255.0 alpha:1].CGColor;
@@ -232,14 +238,19 @@
     if (!_scenicBtn2) {
         _scenicBtn2 = [UIButton new];
         [self.recommendCityView addSubview:_scenicBtn2];
+            //  通过tintColor颜色来渲染图片颜色
+        UIImage *image2 = [[UIImage imageNamed:@"Mall_Search_History_10x10_"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
+        [_scenicBtn2 setImage:image2 forState:UIControlStateNormal];
+       _scenicBtn2.tintColor = [UIColor colorWithRed:165 / 255.0 green:226 / 255.0 blue:198 / 255.0 alpha:1];
         [_scenicBtn2 mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.top.equalTo(self.cityLb).offset(45);
-            make.left.equalTo(Width * 210 / 590);
-            make.size.equalTo(CGSizeMake((Width - 80) / 3, 52));
+            make.bottom.equalTo(self.cityLb).offset(45);
+            make.left.equalTo(Width * 220 / 590);
+            make.size.equalTo(CGSizeMake((Width - 60) / 3, 25));
         }];
-        _scenicBtn2.layer.cornerRadius = 26;
+        _scenicBtn2.layer.cornerRadius = 13;
         _scenicBtn2.clipsToBounds = YES;
-        [_scenicBtn2 setTitle:@"巴黎" forState:UIControlStateNormal];
+        [_scenicBtn2 setTitle:@" 巴黎" forState:UIControlStateNormal];
+        _scenicBtn2.font = [UIFont systemFontOfSize:10];
         [_scenicBtn2 setTitleColor:[UIColor colorWithRed:165 / 255.0 green:226 / 255.0 blue:198 / 255.0 alpha:1] forState:UIControlStateNormal];
         _scenicBtn2.layer.borderWidth = 1;
         _scenicBtn2.layer.borderColor = [UIColor colorWithRed:165 / 255.0 green:226 / 255.0 blue:198 / 255.0 alpha:1].CGColor;
@@ -251,14 +262,19 @@
     if (!_scenicBtn3) {
         _scenicBtn3 = [UIButton new];
         [self.recommendCityView addSubview:_scenicBtn3];
+            //  通过tintColor颜色来渲染图片颜色
+        UIImage *image3 = [[UIImage imageNamed:@"Mall_Search_History_10x10_"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
+        [_scenicBtn3 setImage:image3 forState:UIControlStateNormal];
+        _scenicBtn3.tintColor = [UIColor colorWithRed:165 / 255.0 green:226 / 255.0 blue:198 / 255.0 alpha:1];
         [_scenicBtn3 mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.top.equalTo(self.cityLb).offset(45);
-            make.left.equalTo(Width * 390 / 590);
-            make.size.equalTo(CGSizeMake((Width - 80) / 3, 52));
+            make.bottom.equalTo(self.cityLb).offset(45);
+            make.right.equalTo(-Width * 30 / 590);
+            make.size.equalTo(CGSizeMake((Width - 60) / 3, 25));
         }];
-        _scenicBtn3.layer.cornerRadius = 26;
+        _scenicBtn3.layer.cornerRadius = 13;
         _scenicBtn3.clipsToBounds = YES;
-        [_scenicBtn3 setTitle:@"佛罗伦萨" forState:UIControlStateNormal];
+        [_scenicBtn3 setTitle:@" 高雄市" forState:UIControlStateNormal];
+        _scenicBtn3.font = [UIFont systemFontOfSize:10];
         [_scenicBtn3 setTitleColor:[UIColor colorWithRed:165 / 255.0 green:226 / 255.0 blue:198 / 255.0 alpha:1] forState:UIControlStateNormal];
         _scenicBtn3.layer.borderWidth = 1;
         _scenicBtn3.layer.borderColor = [UIColor colorWithRed:165 / 255.0 green:226 / 255.0 blue:198 / 255.0 alpha:1].CGColor;

@@ -40,7 +40,8 @@
 		854C20951DDC5B4B00F5D5F4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 854C20941DDC5B4B00F5D5F4 /* main.m */; };
 		854C20981DDC5B4B00F5D5F4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 854C20971DDC5B4B00F5D5F4 /* AppDelegate.m */; };
 		854C209B1DDC5B4B00F5D5F4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 854C209A1DDC5B4B00F5D5F4 /* ViewController.m */; };
-		8627ABDB1DEEC48C00DC736B /* shoppingWebPageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 863984FC1DEB3F0A00A0E247 /* shoppingWebPageController.m */; };
+		8629302E1DF6AFB80019C13B /* shoppingWebPageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 863984FC1DEB3F0A00A0E247 /* shoppingWebPageController.m */; };
+		8629302F1DF6AFB80019C13B /* CommentViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F40296751DEECCDD008A1855 /* CommentViewCell.m */; };
 		F40505851DE48765005FCD15 /* RecommendCityCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F40505841DE48765005FCD15 /* RecommendCityCell.m */; };
 		F4A513751DDC60C2008AF2A1 /* NSString+WX.m in Sources */ = {isa = PBXBuildFile; fileRef = F4A513701DDC60C2008AF2A1 /* NSString+WX.m */; };
 		F4A513761DDC60C2008AF2A1 /* UIView+HUD.m in Sources */ = {isa = PBXBuildFile; fileRef = F4A513721DDC60C2008AF2A1 /* UIView+HUD.m */; };
@@ -122,8 +123,10 @@
 		A04F497D9480ACCC7D65A036 /* Pods-Qyer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Qyer.release.xcconfig"; path = "Pods/Target Support Files/Pods-Qyer/Pods-Qyer.release.xcconfig"; sourceTree = "<group>"; };
 		B2B8C73DF8CFEFD16DD67BCE /* Pods-Qyer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Qyer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Qyer/Pods-Qyer.debug.xcconfig"; sourceTree = "<group>"; };
 		B9CE096C68FF0D6FCB7D0228 /* libPods-Qyer.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Qyer.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		F40505831DE48765005FCD15 /* RecommendCityCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecommendCityCell.h; sourceTree = "<group>"; };
-		F40505841DE48765005FCD15 /* RecommendCityCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecommendCityCell.m; sourceTree = "<group>"; };
+		F40296741DEECCDD008A1855 /* CommentViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommentViewCell.h; sourceTree = "<group>"; };
+		F40296751DEECCDD008A1855 /* CommentViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommentViewCell.m; sourceTree = "<group>"; };
+		F40505831DE48765005FCD15 /* RecommendCityCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RecommendCityCell.h; path = ../RecommendCityCell.h; sourceTree = "<group>"; };
+		F40505841DE48765005FCD15 /* RecommendCityCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RecommendCityCell.m; path = ../RecommendCityCell.m; sourceTree = "<group>"; };
 		F4A5136F1DDC60C2008AF2A1 /* NSString+WX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+WX.h"; sourceTree = "<group>"; };
 		F4A513701DDC60C2008AF2A1 /* NSString+WX.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+WX.m"; sourceTree = "<group>"; };
 		F4A513711DDC60C2008AF2A1 /* UIView+HUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+HUD.h"; sourceTree = "<group>"; };
@@ -428,11 +431,37 @@
 			name = "最近访问Model";
 			sourceTree = "<group>";
 		};
-		F40505821DE483C0005FCD15 /* 推荐Cell */ = {
+		F40296711DEEC2F5008A1855 /* 最近访问城市Cell */ = {
 			isa = PBXGroup;
 			children = (
 				F40505831DE48765005FCD15 /* RecommendCityCell.h */,
 				F40505841DE48765005FCD15 /* RecommendCityCell.m */,
+			);
+			path = "最近访问城市Cell";
+			sourceTree = "<group>";
+		};
+		F40296721DEEC624008A1855 /* 推荐城市Cell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "推荐城市Cell";
+			sourceTree = "<group>";
+		};
+		F40296731DEECC46008A1855 /* 点评Cell */ = {
+			isa = PBXGroup;
+			children = (
+				F40296741DEECCDD008A1855 /* CommentViewCell.h */,
+				F40296751DEECCDD008A1855 /* CommentViewCell.m */,
+			);
+			path = "点评Cell";
+			sourceTree = "<group>";
+		};
+		F40505821DE483C0005FCD15 /* 推荐Cell */ = {
+			isa = PBXGroup;
+			children = (
+				F40296731DEECC46008A1855 /* 点评Cell */,
+				F40296721DEEC624008A1855 /* 推荐城市Cell */,
+				F40296711DEEC2F5008A1855 /* 最近访问城市Cell */,
 			);
 			name = "推荐Cell";
 			path = "推荐View";
@@ -564,7 +593,6 @@
 				TargetAttributes = {
 					854C208F1DDC5B4B00F5D5F4 = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = TA7BM9W35D;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -654,7 +682,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8627ABDB1DEEC48C00DC736B /* shoppingWebPageController.m in Sources */,
+				8629302E1DF6AFB80019C13B /* shoppingWebPageController.m in Sources */,
+				8629302F1DF6AFB80019C13B /* CommentViewCell.m in Sources */,
 				550040331DE9681F00BC3DFF /* RecommendModel.m in Sources */,
 				550040341DE9681F00BC3DFF /* QyerModel.m in Sources */,
 				550040351DE9681F00BC3DFF /* RecommendViewModel.m in Sources */,
@@ -740,7 +769,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -781,7 +810,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -793,7 +822,6 @@
 			baseConfigurationReference = B2B8C73DF8CFEFD16DD67BCE /* Pods-Qyer.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = TA7BM9W35D;
 				GCC_PREFIX_HEADER = "$(PRODUCT_NAME)/PrefixHeader.pch";
 				INFOPLIST_FILE = Qyer/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -809,7 +837,6 @@
 			baseConfigurationReference = A04F497D9480ACCC7D65A036 /* Pods-Qyer.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = TA7BM9W35D;
 				GCC_PREFIX_HEADER = "$(PRODUCT_NAME)/PrefixHeader.pch";
 				INFOPLIST_FILE = Qyer/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;

@@ -9,6 +9,7 @@
 #import "RecommendViewController.h"
 #import <iCarousel.h>
 #import "RecommendCityCell.h"
+#import "CommentViewCell.h"
 
 
 @interface RecommendViewController ()<iCarouselDelegate,iCarouselDataSource>
@@ -67,7 +68,7 @@
         _ic.delegate = self;
         _ic.dataSource = self;
         _ic.scrollSpeed = 0;
-        
+        _ic.pagingEnabled = YES;
         //创建页数控制器
         self.pageC = [UIPageControl new];
         [self.touView addSubview:self.pageC];
@@ -127,16 +128,17 @@
 
 #pragma mark - tableView数据源与代理
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
-    return 1;
+    return 2;
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return 1;
 }
 
--(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
 
-    RecommendCityCell *cell = [tableView dequeueReusableCellWithIdentifier:@"RecommendCityCell" forIndexPath:indexPath];
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    if (indexPath.section == 0) {
+         RecommendCityCell *cell = [tableView dequeueReusableCellWithIdentifier:@"RecommendCityCell" forIndexPath:indexPath];
     [cell iconBtnWithCover:self.data.data.cover City:self.data.data.city_name];
     [cell playBtn];
     [cell foodBtn];
@@ -152,28 +154,69 @@
     cell.layer.borderColor = [UIColor grayColor].CGColor;
     //  点击 cell 不可选
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
-    return cell;
+        return cell;
+    }else{
+        CommentViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CommentViewCell" forIndexPath:indexPath];
+    [cell icon];
+    [cell label];
+        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    cell.layer.cornerRadius = 5;
+    cell.clipsToBounds = YES;
+    cell.layer.borderWidth = 1;
+        cell.layer.borderColor = [UIColor grayColor].CGColor;
+    //  点击 cell 不可选
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        
+        return cell;
+    }
+    return nil;
 }
 //  设置row高度
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return Height;
+    if (indexPath.section == 0) {
+        return Height;
+    }else{
+        return Height1;
+    }
+    
+}
+//  每个分区之间的间隔
+-(CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
+{
+    return 25;
 }
 //  推荐城市Cell两边的间隔
--(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
     UIView *view = [UIView new];
     CGFloat width = [UIScreen mainScreen].bounds.size.width - 25;
     view.size = CGSizeMake(width, 200);
     return view;
 }
 
+//  点评分区的风格
+- (UIStatusBarStyle)preferredStatusBarStyle{
+    return UIStatusBarStyleLightContent;
+}
 
-
-
-
+- (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section{
+    UIView *view = [UIView new];
+    if (section == 1) {
+        
+    }
+    
+        
+    return view;
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
+    //  隐藏导航栏
+    self.navigationController.navigationBarHidden = YES;
     [self setTableView:[UITableView new]];
     [self.tableView registerClass:[RecommendCityCell class] forCellReuseIdentifier:@"RecommendCityCell"];
+    [self.tableView registerClass:[CommentViewCell class] forCellReuseIdentifier:@"CommentViewCell"];
+    //  把滚动栏 拆入到电池条上
+      self.tableView.contentInset = UIEdgeInsetsMake(-20, 0, 0, 0);
+
     //去掉分割线
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     [NetManager getTouWithPage:0 completionHandler:^(QyerModel *pic, NSError *error) {
@@ -192,7 +235,7 @@
         }
     }];
     
-    [NetManager getRecommendCityModel:22 completionHandler:^(RecommendModel *model, NSError *error) {
+    [NetManager getRecommendCityModel:0 completionHandler:^(RecommendModel *model, NSError *error) {
         if (!error) {
             //  获取 model层 数据
             self.data = model;

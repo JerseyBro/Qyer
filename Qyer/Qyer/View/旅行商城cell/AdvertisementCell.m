@@ -34,10 +34,10 @@
             make.left.equalTo(0);
             make.top.equalTo(0);
             make.bottom.equalTo(0);
-            CGFloat width = [UIScreen mainScreen].bounds.size.width / 2.0;
-            make.width.equalTo(width);
+            make.width.equalTo(kWidth * (317 / 639.0));
+            make.height.equalTo(kHight * (216 / 1132.0));
         }];
-        //_leftBtn.imageView.contentMode = UIViewContentModeScaleToFill;
+        _leftBtn.imageView.contentMode = UIViewContentModeScaleToFill;
     }
     return _leftBtn;
 }
@@ -52,6 +52,8 @@
             make.left.equalTo(self.leftBtn.mas_right).offset(2.5);
             make.top.equalTo(0);
             make.right.equalTo(0);
+            make.width.equalTo(kWidth * (317 / 639.0));
+            make.height.equalTo(kHight * (105 / 1132.0));
         }];
     }
     

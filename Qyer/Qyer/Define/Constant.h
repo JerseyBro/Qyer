@@ -10,6 +10,17 @@
 #ifndef Constant_h
 
 #define Constant_h
+
+//  App界面的宽度
+#define kWidth (long)([UIScreen mainScreen].bounds.size.width)
+
+//  App界面的高度
+#define kHight (long)([UIScreen mainScreen].bounds.size.height)
+
+
+//  推荐城市View高度宏
+#define Height (long)([UIScreen mainScreen].bounds.size.height * 530 / 1136.0)
+//  推荐城市View宽度宏
 //  最近访问View高度宏
 #define Height (long)([UIScreen mainScreen].bounds.size.height * 530 / 1136.0)
 

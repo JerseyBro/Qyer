@@ -35,43 +35,44 @@
             UIButton *btn = [UIButton new];
             [self addSubview:btn];
             [btn mas_makeConstraints:^(MASConstraintMaker *make) {
-                make.height.equalTo(60);
-                //make.width.equalTo(40);
+                
+                make.height.equalTo(kHight * (99 / 1132.0));
+                make.width.equalTo(kWidth * (99 / 639.0));
                 
                 if ( i >= 0 && i <= 4 )
                 {
-                    make.top.equalTo(15);
+                    make.top.equalTo(kHight * (45 / 1132.0));
  
                     if (i == 0)
                     {
-                        make.left.equalTo(20);
+                        make.left.equalTo(kWidth * (30 / 639.0));
                     }
                     else
                     {
-                        make.left.equalTo(lastView.mas_right).equalTo(10);
-                        make.width.equalTo(lastView);
+                        make.left.equalTo(lastView.mas_right).equalTo(kWidth * (21 / 639.0));
+                        //make.width.equalTo(lastView);
                         if (i == 4)
                         {
-                            make.right.equalTo(-20);
+                            make.right.equalTo(-(kWidth * (30 / 639.0)));
                         }
                     }
                 }
                 else if ( i >= 5 && i <= 9 )
                 {
-                    make.top.equalTo(120);
+                    make.top.equalTo(kHight * (240 / 1132.0));
                     
                     if ( i == 5 )
                     {
-                        make.left.equalTo(20);
+                        make.left.equalTo(kWidth * (30 / 639.0));
                     }
                     else
                     {
-                        make.left.equalTo(lastView.mas_right).equalTo(10);
-                        make.width.equalTo(lastView);
+                        make.left.equalTo(lastView.mas_right).equalTo(kWidth * (21 / 639.0));
+                        //make.width.equalTo(lastView);
 
                         if ( i == 9 )
                         {
-                            make.right.equalTo(-20);
+                            make.right.equalTo(-(kWidth * (30 / 639.0)));
                         }
                     }
                 }
@@ -96,46 +97,47 @@
             UILabel *lb = [UILabel new];
             [self addSubview:lb];
             [lb mas_makeConstraints:^(MASConstraintMaker *make) {
+                make.height.equalTo(kHight * (30 / 1132.0));
+                make.width.equalTo(kWidth * (99 / 639.0));
                 
                 if ( i >= 0 && i <= 4 )
                 {
-                    make.top.equalTo(85);
+                    make.top.equalTo(kHight * (166 / 1132.0));
                     if (i == 0)
                     {
-                        make.left.equalTo(20);
+                         make.left.equalTo(kWidth * (30 / 639.0));
                     }
                     else
                     {
-                        make.left.equalTo(lastView.mas_right).equalTo(10);
-                        make.width.equalTo(lastView);
+                        make.left.equalTo(lastView.mas_right).equalTo(kWidth * (21 / 639.0));
+                        //make.width.equalTo(lastView);
                         if (i == 4)
                         {
-                            make.right.equalTo(-20);
+                            make.right.equalTo(-(kWidth * (30 / 639.0)));
                         }
                     }
                 }
                 else if ( i >= 5 && i <= 9 )
                 {
-                    make.top.equalTo(190);
+                    make.top.equalTo(kHight * (363 / 1132.0));
                     
                     if ( i == 5 )
                     {
-                        make.left.equalTo(20);
-                    }
+                         make.left.equalTo(kWidth * (30 / 639.0));                    }
                     else
                     {
-                        make.left.equalTo(lastView.mas_right).equalTo(10);
+                        make.left.equalTo(lastView.mas_right).equalTo(kWidth * (21 / 639.0));
                         make.width.equalTo(lastView);
                         
                         if ( i == 9 )
                         {
-                            make.right.equalTo(-20);
+                            make.right.equalTo(-(kWidth * (30 / 639.0)));
                         }
                     }
                 }
             }];
             
-            lb.font = [UIFont systemFontOfSize:14.0];
+            lb.font = [UIFont systemFontOfSize:15.0];
             lb.textAlignment = NSTextAlignmentCenter;
             lastView = lb;
             [tmpArr addObject:lb];

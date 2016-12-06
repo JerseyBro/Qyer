@@ -574,25 +574,25 @@
     switch (indexPath.section)
     {
         case 0:
-            return 120;
+            return (kHight * (216 / 1132.0));
             break;
         case 1:
-            return 380;
+            return (kHight * (718 / 1132.0));
             break;
         case 2:
-            return 380;
+            return (kHight * (718 / 1132.0));
             break;
         case 3:
-            return 380;
+            return (kHight * (718 / 1132.0));
             break;
         case 4:
-            return 520;
+            return (kHight * (988 / 1132.0));
             break;
         case 5:
-            return 520;
+            return (kHight * (988 / 1132.0));
             break;
         case 6:
-            return 720;
+            return (kHight * (1250 / 1132.0));
             break;
             
         default:
@@ -654,7 +654,7 @@
 // 获取表头的数据内容并显示.
 -(UIView *)setHeaderView
 {
-    ShoppingHeaderView *headerView = [[ShoppingHeaderView alloc]initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width , 230)];
+    ShoppingHeaderView *headerView = [[ShoppingHeaderView alloc]initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width , kHight * (435 / 1132.0))];
     
     // 取得所有表头ICON的数据.
     [self.iconList  addObjectsFromArray: self.shoppingModel.data.icon_list];

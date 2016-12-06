@@ -42,9 +42,9 @@
         [self.cityView addSubview:_cityTitle];
         [_cityTitle mas_makeConstraints:^(MASConstraintMaker *make)
          {
-             make.top.equalTo(20);
+             make.top.equalTo(kHight * (40.f * (kHight * (1280.f / 1132.f))));
              make.left.right.equalTo(0);
-             make.height.equalTo(20);
+             make.height.equalTo(kHight * (20.f / 1132.f));
              make.width.equalTo([UIScreen mainScreen].bounds.size.width);
          }];
         _cityTitle.textAlignment = NSTextAlignmentCenter;

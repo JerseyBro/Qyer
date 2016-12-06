@@ -564,6 +564,7 @@
 				TargetAttributes = {
 					854C208F1DDC5B4B00F5D5F4 = {
 						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = TA7BM9W35D;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -792,10 +793,12 @@
 			baseConfigurationReference = B2B8C73DF8CFEFD16DD67BCE /* Pods-Qyer.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = TA7BM9W35D;
 				GCC_PREFIX_HEADER = "$(PRODUCT_NAME)/PrefixHeader.pch";
 				INFOPLIST_FILE = Qyer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = DKD.Qyer;
+				PRODUCT_BUNDLE_IDENTIFIER = DKD.Qyer122;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -806,10 +809,12 @@
 			baseConfigurationReference = A04F497D9480ACCC7D65A036 /* Pods-Qyer.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = TA7BM9W35D;
 				GCC_PREFIX_HEADER = "$(PRODUCT_NAME)/PrefixHeader.pch";
 				INFOPLIST_FILE = Qyer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = DKD.Qyer;
+				PRODUCT_BUNDLE_IDENTIFIER = DKD.Qyer122;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 			};

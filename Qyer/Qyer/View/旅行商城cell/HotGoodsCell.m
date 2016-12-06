@@ -66,8 +66,8 @@
             UIButton *btn = [UIButton new];
             [self.contentView addSubview:btn];
             [btn mas_makeConstraints:^(MASConstraintMaker *make) {
-                make.height.equalTo(200);
-                make.width.equalTo(180);
+                make.width.equalTo(kWidth * (132 / 639.0));
+                make.height.equalTo(kHight * (132 / 1132.0));
                 
                 if ( i >= 0 && i <= 1 )
                 {

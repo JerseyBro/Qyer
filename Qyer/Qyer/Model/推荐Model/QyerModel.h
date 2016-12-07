@@ -14,7 +14,7 @@
 @property (nonatomic, strong) QyerDataModel * data;
 @property (nonatomic, strong) QyerExtraModel * extra;
 @property (nonatomic, strong) NSString * info;
-@property (nonatomic, strong) NSString * raReferer;
+@property (nonatomic, strong) NSString * ra_referer;
 @property (nonatomic, assign) NSInteger status;
 @property (nonatomic, assign) NSInteger times;
 @end

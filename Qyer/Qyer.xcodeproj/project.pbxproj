@@ -40,9 +40,11 @@
 		854C20951DDC5B4B00F5D5F4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 854C20941DDC5B4B00F5D5F4 /* main.m */; };
 		854C20981DDC5B4B00F5D5F4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 854C20971DDC5B4B00F5D5F4 /* AppDelegate.m */; };
 		854C209B1DDC5B4B00F5D5F4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 854C209A1DDC5B4B00F5D5F4 /* ViewController.m */; };
-		8629302E1DF6AFB80019C13B /* shoppingWebPageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 863984FC1DEB3F0A00A0E247 /* shoppingWebPageController.m */; };
-		8629302F1DF6AFB80019C13B /* CommentViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F40296751DEECCDD008A1855 /* CommentViewCell.m */; };
 		F40505851DE48765005FCD15 /* RecommendCityCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F40505841DE48765005FCD15 /* RecommendCityCell.m */; };
+		F41421DE1DF704F400415009 /* shoppingWebPageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 863984FC1DEB3F0A00A0E247 /* shoppingWebPageController.m */; };
+		F41421DF1DF704F400415009 /* CommentViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F40296751DEECCDD008A1855 /* CommentViewCell.m */; };
+		F432AF1C1DF18D92000C4374 /* RecommendViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F432AF1B1DF18D92000C4374 /* RecommendViewCell.m */; };
+		F44F518A1DF26D7100EA4513 /* GoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F44F51891DF26D7100EA4513 /* GoCell.m */; };
 		F4A513751DDC60C2008AF2A1 /* NSString+WX.m in Sources */ = {isa = PBXBuildFile; fileRef = F4A513701DDC60C2008AF2A1 /* NSString+WX.m */; };
 		F4A513761DDC60C2008AF2A1 /* UIView+HUD.m in Sources */ = {isa = PBXBuildFile; fileRef = F4A513721DDC60C2008AF2A1 /* UIView+HUD.m */; };
 		F4A513771DDC60C2008AF2A1 /* NSObject+parse.m in Sources */ = {isa = PBXBuildFile; fileRef = F4A513741DDC60C2008AF2A1 /* NSObject+parse.m */; };
@@ -127,6 +129,10 @@
 		F40296751DEECCDD008A1855 /* CommentViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommentViewCell.m; sourceTree = "<group>"; };
 		F40505831DE48765005FCD15 /* RecommendCityCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RecommendCityCell.h; path = ../RecommendCityCell.h; sourceTree = "<group>"; };
 		F40505841DE48765005FCD15 /* RecommendCityCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RecommendCityCell.m; path = ../RecommendCityCell.m; sourceTree = "<group>"; };
+		F432AF1A1DF18D92000C4374 /* RecommendViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecommendViewCell.h; sourceTree = "<group>"; };
+		F432AF1B1DF18D92000C4374 /* RecommendViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecommendViewCell.m; sourceTree = "<group>"; };
+		F44F51881DF26D7100EA4513 /* GoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoCell.h; sourceTree = "<group>"; };
+		F44F51891DF26D7100EA4513 /* GoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoCell.m; sourceTree = "<group>"; };
 		F4A5136F1DDC60C2008AF2A1 /* NSString+WX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+WX.h"; sourceTree = "<group>"; };
 		F4A513701DDC60C2008AF2A1 /* NSString+WX.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+WX.m"; sourceTree = "<group>"; };
 		F4A513711DDC60C2008AF2A1 /* UIView+HUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+HUD.h"; sourceTree = "<group>"; };
@@ -443,6 +449,8 @@
 		F40296721DEEC624008A1855 /* 推荐城市Cell */ = {
 			isa = PBXGroup;
 			children = (
+				F432AF1A1DF18D92000C4374 /* RecommendViewCell.h */,
+				F432AF1B1DF18D92000C4374 /* RecommendViewCell.m */,
 			);
 			path = "推荐城市Cell";
 			sourceTree = "<group>";
@@ -459,12 +467,22 @@
 		F40505821DE483C0005FCD15 /* 推荐Cell */ = {
 			isa = PBXGroup;
 			children = (
+				F44F51871DF26D5B00EA4513 /* 现在出发Cell */,
 				F40296731DEECC46008A1855 /* 点评Cell */,
 				F40296721DEEC624008A1855 /* 推荐城市Cell */,
 				F40296711DEEC2F5008A1855 /* 最近访问城市Cell */,
 			);
 			name = "推荐Cell";
 			path = "推荐View";
+			sourceTree = "<group>";
+		};
+		F44F51871DF26D5B00EA4513 /* 现在出发Cell */ = {
+			isa = PBXGroup;
+			children = (
+				F44F51881DF26D7100EA4513 /* GoCell.h */,
+				F44F51891DF26D7100EA4513 /* GoCell.m */,
+			);
+			path = "现在出发Cell";
 			sourceTree = "<group>";
 		};
 		F4A513651DDC60A3008AF2A1 /* Category */ = {
@@ -504,9 +522,9 @@
 		F4A513681DDC60A3008AF2A1 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				F40505821DE483C0005FCD15 /* 推荐Cell */,
 				554C20DE1DEA99E500A8271E /* 我的Cell */,
 				9386D57C1DE57F8700A6ADF8 /* 旅行商城cell */,
-				F40505821DE483C0005FCD15 /* 推荐Cell */,
 				5508C8B81DE14ABA00594AB5 /* 目的地Cell */,
 			);
 			path = View;
@@ -593,6 +611,7 @@
 				TargetAttributes = {
 					854C208F1DDC5B4B00F5D5F4 = {
 						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = TA7BM9W35D;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -682,8 +701,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8629302E1DF6AFB80019C13B /* shoppingWebPageController.m in Sources */,
-				8629302F1DF6AFB80019C13B /* CommentViewCell.m in Sources */,
+				F41421DE1DF704F400415009 /* shoppingWebPageController.m in Sources */,
+				F41421DF1DF704F400415009 /* CommentViewCell.m in Sources */,
 				550040331DE9681F00BC3DFF /* RecommendModel.m in Sources */,
 				550040341DE9681F00BC3DFF /* QyerModel.m in Sources */,
 				550040351DE9681F00BC3DFF /* RecommendViewModel.m in Sources */,
@@ -701,9 +720,11 @@
 				550463CE1DE4AA04000AA3F7 /* BournCityVC.m in Sources */,
 				F4ADDC891DDF000D00C13254 /* CommunityViewController.m in Sources */,
 				F4ADDC921DDF00C000C13254 /* BournViewController.m in Sources */,
+				F432AF1C1DF18D92000C4374 /* RecommendViewCell.m in Sources */,
 				550463D61DE4AE94000AA3F7 /* HeaddownCell.m in Sources */,
 				F4A513771DDC60C2008AF2A1 /* NSObject+parse.m in Sources */,
 				F4B9E4AF1DDDE3D600254772 /* NetManager.m in Sources */,
+				F44F518A1DF26D7100EA4513 /* GoCell.m in Sources */,
 				F4A5137E1DDC642F008AF2A1 /* BaseNetManager.m in Sources */,
 				F4A513761DDC60C2008AF2A1 /* UIView+HUD.m in Sources */,
 				55FC55BC1DE8634E005B66FF /* TwoHeaddownCell.m in Sources */,
@@ -822,11 +843,12 @@
 			baseConfigurationReference = B2B8C73DF8CFEFD16DD67BCE /* Pods-Qyer.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = TA7BM9W35D;
 				GCC_PREFIX_HEADER = "$(PRODUCT_NAME)/PrefixHeader.pch";
 				INFOPLIST_FILE = Qyer/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = DKD.Qyer122;
+				PRODUCT_BUNDLE_IDENTIFIER = DKD.Qyer1323;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -837,11 +859,12 @@
 			baseConfigurationReference = A04F497D9480ACCC7D65A036 /* Pods-Qyer.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = TA7BM9W35D;
 				GCC_PREFIX_HEADER = "$(PRODUCT_NAME)/PrefixHeader.pch";
 				INFOPLIST_FILE = Qyer/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = DKD.Qyer122;
+				PRODUCT_BUNDLE_IDENTIFIER = DKD.Qyer1323;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 			};

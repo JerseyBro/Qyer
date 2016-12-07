@@ -10,6 +10,8 @@
 #import <iCarousel.h>
 #import "RecommendCityCell.h"
 #import "CommentViewCell.h"
+#import "GoCell.h"
+#import "RecommendViewCell.h"
 
 
 @interface RecommendViewController ()<iCarouselDelegate,iCarouselDataSource>
@@ -32,6 +34,8 @@
 @property (nonatomic) UISearchBar * searchBar;
 //最近访问
 @property (nonatomic) RecommendModel * data;
+//推荐内容
+@property (nonatomic) RecommendViewModel * List;
 
 @end
 
@@ -40,6 +44,7 @@
 -(void)setTableView:(UITableView *)tableView
 {
     [super setTableView:tableView];
+    self.tableView = tableView;
 }
 
 
@@ -128,7 +133,7 @@
 
 #pragma mark - tableView数据源与代理
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
-    return 2;
+    return 4;
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
@@ -137,8 +142,9 @@
 
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    
     if (indexPath.section == 0) {
-         RecommendCityCell *cell = [tableView dequeueReusableCellWithIdentifier:@"RecommendCityCell" forIndexPath:indexPath];
+        RecommendCityCell *cell = [tableView dequeueReusableCellWithIdentifier:@"RecommendCityCell" forIndexPath:indexPath];
     [cell iconBtnWithCover:self.data.data.cover City:self.data.data.city_name];
     [cell playBtn];
     [cell foodBtn];
@@ -155,35 +161,67 @@
     //  点击 cell 不可选
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
         return cell;
-    }else{
+    }
+    if (indexPath.section == 1) {
         CommentViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CommentViewCell" forIndexPath:indexPath];
     [cell icon];
     [cell label];
-        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     cell.layer.cornerRadius = 5;
     cell.clipsToBounds = YES;
     cell.layer.borderWidth = 1;
-        cell.layer.borderColor = [UIColor grayColor].CGColor;
+    cell.layer.borderColor = [UIColor grayColor].CGColor;
     //  点击 cell 不可选
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
         
         return cell;
     }
+    if (indexPath.section == 2) {
+        GoCell *cell = [tableView dequeueReusableCellWithIdentifier:@"GoCell" forIndexPath:indexPath];
+        [cell image];
+        [cell goLb];
+        [cell IV];
+        cell.backgroundColor = [UIColor colorWithRed:235 / 255.0 green:235 / 255.0 blue:235 / 255.0 alpha:1];
+        return cell;
+    }
+    if (indexPath.section == 3) {
+        RecommendViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"RecommendViewCell" forIndexPath:indexPath];
+        [cell.headerView setImageURL:self.List.data.feed.entry[indexPath.row].cover.wx_URL];
+        cell.noteLb.text = self.List.data.feed.entry[indexPath.row].column;
+        cell.titleLb.text = self.List.data.feed.entry[indexPath.row].title;
+        cell.subjectLb.text = self.List.data.feed.entry[indexPath.row].subject;
+        [cell.footerView setImageURL:self.List.data.feed.entry[indexPath.row].icon_url.wx_URL];
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        return cell;
+    }
     return nil;
 }
-//  设置row高度
+
+//  设置cell高度
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     if (indexPath.section == 0) {
         return Height;
-    }else{
+    }
+    if (indexPath.section == 1) {
         return Height1;
     }
-    
+    if (indexPath.section == 2){
+        return 54;
+    }
+    if (indexPath.section == 3) {
+        return Height2;
+    }
+    else{
+        return 25;
+    }
 }
+
 //  每个分区之间的间隔
--(CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
-{
-    return 25;
+-(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
+    if (section == 0 || section == 1) {
+        return 13;
+    }
+    return 0;
 }
 //  推荐城市Cell两边的间隔
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
@@ -193,30 +231,23 @@
     return view;
 }
 
-//  点评分区的风格
+//  状态栏的字体颜色
 - (UIStatusBarStyle)preferredStatusBarStyle{
     return UIStatusBarStyleLightContent;
 }
 
-- (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section{
-    UIView *view = [UIView new];
-    if (section == 1) {
-        
-    }
-    
-        
-    return view;
-}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     //  隐藏导航栏
     self.navigationController.navigationBarHidden = YES;
-    [self setTableView:[UITableView new]];
+  
     [self.tableView registerClass:[RecommendCityCell class] forCellReuseIdentifier:@"RecommendCityCell"];
     [self.tableView registerClass:[CommentViewCell class] forCellReuseIdentifier:@"CommentViewCell"];
+    [self.tableView registerClass:[GoCell class] forCellReuseIdentifier:@"GoCell"];
+    [self.tableView registerClass:[RecommendViewCell class] forCellReuseIdentifier:@"RecommendViewCell"];
     //  把滚动栏 拆入到电池条上
       self.tableView.contentInset = UIEdgeInsetsMake(-20, 0, 0, 0);
-
     //去掉分割线
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     [NetManager getTouWithPage:0 completionHandler:^(QyerModel *pic, NSError *error) {
@@ -242,6 +273,11 @@
             [self.tableView reloadData];
           
         }
+    }];
+    
+    [NetManager getRecommendContentModel:1 ompletionHandler:^(RecommendViewModel *model, NSError *error) {
+        self.List = model;
+        [self.tableView reloadData];
     }];
     
 }

@@ -317,11 +317,12 @@
         }
         
         
-        cell.cityTitle.text = @"东南亚";
+        cell.cityTitle.text = @"欧洲美国";
+        UIImageView *usatIV = [[UIImageView alloc]initWithFrame:CGRectMake(30, -5, 360, 65)];
+        usatIV.image = [UIImage imageNamed:@"欧美其他_375x65_"];
         
-        UIImageView *eastIV = [[UIImageView alloc]initWithFrame:CGRectMake(25, -5, 360, 65)];
-        eastIV.image = [UIImage imageNamed:@"泰国_375x65_"];
-        [cell.cityView addSubview:eastIV];
+        [cell.cityView addSubview:usatIV];
+        
         
         [cell.cityBtn enumerateObjectsUsingBlock:^(UIButton * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
             [obj setBackgroundImageWithURL:self.place[idx].photo.wx_URL forState:UIControlStateNormal options:NO];
@@ -362,12 +363,12 @@
                 cell = [[WorldCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"WorldCell"];
             }
             
-        
-            cell.cityTitle.text = @"港澳台";
+            cell.cityTitle.text = @"东南亚";
             
-            UIImageView *hkIV = [[UIImageView alloc]initWithFrame:CGRectMake(25, -5, 360, 65)];
-            hkIV.image = [UIImage imageNamed:@"港澳_375x65_"];
-            [cell.cityView addSubview:hkIV];
+            UIImageView *eastIV = [[UIImageView alloc]initWithFrame:CGRectMake(25, -5, 360, 65)];
+            eastIV.image = [UIImage imageNamed:@"泰国_375x65_"];
+            [cell.cityView addSubview:eastIV];
+
             
             [cell.cityBtn enumerateObjectsUsingBlock:^(UIButton * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
                 [obj setBackgroundImageWithURL:self.place1[idx].photo.wx_URL forState:UIControlStateNormal options:NO];
@@ -406,11 +407,11 @@
             cell = [[WorldCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"WorldCell"];
         }
         
+        cell.cityTitle.text = @"港澳台";
         
-        cell.cityTitle.text = @"韩日";
-        UIImageView *usatIV = [[UIImageView alloc]initWithFrame:CGRectMake(30, -5, 360, 65)];
-        usatIV.image = [UIImage imageNamed:@"日本_375x65_"];
-        [cell.cityView addSubview:usatIV];
+        UIImageView *hkIV = [[UIImageView alloc]initWithFrame:CGRectMake(25, -5, 360, 65)];
+        hkIV.image = [UIImage imageNamed:@"港澳_375x65_"];
+        [cell.cityView addSubview:hkIV];
         
         [cell.cityBtn enumerateObjectsUsingBlock:^(UIButton * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
             [obj setBackgroundImageWithURL:self.place2[idx].photo.wx_URL forState:UIControlStateNormal options:NO];
@@ -574,25 +575,25 @@
     switch (indexPath.section)
     {
         case 0:
-            return (kHight * (216 / 1132.0));
+            return (kHight * (216.f / 1132.f));
             break;
         case 1:
-            return (kHight * (718 / 1132.0));
+            return (kHight * (630.f / 1132.f));
             break;
         case 2:
-            return (kHight * (718 / 1132.0));
+            return (kHight * (630.f / 1132.f));
             break;
         case 3:
-            return (kHight * (718 / 1132.0));
+            return (kHight * (630.f / 1132.f));
             break;
         case 4:
-            return (kHight * (988 / 1132.0));
+            return (kHight * (988.f / 1132.f));
             break;
         case 5:
-            return (kHight * (988 / 1132.0));
+            return (kHight * (988.f / 1132.f));
             break;
         case 6:
-            return (kHight * (1250 / 1132.0));
+            return (kHight * (1250.f / 1132.f));
             break;
             
         default:
